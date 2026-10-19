@@ -1,6 +1,6 @@
 # SchemaForge — Test Raporu
 
-**Oluşturma:** 2026-10-19 00:05:10 UTC · **Komut:** `node scripts/collect-results.mjs`
+**Oluşturma:** 2026-10-19 00:10:30 UTC · **Komut:** `node scripts/collect-results.mjs`
 
 | Kontrol | Sonuç | Ham çıktı |
 |---|---|---|
@@ -14,31 +14,31 @@
 
 ```
 dist/index.html                   0.74 kB │ gzip:  0.46 kB
-dist/assets/index-DlspW7K1.css   18.65 kB │ gzip:  4.70 kB
-dist/assets/index-DOlT0oG3.js   251.34 kB │ gzip: 78.09 kB
-✓ built in 125ms
+dist/assets/index-8qfJwTeP.css   19.15 kB │ gzip:  4.77 kB
+dist/assets/index-BK8-AFQT.js   251.34 kB │ gzip: 78.09 kB
+✓ built in 130ms
 ```
 
 ## Birim ve entegrasyon testleri
 
 | # | Test | Sonuç | Süre (sn) |
 |---|---|---|---|
-| 1 | App.test.tsx › src/App.test.tsx | BAŞARILI | 0.137 |
-| 2 | App.test.tsx › src/App.test.tsx | BAŞARILI | 0.013 |
-| 3 | App.test.tsx › src/App.test.tsx | BAŞARILI | 0.557 |
-| 4 | App.test.tsx › src/App.test.tsx | BAŞARILI | 0.114 |
-| 5 | App.test.tsx › src/App.test.tsx | BAŞARILI | 0.336 |
-| 6 | App.test.tsx › src/App.test.tsx | BAŞARILI | 0.222 |
-| 7 | App.test.tsx › src/App.test.tsx | BAŞARILI | 0.980 |
-| 8 | App.test.tsx › src/App.test.tsx | BAŞARILI | 0.409 |
-| 9 | App.test.tsx › src/App.test.tsx | BAŞARILI | 0.235 |
-| 10 | App.test.tsx › src/App.test.tsx | BAŞARILI | 0.181 |
-| 11 | App.test.tsx › src/App.test.tsx | BAŞARILI | 0.111 |
-| 12 | App.test.tsx › src/App.test.tsx | BAŞARILI | 0.404 |
-| 13 | App.test.tsx › src/App.test.tsx | BAŞARILI | 0.053 |
-| 14 | App.test.tsx › src/App.test.tsx | BAŞARILI | 0.008 |
-| 15 | App.test.tsx › src/App.test.tsx | BAŞARILI | 0.014 |
-| 16 | App.test.tsx › src/App.test.tsx | BAŞARILI | 0.639 |
+| 1 | App.test.tsx › src/App.test.tsx | BAŞARILI | 0.135 |
+| 2 | App.test.tsx › src/App.test.tsx | BAŞARILI | 0.014 |
+| 3 | App.test.tsx › src/App.test.tsx | BAŞARILI | 0.234 |
+| 4 | App.test.tsx › src/App.test.tsx | BAŞARILI | 0.072 |
+| 5 | App.test.tsx › src/App.test.tsx | BAŞARILI | 0.165 |
+| 6 | App.test.tsx › src/App.test.tsx | BAŞARILI | 0.106 |
+| 7 | App.test.tsx › src/App.test.tsx | BAŞARILI | 0.390 |
+| 8 | App.test.tsx › src/App.test.tsx | BAŞARILI | 0.188 |
+| 9 | App.test.tsx › src/App.test.tsx | BAŞARILI | 0.077 |
+| 10 | App.test.tsx › src/App.test.tsx | BAŞARILI | 0.079 |
+| 11 | App.test.tsx › src/App.test.tsx | BAŞARILI | 0.062 |
+| 12 | App.test.tsx › src/App.test.tsx | BAŞARILI | 0.181 |
+| 13 | App.test.tsx › src/App.test.tsx | BAŞARILI | 0.020 |
+| 14 | App.test.tsx › src/App.test.tsx | BAŞARILI | 0.005 |
+| 15 | App.test.tsx › src/App.test.tsx | BAŞARILI | 0.004 |
+| 16 | App.test.tsx › src/App.test.tsx | BAŞARILI | 0.331 |
 | 17 | lib/lib.test.ts › src/lib/lib.test.ts | BAŞARILI | 0.003 |
 | 18 | lib/lib.test.ts › src/lib/lib.test.ts | BAŞARILI | 0.000 |
 | 19 | lib/lib.test.ts › src/lib/lib.test.ts | BAŞARILI | 0.000 |
@@ -61,9 +61,9 @@ dist/assets/index-DOlT0oG3.js   251.34 kB │ gzip: 78.09 kB
 
 | # | Test | Sonuç | Süre (sn) |
 |---|---|---|---|
-| 1 | desktop › full flow: create, fields, rules, validation, export, real reload, delete | BAŞARILI | 1.463 |
-| 2 | desktop › 11 corrupt LocalStorage: no white page, clear message | BAŞARILI | 0.254 |
-| 3 | desktop › keyboard: create a form and add a field without a mouse; focus is visible | BAŞARILI | 0.248 |
-| 4 | mobile › 12 mobile layout is usable and has no horizontal overflow | BAŞARILI | 0.625 |
+| 1 | desktop › full flow: create, fields, rules, validation, export, real reload, delete | BAŞARILI | 1.573 |
+| 2 | desktop › 11 corrupt LocalStorage: no white page, clear message | BAŞARILI | 0.269 |
+| 3 | desktop › keyboard: create a form and add a field without a mouse; focus is visible | BAŞARILI | 0.269 |
+| 4 | mobile › 12 mobile layout is usable and has no horizontal overflow | BAŞARILI | 0.646 |
 
 Ekran görüntüleri tarayıcı testleri sırasında gerçek Edge penceresinden alınır: `docs/screenshots/`.
