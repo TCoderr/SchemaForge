@@ -81,6 +81,7 @@ Ayrıntılar: [docs/TEST_REPORT.md](docs/TEST_REPORT.md). Ham çıktılar: `docs
 | Vitest + React Testing Library | 33/33 |
 | `npm run build` | Başarılı |
 | Playwright (Edge, masaüstü + mobil) | 4/4 |
+| Playwright, **canlı Netlify sitesine karşı** | 4/4 |
 
 Görevdeki 12 kullanıcı senaryosunun tamamı otomatik testle doğrulandı:
 1. form oluşturma
@@ -123,11 +124,13 @@ docs/                         # TEST_REPORT, DEPLOYMENT, ekran görüntüleri, h
 
 Netlify ayarları `netlify.toml` dosyasında: build `npm run build`, publish `dist`. Ayrıntılı adımlar: [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md).
 
-**Bağlantılar:**
-- **GitHub deposu:** henüz yayımlanmadı
-- **Netlify canlı site:** henüz yayımlanmadı
+**Bağlantılar** (19.10.2026'da doğrulandı):
+- **Canlı site (Netlify Free):** https://schemaforge-tcoderr.netlify.app
+- **GitHub deposu (public):** https://github.com/TCoderr/SchemaForge
 
-Gerçek adresler yayımlandıktan sonra buraya eklenmelidir.
+Canlı sitede de tarayıcı testlerinin tamamı çalıştırıldı ve geçti (4/4).
+
+Not: Site, Netlify CLI ile `dist` klasöründen elle yayımlandı. GitHub'dan otomatik yayın (sürekli dağıtım) henüz bağlanmadı; adımlar `docs/DEPLOYMENT.md` içinde.
 
 ## İlgili kampanya
 

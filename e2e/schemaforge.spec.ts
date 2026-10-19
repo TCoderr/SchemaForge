@@ -1,7 +1,7 @@
 import { expect, test, type Page } from '@playwright/test'
 import { readFileSync } from 'node:fs'
 
-const SHOTS = 'docs/screenshots'
+const SHOTS = process.env.PW_BASE_URL ? 'docs/screenshots/live' : 'docs/screenshots'
 const STORAGE_KEY = 'schemaforge.forms.v1'
 
 /** Fail the test on any console error or uncaught page error. */

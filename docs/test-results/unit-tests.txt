@@ -4,15 +4,18 @@ $ npx vitest run --reporter=default --reporter=junit --outputFile.junit=docs/tes
 
  RUN  v5.0.5 D:/Project/SchemaForge
 
- ✓ src/lib/lib.test.ts (17 tests) 12ms
- ✓ src/App.test.tsx (16 tests) 2063ms
+ ✓ src/lib/lib.test.ts (17 tests) 11ms
+ ✓ src/App.test.tsx (16 tests) 3617ms
    ✓ SchemaForge user scenarios (16)
-     ✓ 6. required and rule validation works in the preview 390ms
-     ✓ security: user text is rendered as text, never as HTML 331ms
+     ✓ 3. edits the form title (saved and visible in the list) 455ms
+     ✓ 4b. label edits update the preview live and keep the JSON name in sync 311ms
+     ✓ 6. required and rule validation works in the preview 772ms
+     ✓ 10. exports valid JSON with types, labels, rules and order 327ms
+     ✓ security: user text is rendered as text, never as HTML 597ms
 
  Test Files  2 passed (2)
       Tests  33 passed (33)
-   Start at  03:10:15
-   Duration  2.93s (tests 59%, environment 31%, setup 6%, import 2%, transform 1%)
+   Start at  03:27:20
+   Duration  4.69s (tests 66%, environment 26%, setup 5%, import 2%, transform 1%)
 
 JUNIT report written to D:/Project/SchemaForge/docs/test-results/unit-junit.xml

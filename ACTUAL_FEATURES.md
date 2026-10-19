@@ -53,7 +53,7 @@ Test dosyaları:
 | F32 | Onay penceresinde odak yönetimi (Vazgeç'e odaklanır, Escape kapatır) | Implemented and tested | App.test `8.` (Escape) |
 | F33 | "İçeriğe atla" bağlantısı | Implemented but not tested | — |
 | F34 | Verinin yalnızca bu tarayıcıda saklandığı açıklaması | Implemented and tested | Başlık ve alt bilgide sabit metin; ekran görüntüleri |
-| F35 | Hash tabanlı yönlendirme ve Netlify yönlendirme kuralı (`netlify.toml`, `public/_redirects`) | Implemented but not tested | Netlify'da yayımlanmadı |
+| F35 | Hash tabanlı yönlendirme ve Netlify yönlendirme kuralı (`netlify.toml`, `public/_redirects`) | Implemented and tested | Canlı sitede (https://schemaforge-tcoderr.netlify.app) Playwright 4/4; `/forms/abc` → HTTP 200 |
 | P1 | JSON içe aktarma (şema doğrulamalı) | Planned | Kod yok |
 | P2 | Alanları sürükle-bırak ile sıralama | Planned | Şu an yukarı/aşağı butonları var |
 | P3 | Koşullu alanlar (bir cevaba göre alan gösterme) | Planned | Kod yok |
@@ -83,8 +83,8 @@ Kampanya vaatleri `FormPilot-AI/PRODUCT_ALIGNMENT_CHECKLIST.md` dosyasındaki ko
 | A11 "Şablonunu kaydet" | **Kısmen.** Form kaydedilip kopyalanabiliyor (F5, F18) ama ayrı bir "şablon" kavramı yok (P4). Kampanya metni "tasarımını kaydet" olarak düzeltilmeli |
 | A12 JSON dışa aktarma | Karşılanıyor: F23, F24 |
 | A13 Kod yazmadan form tasarlama | Karşılanıyor: arayüz kod gerektirmiyor |
-| A14 Kurulum gerektirmeyen, tarayıcıda çalışan | Yalnızca yerel derleme olarak karşılanıyor. **Canlı yayın yok**; Netlify dağıtımı yapılmadı |
+| A14 Kurulum gerektirmeyen, tarayıcıda çalışan | Karşılanıyor: https://schemaforge-tcoderr.netlify.app (canlı sitede testler geçti) |
 | A15 Hesap veya sunucu gerektirmeyen | Karşılanıyor (U4: hesap yok) |
 | A16 Tek ekranda alan + kural + önizleme | Karşılanıyor: masaüstünde üç panel; mobilde alt alta |
-| A17 Demo formu | **Karşılanmıyor**: Herkese açık demo adresi yok |
+| A17 Demo formu | Kısmen: Herkese açık sitede (https://schemaforge-tcoderr.netlify.app) form oluşturulabiliyor. Hazır bir "demo formu" şablonu yok |
 | C1–C5 (yapay zekâ, PDF, entegrasyon, sunucu, yanıt toplama) | Uygulamada yok (U1–U5); kampanyanın "vaat etmiyoruz" ifadeleriyle uyumlu |

@@ -20,8 +20,8 @@ Durum: ✅ tamamlandı ve doğrulandı · ⚠️ tamamlandı, açık not var · 
 | Güncelleme işlemi | Başlık, açıklama, alan ve kural düzenleme | App.test `3.`, `4b.`, `5.`; e2e | ✅ |
 | Silme işlemi | Onaylı form ve alan silme | App.test `7.`, `8.`; e2e | ✅ |
 | En az 1 ekran görüntüsü | 8 gerçek tarayıcı ekran görüntüsü | `docs/screenshots/` | ✅ |
-| GitHub'da public depo + bağlantının teslim formunda paylaşılması | Yerel git deposu hazır; **gönderilmedi** | `docs/DEPLOYMENT.md` | 👤 onay gerekiyor |
-| Netlify veya muadiliyle yayın + bağlantının paylaşılması | Yapılandırma hazır; **yayımlanmadı** | `docs/DEPLOYMENT.md` | 👤 hesap gerekiyor |
+| GitHub'da public depo + bağlantının teslim formunda paylaşılması | https://github.com/TCoderr/SchemaForge | HTTP 200; uzak commit = yerel commit | ✅ Bağlantıyı teslim formuna yaz 👤 |
+| Netlify veya muadiliyle yayın + bağlantının paylaşılması | https://schemaforge-tcoderr.netlify.app | Canlı sitede Playwright 4/4; doğrudan bağlantı 200 | ✅ Bağlantıyı teslim formuna yaz 👤 |
 
 ## Görevin kabul kriterleri
 
@@ -45,12 +45,11 @@ Durum: ✅ tamamlandı ve doğrulandı · ⚠️ tamamlandı, açık not var · 
 | Gerçek ekran görüntüleri | `docs/screenshots/` (Playwright + Edge) | ✅ |
 | README yeterli | Kurulum, komutlar, test sonuçları, yapı, dağıtım | ✅ |
 | `ACTUAL_FEATURES.md` (4 durum) | 44 madde; FormPilot vaatleriyle eşleşme tablosu | ✅ |
-| GitHub ve Netlify bağlantıları (yalnızca gerçekse) | Uydurulmadı; "henüz yayımlanmadı" yazıyor | 👤 |
+| GitHub ve Netlify bağlantıları (yalnızca gerçekse) | Gerçek ve doğrulandı; doğrulama scripti her bağlantının HTTP 200 döndürdüğünü kontrol ediyor | ✅ |
 | ZIP | `release/SchemaForge_Teslim.zip` (`node_modules` ve `.git` yok, `dist` dahil) | ✅ |
 
 ## Kullanıcı aksiyonları
 
-1. 👤 **GitHub:** `gh repo create TCoderr/SchemaForge --public --source . --push` komutu için onay ver veya komutu kendin çalıştır (`docs/DEPLOYMENT.md`).
-2. 👤 **Netlify:** Hesabınla GitHub deposunu içe aktar (ayarlar `netlify.toml` dosyasında) veya `dist` klasörünü app.netlify.com/drop sayfasına sürükle.
-3. 👤 Gerçek GitHub ve Netlify adreslerini README'ye ve teslim formuna yaz.
-4. 👤 İstersen lisansı değiştir. MIT, public depo için varsayılan olarak seçildi.
+1. 👤 Teslim formuna yaz: GitHub https://github.com/TCoderr/SchemaForge · Canlı site https://schemaforge-tcoderr.netlify.app
+2. 👤 İsteğe bağlı: Netlify'da siteyi GitHub deposuna bağlayarak sürekli dağıtımı aç (`docs/DEPLOYMENT.md` 2-A).
+3. 👤 İstersen lisansı değiştir. MIT, public depo için varsayılan olarak seçildi.

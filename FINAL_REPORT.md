@@ -21,7 +21,12 @@ Bütün kontroller gerçekten çalıştırıldı ve geçti:
 | `npm run build` | Başarılı (JS 251 KB, gzip 78 KB) |
 | Playwright, gerçek Microsoft Edge (masaüstü + mobil) | 4/4 |
 
-**Yapılmayanlar:** GitHub'a gönderim ve Netlify yayını yapılmadı. Bu dış hesap işlemleri için onayın gerekiyor; bu yüzden bağlantı yok ve hiçbiri uydurulmadı.
+**Yayın (proje sahibinin onayıyla):**
+- **GitHub:** https://github.com/TCoderr/SchemaForge (public)
+- **Canlı site:** https://schemaforge-tcoderr.netlify.app (Netlify Free)
+- **Canlı site testleri:** Aynı Playwright testleri canlı siteye karşı da çalıştırıldı: 4/4.
+- **Erişim ayarı:** Netlify ekibinin varsayılan "ziyaretçi erişimi: Netlify girişi" koruması yalnızca bu site için kapatıldı (onayla). Ekibin varsayılanı değişmedi.
+- **Açık konu:** Site GitHub'a bağlı değil, sürekli dağıtım yok.
 
 ## 2. Teknik özet
 
@@ -79,17 +84,16 @@ Bütün kontroller gerçekten çalıştırıldı ve geçti:
 | Durum | Vaat |
 |---|---|
 | Karşılanıyor | A1–A8, A10, A12, A13, A15, A16 |
-| Kısmen | A9 ("anında": süre ölçülmedi), A11 ("şablon" kavramı yok) |
-| Henüz değil | A14 (canlı yayın yok), A17 (demo yok) |
+| Karşılanıyor (yayın sonrası) | A14 (canlı site) |
+| Kısmen | A9 ("anında": süre ölçülmedi), A11 ("şablon" kavramı yok), A17 (canlı sitede form oluşturulabiliyor, hazır demo şablonu yok) |
 
 FormPilot-AI klasörü bu görevde değiştirilmedi.
 
 ## 7. Kullanıcı aksiyonları
 
 `DELIVERY_CHECKLIST.md` → "Kullanıcı aksiyonları":
-- GitHub onayı;
-- Netlify yayını;
-- bağlantıların README'ye ve teslim formuna eklenmesi.
+- bağlantıların teslim formuna yazılması;
+- isteğe bağlı sürekli dağıtım.
 
 ## 8. Araçlar
 

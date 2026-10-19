@@ -4,14 +4,14 @@ $ npx playwright test
 
 Running 8 tests using 1 worker
 
-  ✓  1 [desktop] › e2e\schemaforge.spec.ts:22:3 › desktop › full flow: create, fields, rules, validation, export, real reload, delete (1.6s)
-  ✓  2 [desktop] › e2e\schemaforge.spec.ts:120:3 › desktop › 11 corrupt LocalStorage: no white page, clear message (269ms)
-  ✓  3 [desktop] › e2e\schemaforge.spec.ts:132:3 › desktop › keyboard: create a form and add a field without a mouse; focus is visible (269ms)
+  ✓  1 [desktop] › e2e\schemaforge.spec.ts:22:3 › desktop › full flow: create, fields, rules, validation, export, real reload, delete (1.5s)
+  ✓  2 [desktop] › e2e\schemaforge.spec.ts:120:3 › desktop › 11 corrupt LocalStorage: no white page, clear message (250ms)
+  ✓  3 [desktop] › e2e\schemaforge.spec.ts:132:3 › desktop › keyboard: create a form and add a field without a mouse; focus is visible (263ms)
   -  4 [desktop] › e2e\schemaforge.spec.ts:151:3 › mobile › 12 mobile layout is usable and has no horizontal overflow
   -  5 [mobile] › e2e\schemaforge.spec.ts:22:3 › desktop › full flow: create, fields, rules, validation, export, real reload, delete
   -  6 [mobile] › e2e\schemaforge.spec.ts:120:3 › desktop › 11 corrupt LocalStorage: no white page, clear message
   -  7 [mobile] › e2e\schemaforge.spec.ts:132:3 › desktop › keyboard: create a form and add a field without a mouse; focus is visible
-  ✓  8 [mobile] › e2e\schemaforge.spec.ts:151:3 › mobile › 12 mobile layout is usable and has no horizontal overflow (646ms)
+  ✓  8 [mobile] › e2e\schemaforge.spec.ts:151:3 › mobile › 12 mobile layout is usable and has no horizontal overflow (654ms)
 
   4 skipped
-  4 passed (8.6s)
+  4 passed (8.4s)

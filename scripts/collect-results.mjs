@@ -34,6 +34,8 @@ function junit(file) {
 }
 const unit = junit(`${OUT}/unit-junit.xml`)
 const e2e = junit(`${OUT}/e2e-junit.xml`).filter((c) => c.status !== 'ATLANDI')
+let live = []
+try { live = junit(`${OUT}/e2e-live-junit.xml`).filter((c) => c.status !== 'ATLANDI') } catch { /* live run optional */ }
 const count = (cs) => `${cs.length} test · ${cs.filter((c) => c.status === 'BAŞARILI').length} başarılı · ${cs.filter((c) => c.status === 'BAŞARISIZ').length} başarısız`
 const build = readFileSync(`${OUT}/build.txt`, 'utf8').split('\n').filter((l) => /dist\/|built in/.test(l)).join('\n')
 const md = [
@@ -44,13 +46,16 @@ const md = [
   `| ESLint | ${results.lint ? 'Hatasız' : 'HATA'} | \`docs/test-results/lint.txt\` |`,
   `| Birim + entegrasyon (Vitest + React Testing Library) | ${count(unit)} | \`docs/test-results/unit-tests.txt\`, \`unit-junit.xml\` |`,
   `| \`npm run build\` | ${results.build ? 'Başarılı' : 'HATA'} | \`docs/test-results/build.txt\` |`,
-  `| Tarayıcı (Playwright + Microsoft Edge) | ${count(e2e)} | \`docs/test-results/e2e-tests.txt\`, \`e2e-junit.xml\` |`, '',
+  `| Tarayıcı (Playwright + Microsoft Edge) | ${count(e2e)} | \`docs/test-results/e2e-tests.txt\`, \`e2e-junit.xml\` |`,
+  ...(live.length ? [`| Tarayıcı, **canlı Netlify sitesi** (https://schemaforge-tcoderr.netlify.app) | ${count(live)} | \`docs/test-results/e2e-live-junit.xml\`, \`docs/screenshots/live/\` |`] : []), '',
   '## Build çıktısı', '', '```', build, '```', '',
   '## Birim ve entegrasyon testleri', '', '| # | Test | Sonuç | Süre (sn) |', '|---|---|---|---|',
   ...unit.map((c, i) => `| ${i + 1} | ${c.suite.replace(/^src\//, '')} › ${c.name} | ${c.status} | ${c.time.toFixed(3)} |`), '',
   '## Tarayıcı testleri (gerçek Edge, üretim derlemesi `vite preview`)', '', '| # | Test | Sonuç | Süre (sn) |', '|---|---|---|---|',
   ...e2e.map((c, i) => `| ${i + 1} | ${c.name} | ${c.status} | ${c.time.toFixed(3)} |`), '',
-  'Ekran görüntüleri tarayıcı testleri sırasında gerçek Edge penceresinden alınır: `docs/screenshots/`.',
+  ...(live.length ? ['', '## Canlı site testleri (`PW_BASE_URL=https://schemaforge-tcoderr.netlify.app npx playwright test`)', '', '| # | Test | Sonuç | Süre (sn) |', '|---|---|---|---|',
+    ...live.map((c, i) => `| ${i + 1} | ${c.name} | ${c.status} | ${c.time.toFixed(3)} |`)] : []), '',
+  'Ekran görüntüleri tarayıcı testleri sırasında gerçek Edge penceresinden alınır: `docs/screenshots/` (yerel üretim derlemesi) ve `docs/screenshots/live/` (canlı site).',
 ].join('\n')
 writeFileSync('docs/TEST_REPORT.md', md + '\n')
 const allOk = Object.values(results).every(Boolean) && [...unit, ...e2e].every((c) => c.status === 'BAŞARILI')

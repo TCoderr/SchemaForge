@@ -64,10 +64,21 @@ allowed = {'Implemented and tested', 'Implemented but not tested', 'Planned', 'U
 bad = [r for r in rows if r[1].strip() not in allowed]
 check('ACTUAL_FEATURES statuses valid', rows and not bad, f'{len(rows)} items; ' + ', '.join(f'{s}: {sum(1 for _, x in rows if x.strip() == s)}' for s in sorted(allowed)))
 
-# no invented live links
-text = readme + (ROOT / 'FINAL_REPORT.md').read_text(encoding='utf-8') + (ROOT / 'DELIVERY_CHECKLIST.md').read_text(encoding='utf-8')
-fake = re.findall(r'https://[a-z0-9-]+\.netlify\.app|https://github\.com/TCoderr/SchemaForge(?!\.git)', text)
-check('No unpublished GitHub/Netlify link presented as live', not fake and 'henüz yayımlanmadı' in readme, f'live-looking links found: {fake}' if fake else 'none; README states not yet published')
+# every GitHub / Netlify link in the delivery documents must really answer (no invented links)
+import urllib.request
+text = readme + (ROOT / 'FINAL_REPORT.md').read_text(encoding='utf-8') + (ROOT / 'DELIVERY_CHECKLIST.md').read_text(encoding='utf-8') + (ROOT / 'docs/DEPLOYMENT.md').read_text(encoding='utf-8')
+links = sorted(set(re.findall(r'https://[a-z0-9-]+\.netlify\.app/?|https://github\.com/TCoderr/[A-Za-z0-9_.-]+', text)))
+status = {}
+for u in links:
+    try:
+        status[u] = urllib.request.urlopen(urllib.request.Request(u, headers={'User-Agent': 'verify'}), timeout=20).status
+    except Exception as e:  # noqa: BLE001
+        status[u] = getattr(e, 'code', str(e)[:40])
+check('All GitHub/Netlify links in the docs are live (HTTP 200)', links and all(c == 200 for c in status.values()), ', '.join(f'{u} -> {c}' for u, c in status.items()))
+live_junit = ROOT / 'docs/test-results/e2e-live-junit.xml'
+if live_junit.exists():
+    l_total, l_fail = junit('docs/test-results/e2e-live-junit.xml')
+    check('Browser tests against the live Netlify site', l_total >= 4 and l_fail == 0, f'{l_total} run, {l_fail} failed')
 
 src_text = '\n'.join(p.read_text(encoding='utf-8') for p in (ROOT / 'src').rglob('*.tsx'))
 check('No dangerouslySetInnerHTML in source', 'dangerouslySetInnerHTML' not in src_text, 'none')

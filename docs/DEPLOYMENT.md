@@ -1,11 +1,14 @@
 # SchemaForge — GitHub ve Netlify Dağıtım Talimatları
 
-**Durum (19.10.2026):**
-- Proje yerelde bir git deposu olarak hazırlandı.
-- **GitHub'a gönderilmedi.**
-- **Netlify'da yayımlanmadı.**
-
-Bu işlemler proje sahibinin hesabında yapılır ve onay gerektirir. Bu belgede uydurulmuş bir bağlantı yoktur.
+**Durum (19.10.2026, proje sahibinin onayıyla yapıldı ve doğrulandı):**
+- **GitHub:** https://github.com/TCoderr/SchemaForge (public, `main` dalı). `gh repo create` ile oluşturuldu. Oturumsuz istekle HTTP 200 dönüyor; uzaktaki son commit yereldekiyle aynı.
+- **Netlify:** https://schemaforge-tcoderr.netlify.app
+  - Ücretsiz plan, `tcoderr` ekibi, site adı `schemaforge-tcoderr`.
+  - `netlify deploy --prod --dir dist` ile yayımlandı.
+  - Ekibin varsayılan "ziyaretçi erişimi: Netlify girişi" koruması yalnızca bu site için kapatıldı (`sso_login=false`). Ekibin varsayılanı değiştirilmedi.
+  - Canlı sitede Playwright testleri 4/4 geçti (`docs/test-results/e2e-live-junit.xml`).
+  - `/forms/abc` gibi doğrudan bağlantılar HTTP 200 döndürüyor (yönlendirme kuralı çalışıyor).
+- **Açık konu:** Site GitHub deposuna bağlı değil. Yeni bir push otomatik yayın tetiklemez. İstenirse aşağıdaki 2-A adımıyla sürekli dağıtım bağlanabilir veya `npm run build` sonrasında `npx netlify-cli deploy --prod --dir dist --site schemaforge-tcoderr` komutu tekrarlanır.
 
 ## 1. GitHub (hesap: TCoderr)
 
