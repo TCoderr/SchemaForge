@@ -89,7 +89,7 @@ if '--zip' in sys.argv:
     z_path = ROOT / 'release/SchemaForge_Teslim.zip'
     with zipfile.ZipFile(z_path) as z:
         bad_crc = z.testzip(); names = z.namelist()
-    leaked = [n for n in names if re.search(r'(^|/)(node_modules|\.git)/|(^|/)\.env', n)]
+    leaked = [n for n in names if re.search(r'(^|/)(node_modules|\.git|\.netlify)/|(^|/)\.env', n)]
     miss = [f for f in REQUIRED if f'SchemaForge/{f}' not in names]
     check('ZIP integrity and contents', bad_crc is None and not leaked and not miss,
           f'{len(names)} files, {z_path.stat().st_size / 1048576:.2f} MB, CRC ok={bad_crc is None}, leaked={leaked[:3] or "none"}, missing={miss or "none"}')
