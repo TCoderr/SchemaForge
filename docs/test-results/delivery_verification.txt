@@ -1,5 +1,5 @@
 SchemaForge - Delivery Verification
-Generated: 2026-10-19 18:04:02
+Generated: 2026-10-19 18:12:01
 
 [PASS] Required files: 27/27
 [PASS] package.json author + scripts: author=Tugay Sinan Ergün; scripts=['build', 'dev', 'lint', 'preview', 'test', 'test:e2e', 'typecheck']
@@ -13,7 +13,7 @@ Generated: 2026-10-19 18:04:02
 [PASS] Real screenshots (desktop + mobile): 8 PNG; sizes [(780, 1688), (780, 3910), (1440, 900), (1440, 1160)]...
 [PASS] ACTUAL_FEATURES statuses valid: 45 items; Implemented and tested: 35, Implemented but not tested: 1, Planned: 4, Unsupported: 5
 [PASS] All GitHub/Netlify links in the docs are live (HTTP 200): https://github.com/TCoderr/SchemaForge -> 200, https://github.com/TCoderr/SchemaForge.git -> 200, https://schemaforge-tcoderr.netlify.app -> 200
-[FAIL] Browser tests against the live Netlify site: 32 run, 6 failed, 6 known-defect tests
+[PASS] Browser tests against the live Netlify site: 33 run, 0 failed, 6 known-defect tests
 [PASS] No dangerouslySetInnerHTML in source: none
 
-OVERALL: FAIL (13/14)
+OVERALL: PASS (14/14)

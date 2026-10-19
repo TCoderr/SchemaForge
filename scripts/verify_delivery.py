@@ -93,6 +93,24 @@ if '--zip' in sys.argv:
     miss = [f for f in REQUIRED if f'SchemaForge/{f}' not in names]
     check('ZIP integrity and contents', bad_crc is None and not leaked and not miss,
           f'{len(names)} files, {z_path.stat().st_size / 1048576:.2f} MB, CRC ok={bad_crc is None}, leaked={leaked[:3] or "none"}, missing={miss or "none"}')
+    # same version everywhere: ZIP source == git HEAD (line endings ignored), ZIP dist == what Netlify serves
+    import hashlib, subprocess
+    head = subprocess.run(['git', 'rev-parse', 'HEAD'], cwd=ROOT, capture_output=True, text=True).stdout.strip()
+    tracked = set(subprocess.run(['git', 'ls-files'], cwd=ROOT, capture_output=True, text=True).stdout.split('\n'))
+    with zipfile.ZipFile(z_path) as z:
+        src = [n for n in names if n.startswith('SchemaForge/') and n[12:] in tracked]
+        differs = [n for n in src if z.read(n).replace(b'\r\n', b'\n') !=
+                   subprocess.run(['git', 'show', f'HEAD:{n[12:]}'], cwd=ROOT, capture_output=True).stdout.replace(b'\r\n', b'\n')]
+        dist = {n[len('SchemaForge/dist/'):]: hashlib.sha256(z.read(n)).hexdigest() for n in names if n.startswith('SchemaForge/dist/') and not n.endswith(('index.html', '_redirects'))}
+    live = {}
+    for rel in dist:
+        try:
+            live[rel] = hashlib.sha256(urllib.request.urlopen(f'https://schemaforge-tcoderr.netlify.app/{rel}', timeout=20).read()).hexdigest()
+        except Exception as e:  # noqa: BLE001
+            live[rel] = str(e)[:40]
+    check('ZIP source == git HEAD', src and not differs, f'HEAD {head[:7]}; {len(src) - len(differs)}/{len(src)} tracked files identical (line endings ignored)' + (f'; DIFFER {differs[:5]}' if differs else ''))
+    check('ZIP dist == live Netlify files', dist and all(live[k] == v for k, v in dist.items()),
+          '; '.join(f'{k} {v[:12]} {"==" if live[k] == v else "!= " + live[k][:12]} live' for k, v in sorted(dist.items())))
 
 ok = all(r[1] for r in R)
 lines = ['SchemaForge - Delivery Verification', f'Generated: {time.strftime("%Y-%m-%d %H:%M:%S")}', '']

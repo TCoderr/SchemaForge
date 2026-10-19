@@ -18,6 +18,16 @@
   - Playwright: 39 test çalıştı; 33 başarılı, 6 bilinen kusur testi (`test.fail`), 0 başarısız.
   - TypeScript, ESLint ve build: çıkış kodu 0.
 - **Raporlar:** `reports/UI_INTERACTION_AUDIT.md`, `FUNCTIONAL_TEST_REPORT.md`, `BUG_FIX_REPORT.md`, `LIVE_SITE_VERIFICATION.md`.
+- **Yayın (proje sahibinin onayıyla):**
+  - Düzeltmeler GitHub'a push edildi (`952fa87`).
+  - Aynı commit'in temiz build'i Netlify'a dağıtıldı (deploy `6ad6325a192f2a42c5a80c9f`).
+  - Canlı JS, CSS ve favicon dosyaları yerel build ile SHA-256 olarak aynı.
+  - Canlı sitede 39 test: 33 başarılı, 6 bilinen kusur, 0 başarısız.
+- **Sürüm tutarlılığı:** `release/SchemaForge_Teslim.zip` için `python scripts/verify_delivery.py --zip` iki şeyi kontrol eder:
+  - ZIP'teki git'te izlenen her dosya, HEAD'deki dosyayla aynı mı (satır sonları hariç)?
+  - ZIP'teki `dist/` dosyaları canlı Netlify dosyalarıyla SHA-256 olarak aynı mı?
+
+  Sonuç `docs/test-results/zip_verification.txt` dosyasına yazılır.
 
 Aşağıdaki 1–3. bölümler sürüm 1.0 içindir. Oradaki 33/33 ve 4/4 sayıları o sürümün sonuçlarıdır.
 

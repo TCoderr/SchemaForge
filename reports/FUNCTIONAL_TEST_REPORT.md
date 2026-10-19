@@ -1,7 +1,7 @@
 # SchemaForge — Fonksiyonel ve Uçtan Uca Test Raporu
 
 **Author / Maintainer:** Tugay Sinan Ergün · **GitHub:** TCoderr · **Tarih:** 19 Ekim 2026
-**Kontrol edilen commit:** başlangıç `1afb33d`; düzeltmeler bu raporla aynı commit'te (kimlik: `LIVE_SITE_VERIFICATION.md`)
+**Kontrol edilen commit:** başlangıç `1afb33d`; düzeltmeler `952fa87` (GitHub ve Netlify'da yayında)
 **Ortam:** Windows 11, Node.js, Playwright 1.64 + yüklü Microsoft Edge (`channel: msedge`, yeni tarayıcı indirilmedi). Her test ayrı ve temiz bir tarayıcı bağlamında çalıştı. Yerel testler `npm run build && npm run preview` üretim derlemesine karşı çalıştı.
 
 ## Sonuçlar (yerel, düzeltmelerden sonra)
@@ -61,7 +61,7 @@
 | Yerel, düzeltmeden önce | 6 başarısız (5 uygulama hatası + 1 test yazım hatası) | `reports/test-results/before-fix/` |
 | Canlı site `1afb33d`, dağıtımdan önce | 38 test: 26 başarılı · 6 bilinen kusur · **6 başarısız** (6'sı da uygulama hatası: BUG-001–004) | `reports/test-results/live-before-deploy/` |
 | Yerel, düzeltmeden sonra | 39 test: 33 başarılı · 6 bilinen kusur · **0 başarısız** | `reports/test-results/` |
-| Canlı site, yeni dağıtımdan sonra | `LIVE_SITE_VERIFICATION.md` | — |
+| Canlı site, yeni dağıtımdan sonra (`952fa87`, deploy `6ad6325a192f2a42c5a80c9f`) | 39 test: 33 başarılı · 6 bilinen kusur · **0 başarısız** | `reports/test-results/live-after-deploy/` |
 
 ## Kanıtlar
 

@@ -8,7 +8,10 @@
   - Ekibin varsayılan "ziyaretçi erişimi: Netlify girişi" koruması yalnızca bu site için kapatıldı (`sso_login=false`). Ekibin varsayılanı değiştirilmedi.
   - Canlı sitede Playwright testleri 4/4 geçti (`docs/test-results/e2e-live-junit.xml`).
   - `/forms/abc` gibi doğrudan bağlantılar HTTP 200 döndürüyor (yönlendirme kuralı çalışıyor).
-- **Açık konu:** Site GitHub deposuna bağlı değil. Yeni bir push otomatik yayın tetiklemez. İstenirse aşağıdaki 2-A adımıyla sürekli dağıtım bağlanabilir veya `npm run build` sonrasında `npx netlify-cli deploy --prod --dir dist --site schemaforge-tcoderr` komutu tekrarlanır.
+- **Güncelleme (19.10.2026, sürüm 1.0.1):** Commit `952fa87` onayla push edildi ve deploy `6ad6325a192f2a42c5a80c9f` ile yayımlandı (`reports/LIVE_SITE_VERIFICATION.md`).
+- **Açık konu:** Site GitHub deposuna bağlı değil. Yeni bir push otomatik yayın tetiklemez. İstenirse aşağıdaki 2-A adımıyla sürekli dağıtım bağlanabilir veya `npm run build` sonrasında şu komut tekrarlanır:
+  `npx netlify-cli deploy --prod --no-build --dir dist --site 9c4cb07e-dc29-4f49-b5a6-94679ca601fe --message "<sürüm> (commit <kısa-hash>)"`
+  *(Düzeltme: Bu satırda önce `--site schemaforge-tcoderr` yazıyordu. 19.10.2026'da CLI site adını tanımadı ("Not Found"); site kimliği gerekiyor. `--no-build` olmadan CLI kendi build'ini de çalıştırıyor.)*
 
 ## 1. GitHub (hesap: TCoderr)
 

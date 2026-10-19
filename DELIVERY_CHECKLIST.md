@@ -21,7 +21,7 @@ Durum: ✅ tamamlandı ve doğrulandı · ⚠️ tamamlandı, açık not var · 
 | Silme işlemi | Onaylı form ve alan silme | App.test `7.`, `8.`; e2e | ✅ |
 | En az 1 ekran görüntüsü | 8 gerçek tarayıcı ekran görüntüsü | `docs/screenshots/` | ✅ |
 | GitHub'da public depo + bağlantının teslim formunda paylaşılması | https://github.com/TCoderr/SchemaForge | HTTP 200; uzak commit = yerel commit | ✅ Bağlantıyı teslim formuna yaz 👤 |
-| Netlify veya muadiliyle yayın + bağlantının paylaşılması | https://schemaforge-tcoderr.netlify.app | Canlı sitede Playwright 4/4; doğrudan bağlantı 200 | ✅ Bağlantıyı teslim formuna yaz 👤 |
+| Netlify veya muadiliyle yayın + bağlantının paylaşılması | https://schemaforge-tcoderr.netlify.app | **1.1:** commit `952fa87` yayında (deploy `6ad6325a192f2a42c5a80c9f`), canlı sitede Playwright 33 başarılı + 6 bilinen kusur, 0 başarısız (1.0: 4/4); doğrudan bağlantı 200 | ✅ Bağlantıyı teslim formuna yaz 👤 |
 
 ## Görevin kabul kriterleri
 

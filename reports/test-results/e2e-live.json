@@ -178,12 +178,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1565,
+                      "duration": 964,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:54:43.691Z",
+                      "startTime": "2026-10-19T15:08:34.414Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -212,12 +212,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 859,
+                      "duration": 991,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:54:45.457Z",
+                      "startTime": "2026-10-19T15:08:35.586Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -246,12 +246,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1279,
+                      "duration": 1157,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:54:46.325Z",
+                      "startTime": "2026-10-19T15:08:36.590Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -280,12 +280,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1123,
+                      "duration": 1013,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:54:47.612Z",
+                      "startTime": "2026-10-19T15:08:37.757Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -314,12 +314,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1025,
+                      "duration": 1126,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:54:48.742Z",
+                      "startTime": "2026-10-19T15:08:38.779Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -348,12 +348,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1304,
+                      "duration": 1810,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:54:49.775Z",
+                      "startTime": "2026-10-19T15:08:39.916Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -382,12 +382,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1221,
+                      "duration": 1273,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:54:51.089Z",
+                      "startTime": "2026-10-19T15:08:41.736Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -416,12 +416,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1313,
+                      "duration": 1048,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:54:52.317Z",
+                      "startTime": "2026-10-19T15:08:43.018Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -450,12 +450,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1281,
+                      "duration": 1386,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:54:53.638Z",
+                      "startTime": "2026-10-19T15:08:44.078Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -470,7 +470,7 @@
             },
             {
               "title": "F10 rules: invalid e-mail, number range, text length, date range, select choice",
-              "ok": false,
+              "ok": true,
               "tags": [],
               "tests": [
                 {
@@ -483,48 +483,18 @@
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
-                      "status": "failed",
-                      "duration": 5917,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]')\nExpected substring: \u001b[32m\"5 alanda hata var\"\u001b[39m\nReceived string:    \u001b[31m\"\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]')\u001b[22m\n\u001b[2m    14 × locator resolved to <div aria-live=\"polite\"></div>\u001b[22m\n\u001b[2m       - unexpected value \"\"\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]')\nExpected substring: \u001b[32m\"5 alanda hata var\"\u001b[39m\nReceived string:    \u001b[31m\"\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]')\u001b[22m\n\u001b[2m    14 × locator resolved to <div aria-live=\"polite\"></div>\u001b[22m\n\u001b[2m       - unexpected value \"\"\u001b[22m\n\n    at D:\\Project\\SchemaForge\\e2e\\functional.spec.ts:210:32",
-                        "location": {
-                          "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
-                          "column": 32,
-                          "line": 210
-                        },
-                        "snippet": "  208 |     await pv.getByLabel('Başlangıç tarihi').fill('2025-12-31')\n  209 |     await submit(page)\n> 210 |     await expect(result(page)).toContainText('5 alanda hata var')\n      |                                ^\n  211 |     await expect(pv.getByText('Geçerli bir e-posta adresi girin (ör. ornek@alanadi.com).')).toBeVisible()\n  212 |     await expect(pv.getByText('Değer en az 18 olmalıdır.')).toBeVisible()\n  213 |     await expect(pv.getByText('En az 3 karakter girin.')).toBeVisible()"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
-                            "column": 32,
-                            "line": 210
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]')\nExpected substring: \u001b[32m\"5 alanda hata var\"\u001b[39m\nReceived string:    \u001b[31m\"\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]')\u001b[22m\n\u001b[2m    14 × locator resolved to <div aria-live=\"polite\"></div>\u001b[22m\n\u001b[2m       - unexpected value \"\"\u001b[22m\n\n\n  208 |     await pv.getByLabel('Başlangıç tarihi').fill('2025-12-31')\n  209 |     await submit(page)\n> 210 |     await expect(result(page)).toContainText('5 alanda hata var')\n      |                                ^\n  211 |     await expect(pv.getByText('Geçerli bir e-posta adresi girin (ör. ornek@alanadi.com).')).toBeVisible()\n  212 |     await expect(pv.getByText('Değer en az 18 olmalıdır.')).toBeVisible()\n  213 |     await expect(pv.getByText('En az 3 karakter girin.')).toBeVisible()\n    at D:\\Project\\SchemaForge\\e2e\\functional.spec.ts:210:32"
-                        }
-                      ],
+                      "status": "passed",
+                      "duration": 1709,
+                      "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:54:54.929Z",
+                      "startTime": "2026-10-19T15:08:45.474Z",
                       "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "D:\\Project\\SchemaForge\\test-results\\functional-desktop-F10-rul-1178e-th-date-range-select-choice-desktop\\error-context.md"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
-                        "column": 32,
-                        "line": 210
-                      }
+                      "attachments": []
                     }
                   ],
-                  "status": "unexpected"
+                  "status": "expected"
                 }
               ],
               "id": "011e9001526c2e3d879a-e84767fa34c59e786f5e",
@@ -545,15 +515,15 @@
                   "projectName": "desktop",
                   "results": [
                     {
-                      "workerIndex": 1,
+                      "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 948,
+                      "duration": 818,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:55:01.423Z",
+                      "startTime": "2026-10-19T15:08:47.193Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -579,15 +549,15 @@
                   "projectName": "desktop",
                   "results": [
                     {
-                      "workerIndex": 1,
+                      "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 789,
+                      "duration": 1006,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:55:02.567Z",
+                      "startTime": "2026-10-19T15:08:48.020Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -613,15 +583,15 @@
                   "projectName": "desktop",
                   "results": [
                     {
-                      "workerIndex": 1,
+                      "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1074,
+                      "duration": 1028,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:55:03.364Z",
+                      "startTime": "2026-10-19T15:08:49.033Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -647,15 +617,15 @@
                   "projectName": "desktop",
                   "results": [
                     {
-                      "workerIndex": 1,
+                      "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 840,
+                      "duration": 846,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:55:04.446Z",
+                      "startTime": "2026-10-19T15:08:50.071Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -681,15 +651,15 @@
                   "projectName": "desktop",
                   "results": [
                     {
-                      "workerIndex": 1,
+                      "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1451,
+                      "duration": 1359,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:55:05.296Z",
+                      "startTime": "2026-10-19T15:08:50.930Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -715,15 +685,15 @@
                   "projectName": "desktop",
                   "results": [
                     {
-                      "workerIndex": 1,
+                      "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1289,
+                      "duration": 1224,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:55:06.756Z",
+                      "startTime": "2026-10-19T15:08:52.297Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -749,15 +719,15 @@
                   "projectName": "desktop",
                   "results": [
                     {
-                      "workerIndex": 1,
+                      "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1416,
+                      "duration": 2060,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:55:08.057Z",
+                      "startTime": "2026-10-19T15:08:53.533Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -783,15 +753,15 @@
                   "projectName": "desktop",
                   "results": [
                     {
-                      "workerIndex": 1,
+                      "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 795,
+                      "duration": 685,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:55:09.481Z",
+                      "startTime": "2026-10-19T15:08:55.601Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -817,15 +787,15 @@
                   "projectName": "desktop",
                   "results": [
                     {
-                      "workerIndex": 1,
+                      "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 709,
+                      "duration": 818,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:55:10.283Z",
+                      "startTime": "2026-10-19T15:08:56.295Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -840,7 +810,7 @@
             },
             {
               "title": "F20 BUG-003 regression: skip link moves focus to the content and does not leave the editor",
-              "ok": false,
+              "ok": true,
               "tags": [],
               "tests": [
                 {
@@ -851,50 +821,20 @@
                   "projectName": "desktop",
                   "results": [
                     {
-                      "workerIndex": 1,
+                      "workerIndex": 0,
                       "parallelIndex": 0,
-                      "status": "failed",
-                      "duration": 5864,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByLabel('Form başlığı')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByLabel('Form başlığı') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByLabel('Form başlığı')\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByLabel('Form başlığı')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByLabel('Form başlığı') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByLabel('Form başlığı')\u001b[22m\n\n    at D:\\Project\\SchemaForge\\e2e\\functional.spec.ts:423:51",
-                        "location": {
-                          "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
-                          "column": 51,
-                          "line": 423
-                        },
-                        "snippet": "  421 |     await page.getByRole('link', { name: 'İçeriğe atla' }).focus()\n  422 |     await page.keyboard.press('Enter')\n> 423 |     await expect(page.getByLabel('Form başlığı')).toBeVisible()\n      |                                                   ^\n  424 |     expect(page.url()).toBe(url)\n  425 |     expect(await page.evaluate(() => document.activeElement?.id)).toBe('main')\n  426 |   })"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
-                            "column": 51,
-                            "line": 423
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByLabel('Form başlığı')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByLabel('Form başlığı') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByLabel('Form başlığı')\u001b[22m\n\n\n  421 |     await page.getByRole('link', { name: 'İçeriğe atla' }).focus()\n  422 |     await page.keyboard.press('Enter')\n> 423 |     await expect(page.getByLabel('Form başlığı')).toBeVisible()\n      |                                                   ^\n  424 |     expect(page.url()).toBe(url)\n  425 |     expect(await page.evaluate(() => document.activeElement?.id)).toBe('main')\n  426 |   })\n    at D:\\Project\\SchemaForge\\e2e\\functional.spec.ts:423:51"
-                        }
-                      ],
+                      "status": "passed",
+                      "duration": 1305,
+                      "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:55:10.999Z",
+                      "startTime": "2026-10-19T15:08:57.126Z",
                       "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "D:\\Project\\SchemaForge\\test-results\\functional-desktop-F20-BUG-c4077-d-does-not-leave-the-editor-desktop\\error-context.md"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
-                        "column": 51,
-                        "line": 423
-                      }
+                      "attachments": []
                     }
                   ],
-                  "status": "unexpected"
+                  "status": "expected"
                 }
               ],
               "id": "011e9001526c2e3d879a-44f66e245f2f1038204e",
@@ -904,7 +844,7 @@
             },
             {
               "title": "F21 BUG-001 regression: two tabs never overwrite each other's forms",
-              "ok": false,
+              "ok": true,
               "tags": [],
               "tests": [
                 {
@@ -915,50 +855,20 @@
                   "projectName": "desktop",
                   "results": [
                     {
-                      "workerIndex": 2,
+                      "workerIndex": 0,
                       "parallelIndex": 0,
-                      "status": "failed",
-                      "duration": 7433,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Sekme A ikinci form')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Sekme A ikinci form') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Sekme A ikinci form')\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Sekme A ikinci form')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Sekme A ikinci form') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Sekme A ikinci form')\u001b[22m\n\n    at D:\\Project\\SchemaForge\\e2e\\functional.spec.ts:436:54",
-                        "location": {
-                          "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
-                          "column": 54,
-                          "line": 436
-                        },
-                        "snippet": "  434 |     await toList(page)\n  435 |     await newForm(page, 'Sekme A ikinci form') // tab B has not reloaded since\n> 436 |     await expect(b.getByText('Sekme A ikinci form')).toBeVisible() // B picks up A's change\n      |                                                      ^\n  437 |     await newForm(b, 'Sekme B formu')\n  438 |     await page.reload()\n  439 |     await expect(page.getByLabel('Form başlığı')).toHaveValue('Sekme A ikinci form') // A was in its editor"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
-                            "column": 54,
-                            "line": 436
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Sekme A ikinci form')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Sekme A ikinci form') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Sekme A ikinci form')\u001b[22m\n\n\n  434 |     await toList(page)\n  435 |     await newForm(page, 'Sekme A ikinci form') // tab B has not reloaded since\n> 436 |     await expect(b.getByText('Sekme A ikinci form')).toBeVisible() // B picks up A's change\n      |                                                      ^\n  437 |     await newForm(b, 'Sekme B formu')\n  438 |     await page.reload()\n  439 |     await expect(page.getByLabel('Form başlığı')).toHaveValue('Sekme A ikinci form') // A was in its editor\n    at D:\\Project\\SchemaForge\\e2e\\functional.spec.ts:436:54"
-                        }
-                      ],
+                      "status": "passed",
+                      "duration": 3533,
+                      "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:55:17.437Z",
+                      "startTime": "2026-10-19T15:08:58.440Z",
                       "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "D:\\Project\\SchemaForge\\test-results\\functional-desktop-F21-BUG-c2ce9-verwrite-each-other-s-forms-desktop\\error-context.md"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
-                        "column": 54,
-                        "line": 436
-                      }
+                      "attachments": []
                     }
                   ],
-                  "status": "unexpected"
+                  "status": "expected"
                 }
               ],
               "id": "011e9001526c2e3d879a-5dddf6aa20565fdd7329",
@@ -968,7 +878,7 @@
             },
             {
               "title": "F22 BUG-002 regression: \"Temiz başlat\" never deletes forms created after the warning",
-              "ok": false,
+              "ok": true,
               "tags": [],
               "tests": [
                 {
@@ -979,50 +889,20 @@
                   "projectName": "desktop",
                   "results": [
                     {
-                      "workerIndex": 3,
+                      "workerIndex": 0,
                       "parallelIndex": 0,
-                      "status": "failed",
-                      "duration": 6148,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('button', { name: 'Temiz başlat' })\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" getByRole('button', { name: 'Temiz başlat' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: 'Temiz başlat' })\u001b[22m\n\u001b[2m    14 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('button', { name: 'Temiz başlat' })\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" getByRole('button', { name: 'Temiz başlat' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: 'Temiz başlat' })\u001b[22m\n\u001b[2m    14 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n\n    at D:\\Project\\SchemaForge\\e2e\\functional.spec.ts:455:70",
-                        "location": {
-                          "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
-                          "column": 70,
-                          "line": 455
-                        },
-                        "snippet": "  453 |     await page.getByLabel('Form başlığı').fill('Uyarıdan sonra yeni form')\n  454 |     await toList(page)\n> 455 |     await expect(page.getByRole('button', { name: 'Temiz başlat' })).toHaveCount(0) // nothing left to clean: the new data replaced the corrupt value\n      |                                                                      ^\n  456 |     await expect(page.getByRole('alert')).toContainText('yedeklendi') // the raw backup is still mentioned\n  457 |     await page.reload()\n  458 |     await expect(cards(page)).toHaveCount(1)"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
-                            "column": 70,
-                            "line": 455
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('button', { name: 'Temiz başlat' })\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" getByRole('button', { name: 'Temiz başlat' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: 'Temiz başlat' })\u001b[22m\n\u001b[2m    14 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n\n\n  453 |     await page.getByLabel('Form başlığı').fill('Uyarıdan sonra yeni form')\n  454 |     await toList(page)\n> 455 |     await expect(page.getByRole('button', { name: 'Temiz başlat' })).toHaveCount(0) // nothing left to clean: the new data replaced the corrupt value\n      |                                                                      ^\n  456 |     await expect(page.getByRole('alert')).toContainText('yedeklendi') // the raw backup is still mentioned\n  457 |     await page.reload()\n  458 |     await expect(cards(page)).toHaveCount(1)\n    at D:\\Project\\SchemaForge\\e2e\\functional.spec.ts:455:70"
-                        }
-                      ],
+                      "status": "passed",
+                      "duration": 1165,
+                      "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:55:25.633Z",
+                      "startTime": "2026-10-19T15:09:01.984Z",
                       "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "D:\\Project\\SchemaForge\\test-results\\functional-desktop-F22-BUG-81bdc-s-created-after-the-warning-desktop\\error-context.md"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
-                        "column": 70,
-                        "line": 455
-                      }
+                      "attachments": []
                     }
                   ],
-                  "status": "unexpected"
+                  "status": "expected"
                 }
               ],
               "id": "011e9001526c2e3d879a-0f5190c97a6b944b69dc",
@@ -1032,7 +912,7 @@
             },
             {
               "title": "F24 BUG-004 regression: one click on \"Gönder (test)\" submits even when the last field turns invalid on blur",
-              "ok": false,
+              "ok": true,
               "tags": [],
               "tests": [
                 {
@@ -1043,55 +923,59 @@
                   "projectName": "desktop",
                   "results": [
                     {
-                      "workerIndex": 4,
+                      "workerIndex": 0,
                       "parallelIndex": 0,
-                      "status": "failed",
-                      "duration": 5878,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]')\nExpected: \u001b[32m\"2 alanda hata var. Lütfen işaretli alanları düzeltin.\"\u001b[39m\nReceived: \u001b[31m\"\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]')\u001b[22m\n\u001b[2m    14 × locator resolved to <div aria-live=\"polite\"></div>\u001b[22m\n\u001b[2m       - unexpected value \"\"\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]')\nExpected: \u001b[32m\"2 alanda hata var. Lütfen işaretli alanları düzeltin.\"\u001b[39m\nReceived: \u001b[31m\"\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]')\u001b[22m\n\u001b[2m    14 × locator resolved to <div aria-live=\"polite\"></div>\u001b[22m\n\u001b[2m       - unexpected value \"\"\u001b[22m\n\n    at D:\\Project\\SchemaForge\\e2e\\functional.spec.ts:469:32",
-                        "location": {
-                          "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
-                          "column": 32,
-                          "line": 469
-                        },
-                        "snippet": "  467 |     await preview(page).getByLabel('Başlangıç tarihi').fill('2025-06-01') // focus stays in the date field\n  468 |     await preview(page).getByRole('button', { name: 'Gönder (test)' }).click() // a single real mouse click\n> 469 |     await expect(result(page)).toHaveText('2 alanda hata var. Lütfen işaretli alanları düzeltin.')\n      |                                ^\n  470 |     await preview(page).getByLabel(/Ad Soyad/).fill('Ali')\n  471 |     await preview(page).getByRole('button', { name: 'Temizle' }).click()\n  472 |     await expect(preview(page).getByLabel(/Ad Soyad/)).toHaveValue('')"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
-                            "column": 32,
-                            "line": 469
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]')\nExpected: \u001b[32m\"2 alanda hata var. Lütfen işaretli alanları düzeltin.\"\u001b[39m\nReceived: \u001b[31m\"\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]')\u001b[22m\n\u001b[2m    14 × locator resolved to <div aria-live=\"polite\"></div>\u001b[22m\n\u001b[2m       - unexpected value \"\"\u001b[22m\n\n\n  467 |     await preview(page).getByLabel('Başlangıç tarihi').fill('2025-06-01') // focus stays in the date field\n  468 |     await preview(page).getByRole('button', { name: 'Gönder (test)' }).click() // a single real mouse click\n> 469 |     await expect(result(page)).toHaveText('2 alanda hata var. Lütfen işaretli alanları düzeltin.')\n      |                                ^\n  470 |     await preview(page).getByLabel(/Ad Soyad/).fill('Ali')\n  471 |     await preview(page).getByRole('button', { name: 'Temizle' }).click()\n  472 |     await expect(preview(page).getByLabel(/Ad Soyad/)).toHaveValue('')\n    at D:\\Project\\SchemaForge\\e2e\\functional.spec.ts:469:32"
-                        }
-                      ],
+                      "status": "passed",
+                      "duration": 789,
+                      "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:55:32.552Z",
+                      "startTime": "2026-10-19T15:09:03.155Z",
                       "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "D:\\Project\\SchemaForge\\test-results\\functional-desktop-F24-BUG-25fca-field-turns-invalid-on-blur-desktop\\error-context.md"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
-                        "column": 32,
-                        "line": 469
-                      }
+                      "attachments": []
                     }
                   ],
-                  "status": "unexpected"
+                  "status": "expected"
                 }
               ],
               "id": "011e9001526c2e3d879a-bff3794774816ff2cb5a",
               "file": "functional.spec.ts",
               "line": 462,
+              "column": 3
+            },
+            {
+              "title": "F25 JSON name: auto-sync with the label until edited by hand; invalid and duplicate names are flagged",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 879,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:09:03.954Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-fcada3e72e38ff9991bd",
+              "file": "functional.spec.ts",
+              "line": 475,
               "column": 3
             },
             {
@@ -1107,15 +991,15 @@
                   "projectName": "desktop",
                   "results": [
                     {
-                      "workerIndex": 5,
+                      "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1089,
+                      "duration": 915,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:55:39.223Z",
+                      "startTime": "2026-10-19T15:09:04.843Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1125,7 +1009,7 @@
               ],
               "id": "011e9001526c2e3d879a-a0c7235b0670f486982e",
               "file": "functional.spec.ts",
-              "line": 475,
+              "line": 497,
               "column": 3
             },
             {
@@ -1141,7 +1025,7 @@
                       "description": "BUG-005 known defect",
                       "location": {
                         "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
-                        "line": 496,
+                        "line": 518,
                         "column": 10
                       }
                     }
@@ -1151,41 +1035,41 @@
                   "projectName": "desktop",
                   "results": [
                     {
-                      "workerIndex": 5,
+                      "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 3389,
+                      "duration": 3077,
                       "error": {
                         "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]')\nExpected substring: \u001b[32m\"1 alanda hata var\"\u001b[39m\nReceived string:    \u001b[31m\"Form geçerli. Bu bir önizlemedir; veriler hiçbir yere gönderilmedi.\"\u001b[39m\nTimeout: 2000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]') with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]')\u001b[22m\n\u001b[2m    20 × locator resolved to <div aria-live=\"polite\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Form geçerli. Bu bir önizlemedir; veriler hiçbir yere gönderilmedi.\"\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]')\nExpected substring: \u001b[32m\"1 alanda hata var\"\u001b[39m\nReceived string:    \u001b[31m\"Form geçerli. Bu bir önizlemedir; veriler hiçbir yere gönderilmedi.\"\u001b[39m\nTimeout: 2000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]') with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]')\u001b[22m\n\u001b[2m    20 × locator resolved to <div aria-live=\"polite\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Form geçerli. Bu bir önizlemedir; veriler hiçbir yere gönderilmedi.\"\u001b[22m\n\n    at D:\\Project\\SchemaForge\\e2e\\functional.spec.ts:500:32",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]')\nExpected substring: \u001b[32m\"1 alanda hata var\"\u001b[39m\nReceived string:    \u001b[31m\"Form geçerli. Bu bir önizlemedir; veriler hiçbir yere gönderilmedi.\"\u001b[39m\nTimeout: 2000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]') with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]')\u001b[22m\n\u001b[2m    20 × locator resolved to <div aria-live=\"polite\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Form geçerli. Bu bir önizlemedir; veriler hiçbir yere gönderilmedi.\"\u001b[22m\n\n    at D:\\Project\\SchemaForge\\e2e\\functional.spec.ts:522:32",
                         "location": {
                           "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
                           "column": 32,
-                          "line": 500
+                          "line": 522
                         },
-                        "snippet": "  498 |     await preview(page).getByLabel('Yaş').pressSequentially('1-2')\n  499 |     await submit(page)\n> 500 |     await expect(result(page)).toContainText('1 alanda hata var', { timeout: 2000 })\n      |                                ^\n  501 |   })\n  502 |\n  503 |   test('K02 BUG-006 [MEDIUM] select option with surrounding spaces can never pass validation', async ({ page }) => {"
+                        "snippet": "  520 |     await preview(page).getByLabel('Yaş').pressSequentially('1-2')\n  521 |     await submit(page)\n> 522 |     await expect(result(page)).toContainText('1 alanda hata var', { timeout: 2000 })\n      |                                ^\n  523 |   })\n  524 |\n  525 |   test('K02 BUG-006 [MEDIUM] select option with surrounding spaces can never pass validation', async ({ page }) => {"
                       },
                       "errors": [
                         {
                           "location": {
                             "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
                             "column": 32,
-                            "line": 500
+                            "line": 522
                           },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]')\nExpected substring: \u001b[32m\"1 alanda hata var\"\u001b[39m\nReceived string:    \u001b[31m\"Form geçerli. Bu bir önizlemedir; veriler hiçbir yere gönderilmedi.\"\u001b[39m\nTimeout: 2000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]') with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]')\u001b[22m\n\u001b[2m    20 × locator resolved to <div aria-live=\"polite\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Form geçerli. Bu bir önizlemedir; veriler hiçbir yere gönderilmedi.\"\u001b[22m\n\n\n  498 |     await preview(page).getByLabel('Yaş').pressSequentially('1-2')\n  499 |     await submit(page)\n> 500 |     await expect(result(page)).toContainText('1 alanda hata var', { timeout: 2000 })\n      |                                ^\n  501 |   })\n  502 |\n  503 |   test('K02 BUG-006 [MEDIUM] select option with surrounding spaces can never pass validation', async ({ page }) => {\n    at D:\\Project\\SchemaForge\\e2e\\functional.spec.ts:500:32"
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]')\nExpected substring: \u001b[32m\"1 alanda hata var\"\u001b[39m\nReceived string:    \u001b[31m\"Form geçerli. Bu bir önizlemedir; veriler hiçbir yere gönderilmedi.\"\u001b[39m\nTimeout: 2000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]') with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]')\u001b[22m\n\u001b[2m    20 × locator resolved to <div aria-live=\"polite\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Form geçerli. Bu bir önizlemedir; veriler hiçbir yere gönderilmedi.\"\u001b[22m\n\n\n  520 |     await preview(page).getByLabel('Yaş').pressSequentially('1-2')\n  521 |     await submit(page)\n> 522 |     await expect(result(page)).toContainText('1 alanda hata var', { timeout: 2000 })\n      |                                ^\n  523 |   })\n  524 |\n  525 |   test('K02 BUG-006 [MEDIUM] select option with surrounding spaces can never pass validation', async ({ page }) => {\n    at D:\\Project\\SchemaForge\\e2e\\functional.spec.ts:522:32"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:55:40.521Z",
+                      "startTime": "2026-10-19T15:09:05.767Z",
                       "annotations": [
                         {
                           "type": "fail",
                           "description": "BUG-005 known defect",
                           "location": {
                             "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
-                            "line": 496,
+                            "line": 518,
                             "column": 10
                           }
                         }
@@ -1200,7 +1084,7 @@
                       "errorLocation": {
                         "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
                         "column": 32,
-                        "line": 500
+                        "line": 522
                       }
                     }
                   ],
@@ -1209,7 +1093,7 @@
               ],
               "id": "011e9001526c2e3d879a-0c21445eab4f1bc032ad",
               "file": "functional.spec.ts",
-              "line": 495,
+              "line": 517,
               "column": 3
             },
             {
@@ -1225,7 +1109,7 @@
                       "description": "BUG-006 known defect",
                       "location": {
                         "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
-                        "line": 504,
+                        "line": 526,
                         "column": 10
                       }
                     }
@@ -1235,41 +1119,41 @@
                   "projectName": "desktop",
                   "results": [
                     {
-                      "workerIndex": 5,
+                      "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 2890,
+                      "duration": 2788,
                       "error": {
                         "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]')\nExpected substring: \u001b[32m\"Form geçerli\"\u001b[39m\nReceived string:    \u001b[31m\"1 alanda hata var. Lütfen işaretli alanları düzeltin.\"\u001b[39m\nTimeout: 2000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]') with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]')\u001b[22m\n\u001b[2m    20 × locator resolved to <div aria-live=\"polite\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"1 alanda hata var. Lütfen işaretli alanları düzeltin.\"\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]')\nExpected substring: \u001b[32m\"Form geçerli\"\u001b[39m\nReceived string:    \u001b[31m\"1 alanda hata var. Lütfen işaretli alanları düzeltin.\"\u001b[39m\nTimeout: 2000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]') with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]')\u001b[22m\n\u001b[2m    20 × locator resolved to <div aria-live=\"polite\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"1 alanda hata var. Lütfen işaretli alanları düzeltin.\"\u001b[22m\n\n    at D:\\Project\\SchemaForge\\e2e\\functional.spec.ts:509:32",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]')\nExpected substring: \u001b[32m\"Form geçerli\"\u001b[39m\nReceived string:    \u001b[31m\"1 alanda hata var. Lütfen işaretli alanları düzeltin.\"\u001b[39m\nTimeout: 2000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]') with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]')\u001b[22m\n\u001b[2m    20 × locator resolved to <div aria-live=\"polite\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"1 alanda hata var. Lütfen işaretli alanları düzeltin.\"\u001b[22m\n\n    at D:\\Project\\SchemaForge\\e2e\\functional.spec.ts:531:32",
                         "location": {
                           "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
                           "column": 32,
-                          "line": 509
+                          "line": 531
                         },
-                        "snippet": "  507 |     await preview(page).getByLabel('Şehir').selectOption({ index: 1 })\n  508 |     await submit(page)\n> 509 |     await expect(result(page)).toContainText('Form geçerli', { timeout: 2000 })\n      |                                ^\n  510 |   })\n  511 |\n  512 |   test('K03 BUG-007 [LOW] preview keeps a stale error after the field is made optional', async ({ page }) => {"
+                        "snippet": "  529 |     await preview(page).getByLabel('Şehir').selectOption({ index: 1 })\n  530 |     await submit(page)\n> 531 |     await expect(result(page)).toContainText('Form geçerli', { timeout: 2000 })\n      |                                ^\n  532 |   })\n  533 |\n  534 |   test('K03 BUG-007 [LOW] preview keeps a stale error after the field is made optional', async ({ page }) => {"
                       },
                       "errors": [
                         {
                           "location": {
                             "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
                             "column": 32,
-                            "line": 509
+                            "line": 531
                           },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]')\nExpected substring: \u001b[32m\"Form geçerli\"\u001b[39m\nReceived string:    \u001b[31m\"1 alanda hata var. Lütfen işaretli alanları düzeltin.\"\u001b[39m\nTimeout: 2000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]') with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]')\u001b[22m\n\u001b[2m    20 × locator resolved to <div aria-live=\"polite\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"1 alanda hata var. Lütfen işaretli alanları düzeltin.\"\u001b[22m\n\n\n  507 |     await preview(page).getByLabel('Şehir').selectOption({ index: 1 })\n  508 |     await submit(page)\n> 509 |     await expect(result(page)).toContainText('Form geçerli', { timeout: 2000 })\n      |                                ^\n  510 |   })\n  511 |\n  512 |   test('K03 BUG-007 [LOW] preview keeps a stale error after the field is made optional', async ({ page }) => {\n    at D:\\Project\\SchemaForge\\e2e\\functional.spec.ts:509:32"
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]')\nExpected substring: \u001b[32m\"Form geçerli\"\u001b[39m\nReceived string:    \u001b[31m\"1 alanda hata var. Lütfen işaretli alanları düzeltin.\"\u001b[39m\nTimeout: 2000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]') with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]')\u001b[22m\n\u001b[2m    20 × locator resolved to <div aria-live=\"polite\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"1 alanda hata var. Lütfen işaretli alanları düzeltin.\"\u001b[22m\n\n\n  529 |     await preview(page).getByLabel('Şehir').selectOption({ index: 1 })\n  530 |     await submit(page)\n> 531 |     await expect(result(page)).toContainText('Form geçerli', { timeout: 2000 })\n      |                                ^\n  532 |   })\n  533 |\n  534 |   test('K03 BUG-007 [LOW] preview keeps a stale error after the field is made optional', async ({ page }) => {\n    at D:\\Project\\SchemaForge\\e2e\\functional.spec.ts:531:32"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:55:43.923Z",
+                      "startTime": "2026-10-19T15:09:08.857Z",
                       "annotations": [
                         {
                           "type": "fail",
                           "description": "BUG-006 known defect",
                           "location": {
                             "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
-                            "line": 504,
+                            "line": 526,
                             "column": 10
                           }
                         }
@@ -1284,7 +1168,7 @@
                       "errorLocation": {
                         "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
                         "column": 32,
-                        "line": 509
+                        "line": 531
                       }
                     }
                   ],
@@ -1293,7 +1177,7 @@
               ],
               "id": "011e9001526c2e3d879a-ab8627b4bd27f2496828",
               "file": "functional.spec.ts",
-              "line": 503,
+              "line": 525,
               "column": 3
             },
             {
@@ -1309,7 +1193,7 @@
                       "description": "BUG-007 known defect",
                       "location": {
                         "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
-                        "line": 513,
+                        "line": 535,
                         "column": 10
                       }
                     }
@@ -1319,41 +1203,41 @@
                   "projectName": "desktop",
                   "results": [
                     {
-                      "workerIndex": 5,
+                      "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 2894,
+                      "duration": 2869,
                       "error": {
                         "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('form', { name: 'Form önizlemesi' }).getByText('Bu alan zorunludur.')\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  2000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" getByRole('form', { name: 'Form önizlemesi' }).getByText('Bu alan zorunludur.') with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('form', { name: 'Form önizlemesi' }).getByText('Bu alan zorunludur.')\u001b[22m\n\u001b[2m    20 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('form', { name: 'Form önizlemesi' }).getByText('Bu alan zorunludur.')\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  2000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" getByRole('form', { name: 'Form önizlemesi' }).getByText('Bu alan zorunludur.') with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('form', { name: 'Form önizlemesi' }).getByText('Bu alan zorunludur.')\u001b[22m\n\u001b[2m    20 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n\n    at D:\\Project\\SchemaForge\\e2e\\functional.spec.ts:517:66",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('form', { name: 'Form önizlemesi' }).getByText('Bu alan zorunludur.')\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  2000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" getByRole('form', { name: 'Form önizlemesi' }).getByText('Bu alan zorunludur.') with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('form', { name: 'Form önizlemesi' }).getByText('Bu alan zorunludur.')\u001b[22m\n\u001b[2m    20 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n\n    at D:\\Project\\SchemaForge\\e2e\\functional.spec.ts:539:66",
                         "location": {
                           "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
                           "column": 66,
-                          "line": 517
+                          "line": 539
                         },
-                        "snippet": "  515 |     await submit(page)\n  516 |     await page.getByLabel('Zorunlu alan').uncheck()\n> 517 |     await expect(preview(page).getByText('Bu alan zorunludur.')).toHaveCount(0, { timeout: 2000 })\n      |                                                                  ^\n  518 |   })\n  519 |\n  520 |   test('K04 BUG-008 [LOW] export file name breaks the Turkish capital İ', async ({ page }) => {"
+                        "snippet": "  537 |     await submit(page)\n  538 |     await page.getByLabel('Zorunlu alan').uncheck()\n> 539 |     await expect(preview(page).getByText('Bu alan zorunludur.')).toHaveCount(0, { timeout: 2000 })\n      |                                                                  ^\n  540 |   })\n  541 |\n  542 |   test('K04 BUG-008 [LOW] export file name breaks the Turkish capital İ', async ({ page }) => {"
                       },
                       "errors": [
                         {
                           "location": {
                             "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
                             "column": 66,
-                            "line": 517
+                            "line": 539
                           },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('form', { name: 'Form önizlemesi' }).getByText('Bu alan zorunludur.')\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  2000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" getByRole('form', { name: 'Form önizlemesi' }).getByText('Bu alan zorunludur.') with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('form', { name: 'Form önizlemesi' }).getByText('Bu alan zorunludur.')\u001b[22m\n\u001b[2m    20 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n\n\n  515 |     await submit(page)\n  516 |     await page.getByLabel('Zorunlu alan').uncheck()\n> 517 |     await expect(preview(page).getByText('Bu alan zorunludur.')).toHaveCount(0, { timeout: 2000 })\n      |                                                                  ^\n  518 |   })\n  519 |\n  520 |   test('K04 BUG-008 [LOW] export file name breaks the Turkish capital İ', async ({ page }) => {\n    at D:\\Project\\SchemaForge\\e2e\\functional.spec.ts:517:66"
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('form', { name: 'Form önizlemesi' }).getByText('Bu alan zorunludur.')\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  2000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" getByRole('form', { name: 'Form önizlemesi' }).getByText('Bu alan zorunludur.') with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('form', { name: 'Form önizlemesi' }).getByText('Bu alan zorunludur.')\u001b[22m\n\u001b[2m    20 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n\n\n  537 |     await submit(page)\n  538 |     await page.getByLabel('Zorunlu alan').uncheck()\n> 539 |     await expect(preview(page).getByText('Bu alan zorunludur.')).toHaveCount(0, { timeout: 2000 })\n      |                                                                  ^\n  540 |   })\n  541 |\n  542 |   test('K04 BUG-008 [LOW] export file name breaks the Turkish capital İ', async ({ page }) => {\n    at D:\\Project\\SchemaForge\\e2e\\functional.spec.ts:539:66"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:55:46.825Z",
+                      "startTime": "2026-10-19T15:09:11.654Z",
                       "annotations": [
                         {
                           "type": "fail",
                           "description": "BUG-007 known defect",
                           "location": {
                             "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
-                            "line": 513,
+                            "line": 535,
                             "column": 10
                           }
                         }
@@ -1368,7 +1252,7 @@
                       "errorLocation": {
                         "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
                         "column": 66,
-                        "line": 517
+                        "line": 539
                       }
                     }
                   ],
@@ -1377,7 +1261,7 @@
               ],
               "id": "011e9001526c2e3d879a-9e0be49007721403bef8",
               "file": "functional.spec.ts",
-              "line": 512,
+              "line": 534,
               "column": 3
             },
             {
@@ -1393,7 +1277,7 @@
                       "description": "BUG-008 known defect",
                       "location": {
                         "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
-                        "line": 521,
+                        "line": 543,
                         "column": 10
                       }
                     }
@@ -1403,41 +1287,41 @@
                   "projectName": "desktop",
                   "results": [
                     {
-                      "workerIndex": 5,
+                      "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 2705,
+                      "duration": 3358,
                       "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog')\nTimeout: 2000ms\n\u001b[32m- Expected substring  -  1\u001b[39m\n\u001b[31m+ Received string     + 10\u001b[39m\n\n\u001b[32m- \u001b[7mi\u001b[27mletişim.schemaforge.json\u001b[39m\n\u001b[31m+ \u001b[7mJSON dışa aktarmai-\u001b[27mletişim.schemaforge.json\u001b[7m · 0 alan · biçim schemaforge.form v1✕{\u001b[27m\u001b[39m\n\u001b[31m+   \"format\": \"schemaforge.form\",\u001b[39m\n\u001b[31m+   \"version\": 1,\u001b[39m\n\u001b[31m+   \"exportedAt\": \"2026-10-19T14:55:50.414Z\",\u001b[39m\n\u001b[31m+   \"form\": {\u001b[39m\n\u001b[31m+     \"title\": \"İletişim\",\u001b[39m\n\u001b[31m+     \"description\": \"\",\u001b[39m\n\u001b[31m+     \"fields\": []\u001b[39m\n\u001b[31m+   }\u001b[39m\n\u001b[31m+ }Panoya kopyalaJSON indir\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('dialog') with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog')\u001b[22m\n\u001b[2m    20 × locator resolved to <div role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"export-title\" class=\"flex max-h-[90vh] w-full max-w-3xl flex-col rounded-2xl bg-white shadow-xl\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"JSON dışa aktarmai-letişim.schemaforge.json · 0 alan · biçim schemaforge.form v1✕{\u001b[22m\n\u001b[2m  \"format\": \"schemaforge.form\",\u001b[22m\n\u001b[2m  \"version\": 1,\u001b[22m\n\u001b[2m  \"exportedAt\": \"2026-10-19T14:55:50.414Z\",\u001b[22m\n\u001b[2m  \"form\": {\u001b[22m\n\u001b[2m    \"title\": \"İletişim\",\u001b[22m\n\u001b[2m    \"description\": \"\",\u001b[22m\n\u001b[2m    \"fields\": []\u001b[22m\n\u001b[2m  }\u001b[22m\n\u001b[2m}Panoya kopyalaJSON indir\"\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog')\nTimeout: 2000ms\n\u001b[32m- Expected substring  -  1\u001b[39m\n\u001b[31m+ Received string     + 10\u001b[39m\n\n\u001b[32m- \u001b[7mi\u001b[27mletişim.schemaforge.json\u001b[39m\n\u001b[31m+ \u001b[7mJSON dışa aktarmai-\u001b[27mletişim.schemaforge.json\u001b[7m · 0 alan · biçim schemaforge.form v1✕{\u001b[27m\u001b[39m\n\u001b[31m+   \"format\": \"schemaforge.form\",\u001b[39m\n\u001b[31m+   \"version\": 1,\u001b[39m\n\u001b[31m+   \"exportedAt\": \"2026-10-19T14:55:50.414Z\",\u001b[39m\n\u001b[31m+   \"form\": {\u001b[39m\n\u001b[31m+     \"title\": \"İletişim\",\u001b[39m\n\u001b[31m+     \"description\": \"\",\u001b[39m\n\u001b[31m+     \"fields\": []\u001b[39m\n\u001b[31m+   }\u001b[39m\n\u001b[31m+ }Panoya kopyalaJSON indir\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('dialog') with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog')\u001b[22m\n\u001b[2m    20 × locator resolved to <div role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"export-title\" class=\"flex max-h-[90vh] w-full max-w-3xl flex-col rounded-2xl bg-white shadow-xl\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"JSON dışa aktarmai-letişim.schemaforge.json · 0 alan · biçim schemaforge.form v1✕{\u001b[22m\n\u001b[2m  \"format\": \"schemaforge.form\",\u001b[22m\n\u001b[2m  \"version\": 1,\u001b[22m\n\u001b[2m  \"exportedAt\": \"2026-10-19T14:55:50.414Z\",\u001b[22m\n\u001b[2m  \"form\": {\u001b[22m\n\u001b[2m    \"title\": \"İletişim\",\u001b[22m\n\u001b[2m    \"description\": \"\",\u001b[22m\n\u001b[2m    \"fields\": []\u001b[22m\n\u001b[2m  }\u001b[22m\n\u001b[2m}Panoya kopyalaJSON indir\"\u001b[22m\n\n    at D:\\Project\\SchemaForge\\e2e\\functional.spec.ts:524:44",
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog')\nTimeout: 2000ms\n\u001b[32m- Expected substring  -  1\u001b[39m\n\u001b[31m+ Received string     + 10\u001b[39m\n\n\u001b[32m- \u001b[7mi\u001b[27mletişim.schemaforge.json\u001b[39m\n\u001b[31m+ \u001b[7mJSON dışa aktarmai-\u001b[27mletişim.schemaforge.json\u001b[7m · 0 alan · biçim schemaforge.form v1✕{\u001b[27m\u001b[39m\n\u001b[31m+   \"format\": \"schemaforge.form\",\u001b[39m\n\u001b[31m+   \"version\": 1,\u001b[39m\n\u001b[31m+   \"exportedAt\": \"2026-10-19T15:09:15.869Z\",\u001b[39m\n\u001b[31m+   \"form\": {\u001b[39m\n\u001b[31m+     \"title\": \"İletişim\",\u001b[39m\n\u001b[31m+     \"description\": \"\",\u001b[39m\n\u001b[31m+     \"fields\": []\u001b[39m\n\u001b[31m+   }\u001b[39m\n\u001b[31m+ }Panoya kopyalaJSON indir\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('dialog') with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog')\u001b[22m\n\u001b[2m    20 × locator resolved to <div role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"export-title\" class=\"flex max-h-[90vh] w-full max-w-3xl flex-col rounded-2xl bg-white shadow-xl\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"JSON dışa aktarmai-letişim.schemaforge.json · 0 alan · biçim schemaforge.form v1✕{\u001b[22m\n\u001b[2m  \"format\": \"schemaforge.form\",\u001b[22m\n\u001b[2m  \"version\": 1,\u001b[22m\n\u001b[2m  \"exportedAt\": \"2026-10-19T15:09:15.869Z\",\u001b[22m\n\u001b[2m  \"form\": {\u001b[22m\n\u001b[2m    \"title\": \"İletişim\",\u001b[22m\n\u001b[2m    \"description\": \"\",\u001b[22m\n\u001b[2m    \"fields\": []\u001b[22m\n\u001b[2m  }\u001b[22m\n\u001b[2m}Panoya kopyalaJSON indir\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog')\nTimeout: 2000ms\n\u001b[32m- Expected substring  -  1\u001b[39m\n\u001b[31m+ Received string     + 10\u001b[39m\n\n\u001b[32m- \u001b[7mi\u001b[27mletişim.schemaforge.json\u001b[39m\n\u001b[31m+ \u001b[7mJSON dışa aktarmai-\u001b[27mletişim.schemaforge.json\u001b[7m · 0 alan · biçim schemaforge.form v1✕{\u001b[27m\u001b[39m\n\u001b[31m+   \"format\": \"schemaforge.form\",\u001b[39m\n\u001b[31m+   \"version\": 1,\u001b[39m\n\u001b[31m+   \"exportedAt\": \"2026-10-19T15:09:15.869Z\",\u001b[39m\n\u001b[31m+   \"form\": {\u001b[39m\n\u001b[31m+     \"title\": \"İletişim\",\u001b[39m\n\u001b[31m+     \"description\": \"\",\u001b[39m\n\u001b[31m+     \"fields\": []\u001b[39m\n\u001b[31m+   }\u001b[39m\n\u001b[31m+ }Panoya kopyalaJSON indir\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('dialog') with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog')\u001b[22m\n\u001b[2m    20 × locator resolved to <div role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"export-title\" class=\"flex max-h-[90vh] w-full max-w-3xl flex-col rounded-2xl bg-white shadow-xl\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"JSON dışa aktarmai-letişim.schemaforge.json · 0 alan · biçim schemaforge.form v1✕{\u001b[22m\n\u001b[2m  \"format\": \"schemaforge.form\",\u001b[22m\n\u001b[2m  \"version\": 1,\u001b[22m\n\u001b[2m  \"exportedAt\": \"2026-10-19T15:09:15.869Z\",\u001b[22m\n\u001b[2m  \"form\": {\u001b[22m\n\u001b[2m    \"title\": \"İletişim\",\u001b[22m\n\u001b[2m    \"description\": \"\",\u001b[22m\n\u001b[2m    \"fields\": []\u001b[22m\n\u001b[2m  }\u001b[22m\n\u001b[2m}Panoya kopyalaJSON indir\"\u001b[22m\n\n    at D:\\Project\\SchemaForge\\e2e\\functional.spec.ts:546:44",
                         "location": {
                           "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
                           "column": 44,
-                          "line": 524
+                          "line": 546
                         },
-                        "snippet": "  522 |     await page.goto('/'); await newForm(page, 'İletişim')\n  523 |     await page.getByRole('button', { name: \"JSON'u dışa aktar\" }).click()\n> 524 |     await expect(page.getByRole('dialog')).toContainText('iletişim.schemaforge.json', { timeout: 2000 })\n      |                                            ^\n  525 |   })\n  526 |\n  527 |   test('K05 BUG-009 [LOW] Tab can move focus out of an open modal dialog', async ({ page }) => {"
+                        "snippet": "  544 |     await page.goto('/'); await newForm(page, 'İletişim')\n  545 |     await page.getByRole('button', { name: \"JSON'u dışa aktar\" }).click()\n> 546 |     await expect(page.getByRole('dialog')).toContainText('iletişim.schemaforge.json', { timeout: 2000 })\n      |                                            ^\n  547 |   })\n  548 |\n  549 |   test('K05 BUG-009 [LOW] Tab can move focus out of an open modal dialog', async ({ page }) => {"
                       },
                       "errors": [
                         {
                           "location": {
                             "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
                             "column": 44,
-                            "line": 524
+                            "line": 546
                           },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog')\nTimeout: 2000ms\n\u001b[32m- Expected substring  -  1\u001b[39m\n\u001b[31m+ Received string     + 10\u001b[39m\n\n\u001b[32m- \u001b[7mi\u001b[27mletişim.schemaforge.json\u001b[39m\n\u001b[31m+ \u001b[7mJSON dışa aktarmai-\u001b[27mletişim.schemaforge.json\u001b[7m · 0 alan · biçim schemaforge.form v1✕{\u001b[27m\u001b[39m\n\u001b[31m+   \"format\": \"schemaforge.form\",\u001b[39m\n\u001b[31m+   \"version\": 1,\u001b[39m\n\u001b[31m+   \"exportedAt\": \"2026-10-19T14:55:50.414Z\",\u001b[39m\n\u001b[31m+   \"form\": {\u001b[39m\n\u001b[31m+     \"title\": \"İletişim\",\u001b[39m\n\u001b[31m+     \"description\": \"\",\u001b[39m\n\u001b[31m+     \"fields\": []\u001b[39m\n\u001b[31m+   }\u001b[39m\n\u001b[31m+ }Panoya kopyalaJSON indir\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('dialog') with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog')\u001b[22m\n\u001b[2m    20 × locator resolved to <div role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"export-title\" class=\"flex max-h-[90vh] w-full max-w-3xl flex-col rounded-2xl bg-white shadow-xl\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"JSON dışa aktarmai-letişim.schemaforge.json · 0 alan · biçim schemaforge.form v1✕{\u001b[22m\n\u001b[2m  \"format\": \"schemaforge.form\",\u001b[22m\n\u001b[2m  \"version\": 1,\u001b[22m\n\u001b[2m  \"exportedAt\": \"2026-10-19T14:55:50.414Z\",\u001b[22m\n\u001b[2m  \"form\": {\u001b[22m\n\u001b[2m    \"title\": \"İletişim\",\u001b[22m\n\u001b[2m    \"description\": \"\",\u001b[22m\n\u001b[2m    \"fields\": []\u001b[22m\n\u001b[2m  }\u001b[22m\n\u001b[2m}Panoya kopyalaJSON indir\"\u001b[22m\n\n\n  522 |     await page.goto('/'); await newForm(page, 'İletişim')\n  523 |     await page.getByRole('button', { name: \"JSON'u dışa aktar\" }).click()\n> 524 |     await expect(page.getByRole('dialog')).toContainText('iletişim.schemaforge.json', { timeout: 2000 })\n      |                                            ^\n  525 |   })\n  526 |\n  527 |   test('K05 BUG-009 [LOW] Tab can move focus out of an open modal dialog', async ({ page }) => {\n    at D:\\Project\\SchemaForge\\e2e\\functional.spec.ts:524:44"
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog')\nTimeout: 2000ms\n\u001b[32m- Expected substring  -  1\u001b[39m\n\u001b[31m+ Received string     + 10\u001b[39m\n\n\u001b[32m- \u001b[7mi\u001b[27mletişim.schemaforge.json\u001b[39m\n\u001b[31m+ \u001b[7mJSON dışa aktarmai-\u001b[27mletişim.schemaforge.json\u001b[7m · 0 alan · biçim schemaforge.form v1✕{\u001b[27m\u001b[39m\n\u001b[31m+   \"format\": \"schemaforge.form\",\u001b[39m\n\u001b[31m+   \"version\": 1,\u001b[39m\n\u001b[31m+   \"exportedAt\": \"2026-10-19T15:09:15.869Z\",\u001b[39m\n\u001b[31m+   \"form\": {\u001b[39m\n\u001b[31m+     \"title\": \"İletişim\",\u001b[39m\n\u001b[31m+     \"description\": \"\",\u001b[39m\n\u001b[31m+     \"fields\": []\u001b[39m\n\u001b[31m+   }\u001b[39m\n\u001b[31m+ }Panoya kopyalaJSON indir\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('dialog') with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog')\u001b[22m\n\u001b[2m    20 × locator resolved to <div role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"export-title\" class=\"flex max-h-[90vh] w-full max-w-3xl flex-col rounded-2xl bg-white shadow-xl\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"JSON dışa aktarmai-letişim.schemaforge.json · 0 alan · biçim schemaforge.form v1✕{\u001b[22m\n\u001b[2m  \"format\": \"schemaforge.form\",\u001b[22m\n\u001b[2m  \"version\": 1,\u001b[22m\n\u001b[2m  \"exportedAt\": \"2026-10-19T15:09:15.869Z\",\u001b[22m\n\u001b[2m  \"form\": {\u001b[22m\n\u001b[2m    \"title\": \"İletişim\",\u001b[22m\n\u001b[2m    \"description\": \"\",\u001b[22m\n\u001b[2m    \"fields\": []\u001b[22m\n\u001b[2m  }\u001b[22m\n\u001b[2m}Panoya kopyalaJSON indir\"\u001b[22m\n\n\n  544 |     await page.goto('/'); await newForm(page, 'İletişim')\n  545 |     await page.getByRole('button', { name: \"JSON'u dışa aktar\" }).click()\n> 546 |     await expect(page.getByRole('dialog')).toContainText('iletişim.schemaforge.json', { timeout: 2000 })\n      |                                            ^\n  547 |   })\n  548 |\n  549 |   test('K05 BUG-009 [LOW] Tab can move focus out of an open modal dialog', async ({ page }) => {\n    at D:\\Project\\SchemaForge\\e2e\\functional.spec.ts:546:44"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:55:49.731Z",
+                      "startTime": "2026-10-19T15:09:14.533Z",
                       "annotations": [
                         {
                           "type": "fail",
                           "description": "BUG-008 known defect",
                           "location": {
                             "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
-                            "line": 521,
+                            "line": 543,
                             "column": 10
                           }
                         }
@@ -1452,7 +1336,7 @@
                       "errorLocation": {
                         "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
                         "column": 44,
-                        "line": 524
+                        "line": 546
                       }
                     }
                   ],
@@ -1461,7 +1345,7 @@
               ],
               "id": "011e9001526c2e3d879a-9b8799a46f19b5fefb24",
               "file": "functional.spec.ts",
-              "line": 520,
+              "line": 542,
               "column": 3
             },
             {
@@ -1477,7 +1361,7 @@
                       "description": "BUG-009 known defect",
                       "location": {
                         "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
-                        "line": 528,
+                        "line": 550,
                         "column": 10
                       }
                     }
@@ -1487,41 +1371,41 @@
                   "projectName": "desktop",
                   "results": [
                     {
-                      "workerIndex": 5,
+                      "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 852,
+                      "duration": 972,
                       "error": {
                         "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at D:\\Project\\SchemaForge\\e2e\\functional.spec.ts:532:98",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at D:\\Project\\SchemaForge\\e2e\\functional.spec.ts:554:98",
                         "location": {
                           "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
                           "column": 98,
-                          "line": 532
+                          "line": 554
                         },
-                        "snippet": "  530 |     await page.getByRole('button', { name: \"JSON'u dışa aktar\" }).click()\n  531 |     for (let i = 0; i < 6; i++) await page.keyboard.press('Tab')\n> 532 |     expect(await page.evaluate(() => Boolean(document.activeElement?.closest('[role=dialog]')))).toBe(true)\n      |                                                                                                  ^\n  533 |   })\n  534 |\n  535 |   test('K06 BUG-010 [LOW] a form with an empty title gets nameless card buttons', async ({ page }) => {"
+                        "snippet": "  552 |     await page.getByRole('button', { name: \"JSON'u dışa aktar\" }).click()\n  553 |     for (let i = 0; i < 6; i++) await page.keyboard.press('Tab')\n> 554 |     expect(await page.evaluate(() => Boolean(document.activeElement?.closest('[role=dialog]')))).toBe(true)\n      |                                                                                                  ^\n  555 |   })\n  556 |\n  557 |   test('K06 BUG-010 [LOW] a form with an empty title gets nameless card buttons', async ({ page }) => {"
                       },
                       "errors": [
                         {
                           "location": {
                             "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
                             "column": 98,
-                            "line": 532
+                            "line": 554
                           },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n  530 |     await page.getByRole('button', { name: \"JSON'u dışa aktar\" }).click()\n  531 |     for (let i = 0; i < 6; i++) await page.keyboard.press('Tab')\n> 532 |     expect(await page.evaluate(() => Boolean(document.activeElement?.closest('[role=dialog]')))).toBe(true)\n      |                                                                                                  ^\n  533 |   })\n  534 |\n  535 |   test('K06 BUG-010 [LOW] a form with an empty title gets nameless card buttons', async ({ page }) => {\n    at D:\\Project\\SchemaForge\\e2e\\functional.spec.ts:532:98"
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n  552 |     await page.getByRole('button', { name: \"JSON'u dışa aktar\" }).click()\n  553 |     for (let i = 0; i < 6; i++) await page.keyboard.press('Tab')\n> 554 |     expect(await page.evaluate(() => Boolean(document.activeElement?.closest('[role=dialog]')))).toBe(true)\n      |                                                                                                  ^\n  555 |   })\n  556 |\n  557 |   test('K06 BUG-010 [LOW] a form with an empty title gets nameless card buttons', async ({ page }) => {\n    at D:\\Project\\SchemaForge\\e2e\\functional.spec.ts:554:98"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:55:52.450Z",
+                      "startTime": "2026-10-19T15:09:17.902Z",
                       "annotations": [
                         {
                           "type": "fail",
                           "description": "BUG-009 known defect",
                           "location": {
                             "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
-                            "line": 528,
+                            "line": 550,
                             "column": 10
                           }
                         }
@@ -1536,7 +1420,7 @@
                       "errorLocation": {
                         "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
                         "column": 98,
-                        "line": 532
+                        "line": 554
                       }
                     }
                   ],
@@ -1545,7 +1429,7 @@
               ],
               "id": "011e9001526c2e3d879a-bea4cd1e65c10a8b7b79",
               "file": "functional.spec.ts",
-              "line": 527,
+              "line": 549,
               "column": 3
             },
             {
@@ -1561,7 +1445,7 @@
                       "description": "BUG-010 known defect",
                       "location": {
                         "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
-                        "line": 536,
+                        "line": 558,
                         "column": 10
                       }
                     }
@@ -1571,41 +1455,41 @@
                   "projectName": "desktop",
                   "results": [
                     {
-                      "workerIndex": 5,
+                      "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 2796,
+                      "duration": 2936,
                       "error": {
                         "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('button', { name: 'Adsız form formunu sil' })\nExpected: visible\nTimeout: 2000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('button', { name: 'Adsız form formunu sil' }) with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: 'Adsız form formunu sil' })\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('button', { name: 'Adsız form formunu sil' })\nExpected: visible\nTimeout: 2000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('button', { name: 'Adsız form formunu sil' }) with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: 'Adsız form formunu sil' })\u001b[22m\n\n    at D:\\Project\\SchemaForge\\e2e\\functional.spec.ts:538:80",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('button', { name: 'Adsız form formunu sil' })\nExpected: visible\nTimeout: 2000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('button', { name: 'Adsız form formunu sil' }) with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: 'Adsız form formunu sil' })\u001b[22m\n\n    at D:\\Project\\SchemaForge\\e2e\\functional.spec.ts:560:80",
                         "location": {
                           "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
                           "column": 80,
-                          "line": 538
+                          "line": 560
                         },
-                        "snippet": "  536 |     test.fail(true, 'BUG-010 known defect')\n  537 |     await page.goto('/'); await newForm(page, ''); await toList(page)\n> 538 |     await expect(page.getByRole('button', { name: 'Adsız form formunu sil' })).toBeVisible({ timeout: 2000 })\n      |                                                                                ^\n  539 |   })\n  540 | })\n  541 |"
+                        "snippet": "  558 |     test.fail(true, 'BUG-010 known defect')\n  559 |     await page.goto('/'); await newForm(page, ''); await toList(page)\n> 560 |     await expect(page.getByRole('button', { name: 'Adsız form formunu sil' })).toBeVisible({ timeout: 2000 })\n      |                                                                                ^\n  561 |   })\n  562 | })\n  563 |"
                       },
                       "errors": [
                         {
                           "location": {
                             "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
                             "column": 80,
-                            "line": 538
+                            "line": 560
                           },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('button', { name: 'Adsız form formunu sil' })\nExpected: visible\nTimeout: 2000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('button', { name: 'Adsız form formunu sil' }) with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: 'Adsız form formunu sil' })\u001b[22m\n\n\n  536 |     test.fail(true, 'BUG-010 known defect')\n  537 |     await page.goto('/'); await newForm(page, ''); await toList(page)\n> 538 |     await expect(page.getByRole('button', { name: 'Adsız form formunu sil' })).toBeVisible({ timeout: 2000 })\n      |                                                                                ^\n  539 |   })\n  540 | })\n  541 |\n    at D:\\Project\\SchemaForge\\e2e\\functional.spec.ts:538:80"
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('button', { name: 'Adsız form formunu sil' })\nExpected: visible\nTimeout: 2000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('button', { name: 'Adsız form formunu sil' }) with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: 'Adsız form formunu sil' })\u001b[22m\n\n\n  558 |     test.fail(true, 'BUG-010 known defect')\n  559 |     await page.goto('/'); await newForm(page, ''); await toList(page)\n> 560 |     await expect(page.getByRole('button', { name: 'Adsız form formunu sil' })).toBeVisible({ timeout: 2000 })\n      |                                                                                ^\n  561 |   })\n  562 | })\n  563 |\n    at D:\\Project\\SchemaForge\\e2e\\functional.spec.ts:560:80"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:55:53.313Z",
+                      "startTime": "2026-10-19T15:09:18.882Z",
                       "annotations": [
                         {
                           "type": "fail",
                           "description": "BUG-010 known defect",
                           "location": {
                             "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
-                            "line": 536,
+                            "line": 558,
                             "column": 10
                           }
                         }
@@ -1620,7 +1504,7 @@
                       "errorLocation": {
                         "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
                         "column": 80,
-                        "line": 538
+                        "line": 560
                       }
                     }
                   ],
@@ -1629,7 +1513,7 @@
               ],
               "id": "011e9001526c2e3d879a-a1c825d570f61c86b20b",
               "file": "functional.spec.ts",
-              "line": 535,
+              "line": 557,
               "column": 3
             },
             {
@@ -1655,15 +1539,15 @@
                   "projectName": "mobile",
                   "results": [
                     {
-                      "workerIndex": 7,
+                      "workerIndex": 1,
                       "parallelIndex": 0,
                       "status": "skipped",
-                      "duration": 164,
+                      "duration": 160,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:56:12.694Z",
+                      "startTime": "2026-10-19T15:09:31.514Z",
                       "annotations": [
                         {
                           "type": "skip",
@@ -1709,15 +1593,15 @@
                   "projectName": "mobile",
                   "results": [
                     {
-                      "workerIndex": 7,
+                      "workerIndex": 1,
                       "parallelIndex": 0,
                       "status": "skipped",
-                      "duration": 93,
+                      "duration": 98,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:56:13.075Z",
+                      "startTime": "2026-10-19T15:09:31.893Z",
                       "annotations": [
                         {
                           "type": "skip",
@@ -1763,15 +1647,15 @@
                   "projectName": "mobile",
                   "results": [
                     {
-                      "workerIndex": 7,
+                      "workerIndex": 1,
                       "parallelIndex": 0,
                       "status": "skipped",
-                      "duration": 102,
+                      "duration": 99,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:56:13.178Z",
+                      "startTime": "2026-10-19T15:09:32.000Z",
                       "annotations": [
                         {
                           "type": "skip",
@@ -1817,15 +1701,15 @@
                   "projectName": "mobile",
                   "results": [
                     {
-                      "workerIndex": 7,
+                      "workerIndex": 1,
                       "parallelIndex": 0,
                       "status": "skipped",
-                      "duration": 100,
+                      "duration": 89,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:56:13.289Z",
+                      "startTime": "2026-10-19T15:09:32.107Z",
                       "annotations": [
                         {
                           "type": "skip",
@@ -1871,15 +1755,15 @@
                   "projectName": "mobile",
                   "results": [
                     {
-                      "workerIndex": 7,
+                      "workerIndex": 1,
                       "parallelIndex": 0,
                       "status": "skipped",
-                      "duration": 103,
+                      "duration": 100,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:56:13.397Z",
+                      "startTime": "2026-10-19T15:09:32.203Z",
                       "annotations": [
                         {
                           "type": "skip",
@@ -1925,15 +1809,15 @@
                   "projectName": "mobile",
                   "results": [
                     {
-                      "workerIndex": 7,
+                      "workerIndex": 1,
                       "parallelIndex": 0,
                       "status": "skipped",
-                      "duration": 106,
+                      "duration": 98,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:56:13.507Z",
+                      "startTime": "2026-10-19T15:09:32.311Z",
                       "annotations": [
                         {
                           "type": "skip",
@@ -1979,15 +1863,15 @@
                   "projectName": "mobile",
                   "results": [
                     {
-                      "workerIndex": 7,
+                      "workerIndex": 1,
                       "parallelIndex": 0,
                       "status": "skipped",
-                      "duration": 100,
+                      "duration": 95,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:56:13.620Z",
+                      "startTime": "2026-10-19T15:09:32.415Z",
                       "annotations": [
                         {
                           "type": "skip",
@@ -2033,15 +1917,15 @@
                   "projectName": "mobile",
                   "results": [
                     {
-                      "workerIndex": 7,
+                      "workerIndex": 1,
                       "parallelIndex": 0,
                       "status": "skipped",
-                      "duration": 99,
+                      "duration": 100,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:56:13.727Z",
+                      "startTime": "2026-10-19T15:09:32.518Z",
                       "annotations": [
                         {
                           "type": "skip",
@@ -2087,15 +1971,15 @@
                   "projectName": "mobile",
                   "results": [
                     {
-                      "workerIndex": 7,
+                      "workerIndex": 1,
                       "parallelIndex": 0,
                       "status": "skipped",
-                      "duration": 102,
+                      "duration": 111,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:56:13.833Z",
+                      "startTime": "2026-10-19T15:09:32.625Z",
                       "annotations": [
                         {
                           "type": "skip",
@@ -2141,15 +2025,15 @@
                   "projectName": "mobile",
                   "results": [
                     {
-                      "workerIndex": 7,
+                      "workerIndex": 1,
                       "parallelIndex": 0,
                       "status": "skipped",
-                      "duration": 97,
+                      "duration": 94,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:56:13.943Z",
+                      "startTime": "2026-10-19T15:09:32.744Z",
                       "annotations": [
                         {
                           "type": "skip",
@@ -2195,15 +2079,15 @@
                   "projectName": "mobile",
                   "results": [
                     {
-                      "workerIndex": 7,
+                      "workerIndex": 1,
                       "parallelIndex": 0,
                       "status": "skipped",
-                      "duration": 102,
+                      "duration": 99,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:56:14.048Z",
+                      "startTime": "2026-10-19T15:09:32.846Z",
                       "annotations": [
                         {
                           "type": "skip",
@@ -2249,15 +2133,15 @@
                   "projectName": "mobile",
                   "results": [
                     {
-                      "workerIndex": 7,
+                      "workerIndex": 1,
                       "parallelIndex": 0,
                       "status": "skipped",
-                      "duration": 92,
+                      "duration": 94,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:56:14.157Z",
+                      "startTime": "2026-10-19T15:09:32.953Z",
                       "annotations": [
                         {
                           "type": "skip",
@@ -2303,15 +2187,15 @@
                   "projectName": "mobile",
                   "results": [
                     {
-                      "workerIndex": 7,
+                      "workerIndex": 1,
                       "parallelIndex": 0,
                       "status": "skipped",
-                      "duration": 95,
+                      "duration": 94,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:56:14.256Z",
+                      "startTime": "2026-10-19T15:09:33.054Z",
                       "annotations": [
                         {
                           "type": "skip",
@@ -2357,15 +2241,15 @@
                   "projectName": "mobile",
                   "results": [
                     {
-                      "workerIndex": 7,
+                      "workerIndex": 1,
                       "parallelIndex": 0,
                       "status": "skipped",
-                      "duration": 94,
+                      "duration": 90,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:56:14.361Z",
+                      "startTime": "2026-10-19T15:09:33.155Z",
                       "annotations": [
                         {
                           "type": "skip",
@@ -2411,15 +2295,15 @@
                   "projectName": "mobile",
                   "results": [
                     {
-                      "workerIndex": 7,
+                      "workerIndex": 1,
                       "parallelIndex": 0,
                       "status": "skipped",
-                      "duration": 102,
+                      "duration": 94,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:56:14.463Z",
+                      "startTime": "2026-10-19T15:09:33.254Z",
                       "annotations": [
                         {
                           "type": "skip",
@@ -2465,15 +2349,15 @@
                   "projectName": "mobile",
                   "results": [
                     {
-                      "workerIndex": 7,
+                      "workerIndex": 1,
                       "parallelIndex": 0,
                       "status": "skipped",
-                      "duration": 98,
+                      "duration": 96,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:56:14.573Z",
+                      "startTime": "2026-10-19T15:09:33.354Z",
                       "annotations": [
                         {
                           "type": "skip",
@@ -2519,15 +2403,15 @@
                   "projectName": "mobile",
                   "results": [
                     {
-                      "workerIndex": 7,
+                      "workerIndex": 1,
                       "parallelIndex": 0,
                       "status": "skipped",
-                      "duration": 101,
+                      "duration": 94,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:56:14.678Z",
+                      "startTime": "2026-10-19T15:09:33.457Z",
                       "annotations": [
                         {
                           "type": "skip",
@@ -2573,15 +2457,15 @@
                   "projectName": "mobile",
                   "results": [
                     {
-                      "workerIndex": 7,
+                      "workerIndex": 1,
                       "parallelIndex": 0,
                       "status": "skipped",
-                      "duration": 114,
+                      "duration": 93,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:56:14.788Z",
+                      "startTime": "2026-10-19T15:09:33.556Z",
                       "annotations": [
                         {
                           "type": "skip",
@@ -2627,15 +2511,15 @@
                   "projectName": "mobile",
                   "results": [
                     {
-                      "workerIndex": 7,
+                      "workerIndex": 1,
                       "parallelIndex": 0,
                       "status": "skipped",
-                      "duration": 92,
+                      "duration": 95,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:56:14.910Z",
+                      "startTime": "2026-10-19T15:09:33.655Z",
                       "annotations": [
                         {
                           "type": "skip",
@@ -2681,15 +2565,15 @@
                   "projectName": "mobile",
                   "results": [
                     {
-                      "workerIndex": 7,
+                      "workerIndex": 1,
                       "parallelIndex": 0,
                       "status": "skipped",
-                      "duration": 106,
+                      "duration": 95,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:56:15.008Z",
+                      "startTime": "2026-10-19T15:09:33.757Z",
                       "annotations": [
                         {
                           "type": "skip",
@@ -2735,15 +2619,15 @@
                   "projectName": "mobile",
                   "results": [
                     {
-                      "workerIndex": 7,
+                      "workerIndex": 1,
                       "parallelIndex": 0,
                       "status": "skipped",
-                      "duration": 92,
+                      "duration": 95,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:56:15.120Z",
+                      "startTime": "2026-10-19T15:09:33.858Z",
                       "annotations": [
                         {
                           "type": "skip",
@@ -2789,15 +2673,15 @@
                   "projectName": "mobile",
                   "results": [
                     {
-                      "workerIndex": 7,
+                      "workerIndex": 1,
                       "parallelIndex": 0,
                       "status": "skipped",
-                      "duration": 90,
+                      "duration": 98,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:56:15.218Z",
+                      "startTime": "2026-10-19T15:09:33.959Z",
                       "annotations": [
                         {
                           "type": "skip",
@@ -2843,15 +2727,15 @@
                   "projectName": "mobile",
                   "results": [
                     {
-                      "workerIndex": 7,
+                      "workerIndex": 1,
                       "parallelIndex": 0,
                       "status": "skipped",
-                      "duration": 97,
+                      "duration": 91,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:56:15.314Z",
+                      "startTime": "2026-10-19T15:09:34.063Z",
                       "annotations": [
                         {
                           "type": "skip",
@@ -2872,6 +2756,60 @@
               "id": "011e9001526c2e3d879a-0a82f2807ea64566c66b",
               "file": "functional.spec.ts",
               "line": 462,
+              "column": 3
+            },
+            {
+              "title": "F25 JSON name: auto-sync with the label until edited by hand; invalid and duplicate names are flagged",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 89,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:09:34.163Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-9795888f0f4a19bb9124",
+              "file": "functional.spec.ts",
+              "line": 475,
               "column": 3
             },
             {
@@ -2897,15 +2835,15 @@
                   "projectName": "mobile",
                   "results": [
                     {
-                      "workerIndex": 7,
+                      "workerIndex": 1,
                       "parallelIndex": 0,
                       "status": "skipped",
-                      "duration": 93,
+                      "duration": 90,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:56:15.421Z",
+                      "startTime": "2026-10-19T15:09:34.263Z",
                       "annotations": [
                         {
                           "type": "skip",
@@ -2925,7 +2863,7 @@
               ],
               "id": "011e9001526c2e3d879a-da5fb1c8ace75ac4f637",
               "file": "functional.spec.ts",
-              "line": 475,
+              "line": 497,
               "column": 3
             },
             {
@@ -2951,15 +2889,15 @@
                   "projectName": "mobile",
                   "results": [
                     {
-                      "workerIndex": 7,
+                      "workerIndex": 1,
                       "parallelIndex": 0,
                       "status": "skipped",
-                      "duration": 101,
+                      "duration": 86,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:56:15.527Z",
+                      "startTime": "2026-10-19T15:09:34.365Z",
                       "annotations": [
                         {
                           "type": "skip",
@@ -2979,7 +2917,7 @@
               ],
               "id": "011e9001526c2e3d879a-395cfe785d97c04ecbbb",
               "file": "functional.spec.ts",
-              "line": 495,
+              "line": 517,
               "column": 3
             },
             {
@@ -3005,15 +2943,15 @@
                   "projectName": "mobile",
                   "results": [
                     {
-                      "workerIndex": 7,
+                      "workerIndex": 1,
                       "parallelIndex": 0,
                       "status": "skipped",
-                      "duration": 97,
+                      "duration": 96,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:56:15.639Z",
+                      "startTime": "2026-10-19T15:09:34.461Z",
                       "annotations": [
                         {
                           "type": "skip",
@@ -3033,7 +2971,7 @@
               ],
               "id": "011e9001526c2e3d879a-09c5bf7671978b73ca21",
               "file": "functional.spec.ts",
-              "line": 503,
+              "line": 525,
               "column": 3
             },
             {
@@ -3059,7 +2997,7 @@
                   "projectName": "mobile",
                   "results": [
                     {
-                      "workerIndex": 7,
+                      "workerIndex": 1,
                       "parallelIndex": 0,
                       "status": "skipped",
                       "duration": 112,
@@ -3067,7 +3005,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:56:15.749Z",
+                      "startTime": "2026-10-19T15:09:34.566Z",
                       "annotations": [
                         {
                           "type": "skip",
@@ -3087,7 +3025,7 @@
               ],
               "id": "011e9001526c2e3d879a-4b0c2dae3c559590777c",
               "file": "functional.spec.ts",
-              "line": 512,
+              "line": 534,
               "column": 3
             },
             {
@@ -3113,15 +3051,15 @@
                   "projectName": "mobile",
                   "results": [
                     {
-                      "workerIndex": 7,
+                      "workerIndex": 1,
                       "parallelIndex": 0,
                       "status": "skipped",
-                      "duration": 117,
+                      "duration": 129,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:56:15.872Z",
+                      "startTime": "2026-10-19T15:09:34.689Z",
                       "annotations": [
                         {
                           "type": "skip",
@@ -3141,7 +3079,7 @@
               ],
               "id": "011e9001526c2e3d879a-1222aebfef2fb9eb33cb",
               "file": "functional.spec.ts",
-              "line": 520,
+              "line": 542,
               "column": 3
             },
             {
@@ -3167,15 +3105,15 @@
                   "projectName": "mobile",
                   "results": [
                     {
-                      "workerIndex": 7,
+                      "workerIndex": 1,
                       "parallelIndex": 0,
                       "status": "skipped",
-                      "duration": 114,
+                      "duration": 129,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:56:16.000Z",
+                      "startTime": "2026-10-19T15:09:34.827Z",
                       "annotations": [
                         {
                           "type": "skip",
@@ -3195,7 +3133,7 @@
               ],
               "id": "011e9001526c2e3d879a-53b5e111863cfff2c23c",
               "file": "functional.spec.ts",
-              "line": 527,
+              "line": 549,
               "column": 3
             },
             {
@@ -3221,15 +3159,15 @@
                   "projectName": "mobile",
                   "results": [
                     {
-                      "workerIndex": 7,
+                      "workerIndex": 1,
                       "parallelIndex": 0,
                       "status": "skipped",
-                      "duration": 114,
+                      "duration": 124,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:56:16.125Z",
+                      "startTime": "2026-10-19T15:09:34.967Z",
                       "annotations": [
                         {
                           "type": "skip",
@@ -3249,7 +3187,7 @@
               ],
               "id": "011e9001526c2e3d879a-3bf7b8f9f969688c2e62",
               "file": "functional.spec.ts",
-              "line": 535,
+              "line": 557,
               "column": 3
             }
           ]
@@ -3257,7 +3195,7 @@
         {
           "title": "scenarios",
           "file": "functional.spec.ts",
-          "line": 542,
+          "line": 564,
           "column": 6,
           "specs": [
             {
@@ -3273,15 +3211,15 @@
                   "projectName": "desktop",
                   "results": [
                     {
-                      "workerIndex": 5,
+                      "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2433,
+                      "duration": 1584,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:55:56.132Z",
+                      "startTime": "2026-10-19T15:09:21.828Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3291,12 +3229,12 @@
               ],
               "id": "011e9001526c2e3d879a-ef0899f803ec248cdf2c",
               "file": "functional.spec.ts",
-              "line": 545,
+              "line": 567,
               "column": 3
             },
             {
               "title": "Scenario B: registration form with 6 field types — invalid data, edit the schema, test again",
-              "ok": false,
+              "ok": true,
               "tags": [],
               "tests": [
                 {
@@ -3307,55 +3245,25 @@
                   "projectName": "desktop",
                   "results": [
                     {
-                      "workerIndex": 5,
+                      "workerIndex": 0,
                       "parallelIndex": 0,
-                      "status": "failed",
-                      "duration": 6084,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]')\nExpected substring: \u001b[32m\"6 alanda hata var\"\u001b[39m\nReceived string:    \u001b[31m\"\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]')\u001b[22m\n\u001b[2m    14 × locator resolved to <div aria-live=\"polite\"></div>\u001b[22m\n\u001b[2m       - unexpected value \"\"\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]')\nExpected substring: \u001b[32m\"6 alanda hata var\"\u001b[39m\nReceived string:    \u001b[31m\"\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]')\u001b[22m\n\u001b[2m    14 × locator resolved to <div aria-live=\"polite\"></div>\u001b[22m\n\u001b[2m       - unexpected value \"\"\u001b[22m\n\n    at D:\\Project\\SchemaForge\\e2e\\functional.spec.ts:594:32",
-                        "location": {
-                          "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
-                          "column": 32,
-                          "line": 594
-                        },
-                        "snippet": "  592 |     await pv.getByLabel('Katılım tarihi').fill('2026-10-01')\n  593 |     await submit(page)\n> 594 |     await expect(result(page)).toContainText('6 alanda hata var')\n      |                                ^\n  595 |     await page.screenshot({ path: `${SHOTS}/B-kayit-hatalar.png`, fullPage: true })\n  596 |     // edit the schema: age limit lowered, ticket no longer required, consent removed\n  597 |     await page.getByRole('button', { name: /^3\\. Yaş/ }).click(); await page.getByLabel('En küçük değer').fill('16')"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
-                            "column": 32,
-                            "line": 594
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]')\nExpected substring: \u001b[32m\"6 alanda hata var\"\u001b[39m\nReceived string:    \u001b[31m\"\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]')\u001b[22m\n\u001b[2m    14 × locator resolved to <div aria-live=\"polite\"></div>\u001b[22m\n\u001b[2m       - unexpected value \"\"\u001b[22m\n\n\n  592 |     await pv.getByLabel('Katılım tarihi').fill('2026-10-01')\n  593 |     await submit(page)\n> 594 |     await expect(result(page)).toContainText('6 alanda hata var')\n      |                                ^\n  595 |     await page.screenshot({ path: `${SHOTS}/B-kayit-hatalar.png`, fullPage: true })\n  596 |     // edit the schema: age limit lowered, ticket no longer required, consent removed\n  597 |     await page.getByRole('button', { name: /^3\\. Yaş/ }).click(); await page.getByLabel('En küçük değer').fill('16')\n    at D:\\Project\\SchemaForge\\e2e\\functional.spec.ts:594:32"
-                        }
-                      ],
+                      "status": "passed",
+                      "duration": 1403,
+                      "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:55:58.573Z",
+                      "startTime": "2026-10-19T15:09:23.423Z",
                       "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "D:\\Project\\SchemaForge\\test-results\\functional-scenarios-Scena-3bdf6--edit-the-schema-test-again-desktop\\error-context.md"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
-                        "column": 32,
-                        "line": 594
-                      }
+                      "attachments": []
                     }
                   ],
-                  "status": "unexpected"
+                  "status": "expected"
                 }
               ],
               "id": "011e9001526c2e3d879a-9cfdfe915bd90676bbab",
               "file": "functional.spec.ts",
-              "line": 579,
+              "line": 601,
               "column": 3
             },
             {
@@ -3371,15 +3279,15 @@
                   "projectName": "desktop",
                   "results": [
                     {
-                      "workerIndex": 6,
+                      "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1760,
+                      "duration": 1577,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:56:05.239Z",
+                      "startTime": "2026-10-19T15:09:24.837Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3389,7 +3297,7 @@
               ],
               "id": "011e9001526c2e3d879a-a33156eb6737c7a2e86c",
               "file": "functional.spec.ts",
-              "line": 608,
+              "line": 630,
               "column": 3
             },
             {
@@ -3405,7 +3313,7 @@
                       "description": "desktop only",
                       "location": {
                         "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
-                        "line": 543,
+                        "line": 565,
                         "column": 8
                       }
                     }
@@ -3415,22 +3323,22 @@
                   "projectName": "mobile",
                   "results": [
                     {
-                      "workerIndex": 7,
+                      "workerIndex": 1,
                       "parallelIndex": 0,
                       "status": "skipped",
-                      "duration": 114,
+                      "duration": 116,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:56:16.251Z",
+                      "startTime": "2026-10-19T15:09:35.100Z",
                       "annotations": [
                         {
                           "type": "skip",
                           "description": "desktop only",
                           "location": {
                             "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
-                            "line": 543,
+                            "line": 565,
                             "column": 8
                           }
                         }
@@ -3443,7 +3351,7 @@
               ],
               "id": "011e9001526c2e3d879a-706a262d534401164d8d",
               "file": "functional.spec.ts",
-              "line": 545,
+              "line": 567,
               "column": 3
             },
             {
@@ -3459,7 +3367,7 @@
                       "description": "desktop only",
                       "location": {
                         "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
-                        "line": 543,
+                        "line": 565,
                         "column": 8
                       }
                     }
@@ -3469,22 +3377,22 @@
                   "projectName": "mobile",
                   "results": [
                     {
-                      "workerIndex": 7,
+                      "workerIndex": 1,
                       "parallelIndex": 0,
                       "status": "skipped",
-                      "duration": 112,
+                      "duration": 123,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:56:16.378Z",
+                      "startTime": "2026-10-19T15:09:35.226Z",
                       "annotations": [
                         {
                           "type": "skip",
                           "description": "desktop only",
                           "location": {
                             "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
-                            "line": 543,
+                            "line": 565,
                             "column": 8
                           }
                         }
@@ -3497,7 +3405,7 @@
               ],
               "id": "011e9001526c2e3d879a-cab50a98f3c42e938060",
               "file": "functional.spec.ts",
-              "line": 579,
+              "line": 601,
               "column": 3
             },
             {
@@ -3513,7 +3421,7 @@
                       "description": "desktop only",
                       "location": {
                         "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
-                        "line": 543,
+                        "line": 565,
                         "column": 8
                       }
                     }
@@ -3523,22 +3431,22 @@
                   "projectName": "mobile",
                   "results": [
                     {
-                      "workerIndex": 7,
+                      "workerIndex": 1,
                       "parallelIndex": 0,
                       "status": "skipped",
-                      "duration": 116,
+                      "duration": 122,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:56:16.499Z",
+                      "startTime": "2026-10-19T15:09:35.361Z",
                       "annotations": [
                         {
                           "type": "skip",
                           "description": "desktop only",
                           "location": {
                             "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
-                            "line": 543,
+                            "line": 565,
                             "column": 8
                           }
                         }
@@ -3551,7 +3459,7 @@
               ],
               "id": "011e9001526c2e3d879a-e88a098eb0d984c420c7",
               "file": "functional.spec.ts",
-              "line": 608,
+              "line": 630,
               "column": 3
             }
           ]
@@ -3559,7 +3467,7 @@
         {
           "title": "mobile",
           "file": "functional.spec.ts",
-          "line": 626,
+          "line": 648,
           "column": 6,
           "specs": [
             {
@@ -3575,7 +3483,7 @@
                       "description": "mobile only",
                       "location": {
                         "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
-                        "line": 627,
+                        "line": 649,
                         "column": 8
                       }
                     }
@@ -3585,22 +3493,22 @@
                   "projectName": "desktop",
                   "results": [
                     {
-                      "workerIndex": 6,
+                      "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "skipped",
-                      "duration": 116,
+                      "duration": 134,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:56:07.210Z",
+                      "startTime": "2026-10-19T15:09:26.425Z",
                       "annotations": [
                         {
                           "type": "skip",
                           "description": "mobile only",
                           "location": {
                             "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
-                            "line": 627,
+                            "line": 649,
                             "column": 8
                           }
                         }
@@ -3613,7 +3521,7 @@
               ],
               "id": "011e9001526c2e3d879a-6d0d2751b0521eea757a",
               "file": "functional.spec.ts",
-              "line": 629,
+              "line": 651,
               "column": 3
             },
             {
@@ -3629,15 +3537,15 @@
                   "projectName": "mobile",
                   "results": [
                     {
-                      "workerIndex": 7,
+                      "workerIndex": 1,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1557,
+                      "duration": 1558,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:56:16.626Z",
+                      "startTime": "2026-10-19T15:09:35.495Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3647,7 +3555,7 @@
               ],
               "id": "011e9001526c2e3d879a-89aaa60c1d72982715f0",
               "file": "functional.spec.ts",
-              "line": 629,
+              "line": 651,
               "column": 3
             }
           ]
@@ -3680,15 +3588,15 @@
                   "projectName": "desktop",
                   "results": [
                     {
-                      "workerIndex": 6,
+                      "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2848,
+                      "duration": 2443,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:56:07.349Z",
+                      "startTime": "2026-10-19T15:09:26.597Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3714,15 +3622,15 @@
                   "projectName": "desktop",
                   "results": [
                     {
-                      "workerIndex": 6,
+                      "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1080,
+                      "duration": 939,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:56:10.207Z",
+                      "startTime": "2026-10-19T15:09:29.053Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3748,15 +3656,15 @@
                   "projectName": "desktop",
                   "results": [
                     {
-                      "workerIndex": 6,
+                      "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 755,
+                      "duration": 776,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:56:11.297Z",
+                      "startTime": "2026-10-19T15:09:30.000Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3792,7 +3700,7 @@
                   "projectName": "mobile",
                   "results": [
                     {
-                      "workerIndex": 7,
+                      "workerIndex": 1,
                       "parallelIndex": 0,
                       "status": "skipped",
                       "duration": 0,
@@ -3800,7 +3708,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:56:18.202Z",
+                      "startTime": "2026-10-19T15:09:37.069Z",
                       "annotations": [
                         {
                           "type": "skip",
@@ -3846,7 +3754,7 @@
                   "projectName": "mobile",
                   "results": [
                     {
-                      "workerIndex": 7,
+                      "workerIndex": 1,
                       "parallelIndex": 0,
                       "status": "skipped",
                       "duration": 0,
@@ -3854,7 +3762,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:56:18.214Z",
+                      "startTime": "2026-10-19T15:09:37.076Z",
                       "annotations": [
                         {
                           "type": "skip",
@@ -3900,7 +3808,7 @@
                   "projectName": "mobile",
                   "results": [
                     {
-                      "workerIndex": 7,
+                      "workerIndex": 1,
                       "parallelIndex": 0,
                       "status": "skipped",
                       "duration": 0,
@@ -3908,7 +3816,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:56:18.224Z",
+                      "startTime": "2026-10-19T15:09:37.082Z",
                       "annotations": [
                         {
                           "type": "skip",
@@ -3962,15 +3870,15 @@
                   "projectName": "desktop",
                   "results": [
                     {
-                      "workerIndex": 6,
+                      "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "skipped",
-                      "duration": 1,
+                      "duration": 0,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:56:12.061Z",
+                      "startTime": "2026-10-19T15:09:30.786Z",
                       "annotations": [
                         {
                           "type": "skip",
@@ -4006,15 +3914,15 @@
                   "projectName": "mobile",
                   "results": [
                     {
-                      "workerIndex": 7,
+                      "workerIndex": 1,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1171,
+                      "duration": 1027,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-19T14:56:18.235Z",
+                      "startTime": "2026-10-19T15:09:37.091Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -4034,11 +3942,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-19T14:54:43.318Z",
-    "duration": 96340.09700000001,
-    "expected": 32,
-    "skipped": 38,
-    "unexpected": 6,
+    "startTime": "2026-10-19T15:08:34.015Z",
+    "duration": 64378.638000000006,
+    "expected": 39,
+    "skipped": 39,
+    "unexpected": 0,
     "flaky": 0
   }
 }

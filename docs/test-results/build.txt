@@ -10,4 +10,4 @@ dist/index.html                   0.74 kB │ gzip:  0.46 kB
 dist/assets/index-7_u-jkvg.css   20.45 kB │ gzip:  4.99 kB
 dist/assets/index-DtpLGSyl.js   251.80 kB │ gzip: 78.19 kB
 
-✓ built in 140ms
+✓ built in 192ms
