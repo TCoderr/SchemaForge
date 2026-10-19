@@ -5,18 +5,20 @@ $ npx vitest run --reporter=default --reporter=junit --outputFile.junit=docs/tes
  RUN  v5.0.5 D:/Project/SchemaForge
 
  ✓ src/lib/lib.test.ts (20 tests) 11ms
- ✓ src/App.test.tsx (23 tests) 4889ms
+ ✓ src/App.test.tsx (23 tests) 5333ms
    ✓ SchemaForge user scenarios (23)
-     ✓ 6. required and rule validation works in the preview 732ms
-     ✓ 7. deletes a field after confirmation (cancel keeps it) 362ms
-     ✓ 10. exports valid JSON with types, labels, rules and order 411ms
-     ✓ BUG-007: a preview error disappears when its rule is switched off, and returns with the rule 347ms
-     ✓ BUG-009: Tab and Shift+Tab cycle inside the export dialog; focus goes to the main content when the trigger is gone 578ms
-     ✓ security: user text is rendered as text, never as HTML 523ms
+     ✓ 3. edits the form title (saved and visible in the list) 315ms
+     ✓ 4b. label edits update the preview live and keep the JSON name in sync 332ms
+     ✓ 6. required and rule validation works in the preview 893ms
+     ✓ 7. deletes a field after confirmation (cancel keeps it) 381ms
+     ✓ 10. exports valid JSON with types, labels, rules and order 426ms
+     ✓ BUG-007: a preview error disappears when its rule is switched off, and returns with the rule 332ms
+     ✓ BUG-009: Tab and Shift+Tab cycle inside the export dialog; focus goes to the main content when the trigger is gone 604ms
+     ✓ security: user text is rendered as text, never as HTML 630ms
 
  Test Files  2 passed (2)
       Tests  43 passed (43)
-   Start at  18:24:01
-   Duration  5.79s (tests 77%, environment 17%, setup 3%, transform 2%, import 1%)
+   Start at  18:40:21
+   Duration  6.44s (tests 74%, environment 20%, setup 4%, import 1%, transform 1%)
 
 JUNIT report written to D:/Project/SchemaForge/docs/test-results/unit-junit.xml

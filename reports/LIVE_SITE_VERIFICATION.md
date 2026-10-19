@@ -89,4 +89,28 @@ Hepsi ✅. Dağıtımdan önce başarısız olan F10, F20, F21, F22, F24 ve Sena
 
 ## 4. Sürüm 1.0.2 (kalan 6 hatanın düzeltilmesi)
 
-*Bu bölüm, proje sahibinin GitHub push ve Netlify dağıtım onayından sonra doldurulacak. O zamana kadar canlı site 1.0.1 (`952fa87`) sürümündedir.*
+| Adım | Sonuç |
+|---|---|
+| GitHub push (onaylandı) | `9d984fe..60edc6b  main -> main`. Yerel = `git ls-remote` = `60edc6bb07d6c9b5f8ea6dc5079fbb7cb2e1f6cf` |
+| Production build | Temiz çalışma ağacında, HEAD `60edc6b` iken `rm -rf dist && npm run build` |
+| Netlify dağıtımı (ayrıca onaylandı) | Deploy **`6ad63974c2e180e29a2627ba`**, 2026-10-19 15:38 UTC, başlık "SchemaForge 1.0.2 (commit 60edc6b): …" (Netlify API'den okundu). `--prod --no-build --dir dist --site <site kimliği>` |
+| Yayımlanan build hangi commit'ten? | **`60edc6b`**. Canlı `assets/index-wxSCGASN.js` (`bcf1e5be…`), `assets/index-7_u-jkvg.css` (`961b57af…`) ve `favicon.svg` (`e30fb729…`) bu commit'in yerel build'iyle SHA-256 olarak aynı. `index.html` yalnızca Netlify'ın eklediği yorum ve `/.netlify/scripts/hud` betiği kadar farklı |
+
+### Canlı sitede regresyon testi (1.0.2, yeni ve izole tarayıcı bağlamları)
+
+| Sonuç | Sayı |
+|---|---|
+| Çalışan test | 39 (masaüstü 37, mobil 2) |
+| Başarılı | **39** |
+| Bilinen kusur testi | **0** (`test.fail` kalmadı) |
+| Başarısız | **0** |
+| Üçüncü taraf kaynak hatası | Kaydedilmedi |
+
+Kayıtlar: `reports/test-results/v1.0.2-live/` (liste çıktısı, JUnit, JSON).
+
+**Yerel ile canlı farkı:** Yok. Yerel 39/39, canlı 39/39. Tek fark Netlify'ın `index.html`'e eklediği betik.
+
+**Yerel, GitHub, Netlify ve ZIP:**
+- **Kod:** `60edc6b`. Sonraki rapor commit'leri uygulama kodunu değiştirmez.
+- **Netlify:** Bu commit'in build'i yayında.
+- **ZIP:** `python scripts/verify_delivery.py --zip`, ZIP kaynağının HEAD ile, ZIP `dist`'inin de canlı dosyalarla aynı olduğunu kontrol eder.

@@ -1,0 +1,400 @@
+<testsuites id="" name="" tests="78" failures="0" skipped="39" errors="0" time="53.164694">
+<testsuite name="functional.spec.ts" timestamp="2026-10-19T15:38:56.093Z" hostname="desktop" tests="35" failures="0" skipped="1" time="40.547" errors="0">
+<testcase name="desktop › F01 first visit: empty state, nothing stored before the user acts" classname="functional.spec.ts" time="0.982">
+</testcase>
+<testcase name="desktop › F02 first form from the empty state opens the editor and is stored" classname="functional.spec.ts" time="1.243">
+</testcase>
+<testcase name="desktop › F03 second form, listing (newest first, counts, date) and &quot;Düzenle&quot; opens the right form" classname="functional.spec.ts" time="1.088">
+</testcase>
+<testcase name="desktop › F04 title and description: live preview, list card and storage" classname="functional.spec.ts" time="1.051">
+</testcase>
+<testcase name="desktop › F05 duplicate: &quot;(kopya)&quot;, &quot;(kopya 2)&quot;, fields copied and independent of the original" classname="functional.spec.ts" time="1.058">
+</testcase>
+<testcase name="desktop › F06 delete form: Vazgeç, Escape and backdrop cancel; &quot;Formu sil&quot; deletes and survives reload" classname="functional.spec.ts" time="1.307">
+</testcase>
+<testcase name="desktop › F07 every field type: defaults, preview control, unique JSON names" classname="functional.spec.ts" time="1.328">
+</testcase>
+<testcase name="desktop › F08 placeholder and help text reach the preview; hidden where they do not apply" classname="functional.spec.ts" time="1.14">
+</testcase>
+<testcase name="desktop › F09 required: marker in list and preview, aria-required, checkbox message" classname="functional.spec.ts" time="0.849">
+</testcase>
+<testcase name="desktop › F10 rules: invalid e-mail, number range, text length, date range, select choice" classname="functional.spec.ts" time="1.152">
+</testcase>
+<testcase name="desktop › F11 empty required submit, live re-validation, &quot;Temizle&quot; resets" classname="functional.spec.ts" time="1.172">
+</testcase>
+<testcase name="desktop › F12 live preview follows label, type, options and order changes" classname="functional.spec.ts" time="1.228">
+</testcase>
+<testcase name="desktop › F13 delete field: cancel keeps it; confirm removes it from list, preview and storage" classname="functional.spec.ts" time="1.004">
+</testcase>
+<testcase name="desktop › F14 reorder with ↑/↓: list, preview, storage and export follow; edge buttons are disabled" classname="functional.spec.ts" time="0.928">
+</testcase>
+<testcase name="desktop › F15 export: JSON content, real download, clipboard, warnings, three ways to close, focus return" classname="functional.spec.ts" time="1.587">
+</testcase>
+<testcase name="desktop › F16 persistence: real reload in the editor keeps every setting; browser back/forward work" classname="functional.spec.ts" time="1.093">
+</testcase>
+<testcase name="desktop › F17 broken storage: corrupt JSON, wrong shape, partly invalid data, unknown form link" classname="functional.spec.ts" time="1.998">
+</testcase>
+<testcase name="desktop › F18 storage full / blocked: warning banner instead of silent data loss" classname="functional.spec.ts" time="1.164">
+</testcase>
+<testcase name="desktop › F19 keyboard: create, add a field and delete via dialog without a mouse; Escape and focus order" classname="functional.spec.ts" time="0.934">
+</testcase>
+<testcase name="desktop › F20 BUG-003 regression: skip link moves focus to the content and does not leave the editor" classname="functional.spec.ts" time="0.871">
+</testcase>
+<testcase name="desktop › F21 BUG-001 regression: two tabs never overwrite each other&apos;s forms" classname="functional.spec.ts" time="3.588">
+</testcase>
+<testcase name="desktop › F22 BUG-002 regression: &quot;Temiz başlat&quot; never deletes forms created after the warning" classname="functional.spec.ts" time="1.127">
+</testcase>
+<testcase name="desktop › F24 BUG-004 regression: one click on &quot;Gönder (test)&quot; submits even when the last field turns invalid on blur" classname="functional.spec.ts" time="1.09">
+</testcase>
+<testcase name="desktop › F25 JSON name: auto-sync with the label until edited by hand; invalid and duplicate names are flagged" classname="functional.spec.ts" time="0.885">
+</testcase>
+<testcase name="desktop › F23 network: the app loads without login and sends no form data anywhere" classname="functional.spec.ts" time="0.74">
+</testcase>
+<testcase name="desktop › F26 BUG-005 regression: unparsable number input is rejected, optional or required; &quot;Temizle&quot; clears it" classname="functional.spec.ts" time="1.241">
+</testcase>
+<testcase name="desktop › F27 BUG-006 regression: options are trimmed, de-duplicated and identical in storage, preview, validation and export" classname="functional.spec.ts" time="0.788">
+</testcase>
+<testcase name="desktop › F28 BUG-007 regression: preview errors follow schema changes (required on/off)" classname="functional.spec.ts" time="0.772">
+</testcase>
+<testcase name="desktop › F29 BUG-008 regression: export file names keep Turkish letters correctly (İ ı Ş ş Ğ ğ Ü ü Ö ö Ç ç)" classname="functional.spec.ts" time="0.801">
+</testcase>
+<testcase name="desktop › F30 BUG-009 regression: Tab and Shift+Tab stay inside both modals; focus returns to a sensible trigger" classname="functional.spec.ts" time="0.881">
+</testcase>
+<testcase name="desktop › F31 BUG-010 regression: an empty title or label still gives every button a meaningful accessible name" classname="functional.spec.ts" time="0.788">
+</testcase>
+<testcase name="scenarios › Scenario A: customer contact form — build, validate, autosave, reload, export" classname="functional.spec.ts" time="1.596">
+</testcase>
+<testcase name="scenarios › Scenario B: registration form with 6 field types — invalid data, edit the schema, test again" classname="functional.spec.ts" time="1.55">
+</testcase>
+<testcase name="scenarios › Scenario C: several forms — switch, delete one, keep the others, reload" classname="functional.spec.ts" time="1.386">
+</testcase>
+<testcase name="mobile › M01 mobile: create, edit, preview, export and delete; no horizontal overflow; dialogs fit the screen" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="mobile only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="schemaforge.spec.ts" timestamp="2026-10-19T15:38:56.093Z" hostname="desktop" tests="4" failures="0" skipped="1" time="4.227" errors="0">
+<testcase name="desktop › full flow: create, fields, rules, validation, export, real reload, delete" classname="schemaforge.spec.ts" time="2.458">
+</testcase>
+<testcase name="desktop › 11 corrupt LocalStorage: no white page, clear message" classname="schemaforge.spec.ts" time="0.979">
+</testcase>
+<testcase name="desktop › keyboard: create a form and add a field without a mouse; focus is visible" classname="schemaforge.spec.ts" time="0.79">
+</testcase>
+<testcase name="mobile › 12 mobile layout is usable and has no horizontal overflow" classname="schemaforge.spec.ts">
+<properties>
+<property name="skip" value="mobile only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="functional.spec.ts" timestamp="2026-10-19T15:38:56.093Z" hostname="mobile" tests="35" failures="0" skipped="34" time="4.763" errors="0">
+<testcase name="desktop › F01 first visit: empty state, nothing stored before the user acts" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › F02 first form from the empty state opens the editor and is stored" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › F03 second form, listing (newest first, counts, date) and &quot;Düzenle&quot; opens the right form" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › F04 title and description: live preview, list card and storage" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › F05 duplicate: &quot;(kopya)&quot;, &quot;(kopya 2)&quot;, fields copied and independent of the original" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › F06 delete form: Vazgeç, Escape and backdrop cancel; &quot;Formu sil&quot; deletes and survives reload" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › F07 every field type: defaults, preview control, unique JSON names" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › F08 placeholder and help text reach the preview; hidden where they do not apply" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › F09 required: marker in list and preview, aria-required, checkbox message" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › F10 rules: invalid e-mail, number range, text length, date range, select choice" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › F11 empty required submit, live re-validation, &quot;Temizle&quot; resets" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › F12 live preview follows label, type, options and order changes" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › F13 delete field: cancel keeps it; confirm removes it from list, preview and storage" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › F14 reorder with ↑/↓: list, preview, storage and export follow; edge buttons are disabled" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › F15 export: JSON content, real download, clipboard, warnings, three ways to close, focus return" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › F16 persistence: real reload in the editor keeps every setting; browser back/forward work" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › F17 broken storage: corrupt JSON, wrong shape, partly invalid data, unknown form link" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › F18 storage full / blocked: warning banner instead of silent data loss" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › F19 keyboard: create, add a field and delete via dialog without a mouse; Escape and focus order" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › F20 BUG-003 regression: skip link moves focus to the content and does not leave the editor" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › F21 BUG-001 regression: two tabs never overwrite each other&apos;s forms" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › F22 BUG-002 regression: &quot;Temiz başlat&quot; never deletes forms created after the warning" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › F24 BUG-004 regression: one click on &quot;Gönder (test)&quot; submits even when the last field turns invalid on blur" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › F25 JSON name: auto-sync with the label until edited by hand; invalid and duplicate names are flagged" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › F23 network: the app loads without login and sends no form data anywhere" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › F26 BUG-005 regression: unparsable number input is rejected, optional or required; &quot;Temizle&quot; clears it" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › F27 BUG-006 regression: options are trimmed, de-duplicated and identical in storage, preview, validation and export" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › F28 BUG-007 regression: preview errors follow schema changes (required on/off)" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › F29 BUG-008 regression: export file names keep Turkish letters correctly (İ ı Ş ş Ğ ğ Ü ü Ö ö Ç ç)" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › F30 BUG-009 regression: Tab and Shift+Tab stay inside both modals; focus returns to a sensible trigger" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › F31 BUG-010 regression: an empty title or label still gives every button a meaningful accessible name" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="scenarios › Scenario A: customer contact form — build, validate, autosave, reload, export" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="scenarios › Scenario B: registration form with 6 field types — invalid data, edit the schema, test again" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="scenarios › Scenario C: several forms — switch, delete one, keep the others, reload" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="mobile › M01 mobile: create, edit, preview, export and delete; no horizontal overflow; dialogs fit the screen" classname="functional.spec.ts" time="1.5">
+</testcase>
+</testsuite>
+<testsuite name="schemaforge.spec.ts" timestamp="2026-10-19T15:38:56.093Z" hostname="mobile" tests="4" failures="0" skipped="3" time="1.159" errors="0">
+<testcase name="desktop › full flow: create, fields, rules, validation, export, real reload, delete" classname="schemaforge.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › 11 corrupt LocalStorage: no white page, clear message" classname="schemaforge.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › keyboard: create a form and add a field without a mouse; focus is visible" classname="schemaforge.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="mobile › 12 mobile layout is usable and has no horizontal overflow" classname="schemaforge.spec.ts" time="1.159">
+</testcase>
+</testsuite>
+</testsuites>

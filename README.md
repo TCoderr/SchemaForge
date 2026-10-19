@@ -83,7 +83,7 @@ Ayrıntılar: [docs/TEST_REPORT.md](docs/TEST_REPORT.md). Ham çıktılar: `docs
 | Vitest + React Testing Library | 43/43 |
 | `npm run build` | Başarılı |
 | Playwright (Edge, masaüstü + mobil) | 39/39 (bilinen kusur testi yok) |
-| Playwright, **canlı Netlify sitesine karşı** | [reports/LIVE_SITE_VERIFICATION.md](reports/LIVE_SITE_VERIFICATION.md) §4 (1.0.1, `952fa87`: 33 başarılı + 6 bilinen kusur) |
+| Playwright, **canlı Netlify sitesine karşı** (1.0.2, commit `60edc6b`) | 39/39 canlıda da geçti ([ayrıntı](reports/LIVE_SITE_VERIFICATION.md)) |
 
 Görevdeki 12 kullanıcı senaryosunun tamamı otomatik testle doğrulandı:
 1. form oluşturma

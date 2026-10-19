@@ -15,6 +15,7 @@
 - **Denetimde bulunan 10 hatanın 10'u da düzeltildi.**
 - **Testler:** Vitest 43/43. Playwright yerelde 39/39; `test.fail` kalmadı. Bilinen kusur testleri normal regresyon testlerine dönüştürüldü (F26–F31). TypeScript, ESLint ve build: çıkış kodu 0.
 - **Ayrıntılar:** `reports/BUG_FIX_REPORT.md` (1.0.2 düzeltmeleri); canlı sonuç `reports/LIVE_SITE_VERIFICATION.md` §4.
+- **Yayın (onaylarla):** GitHub `60edc6b`; Netlify deploy `6ad63974c2e180e29a2627ba` (aynı commit'in build'i, dosya hash'leri eşleşiyor). Canlı sitede 39/39 test geçti.
 
 ## 0. Sürüm 1.1 — Kapsamlı fonksiyonel ve uçtan uca test (19.10.2026)
 

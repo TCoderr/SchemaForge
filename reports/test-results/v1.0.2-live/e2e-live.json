@@ -1,0 +1,3652 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\Project\\SchemaForge\\node_modules\\@playwright\\test\\cli.js",
+      "test"
+    ],
+    "configFile": "D:\\Project\\SchemaForge\\playwright.config.ts",
+    "rootDir": "D:/Project/SchemaForge/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/Project/SchemaForge/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "desktop",
+        "name": "desktop",
+        "testDir": "D:/Project/SchemaForge/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "D:/Project/SchemaForge/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "mobile",
+        "name": "mobile",
+        "testDir": "D:/Project/SchemaForge/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\Project\\SchemaForge\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "desktop",
+        "testDir": "D:\\Project\\SchemaForge\\e2e",
+        "snapshotDir": "D:\\Project\\SchemaForge\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "https://schemaforge-tcoderr.netlify.app",
+          "channel": "msedge",
+          "locale": "tr-TR",
+          "acceptDownloads": true,
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "desktop"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\Project\\SchemaForge\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "mobile",
+        "testDir": "D:\\Project\\SchemaForge\\e2e",
+        "snapshotDir": "D:\\Project\\SchemaForge\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "https://schemaforge-tcoderr.netlify.app",
+          "channel": "msedge",
+          "locale": "tr-TR",
+          "acceptDownloads": true,
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "isMobile": true,
+          "hasTouch": true,
+          "deviceScaleFactor": 2
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "mobile"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "docs/test-results/e2e-live-junit.xml"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "reports/test-results/e2e-live.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "functional.spec.ts",
+      "file": "functional.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "desktop",
+          "file": "functional.spec.ts",
+          "line": 46,
+          "column": 6,
+          "specs": [
+            {
+              "title": "F01 first visit: empty state, nothing stored before the user acts",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 982,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:38:56.445Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-1cfae4049e61aab86ec3",
+              "file": "functional.spec.ts",
+              "line": 49,
+              "column": 3
+            },
+            {
+              "title": "F02 first form from the empty state opens the editor and is stored",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1243,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:38:57.737Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-f50bf767b27cd6b45f07",
+              "file": "functional.spec.ts",
+              "line": 60,
+              "column": 3
+            },
+            {
+              "title": "F03 second form, listing (newest first, counts, date) and \"Düzenle\" opens the right form",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1088,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:38:58.989Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-674984cd8ee16a88c23b",
+              "file": "functional.spec.ts",
+              "line": 71,
+              "column": 3
+            },
+            {
+              "title": "F04 title and description: live preview, list card and storage",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1051,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:00.088Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-d6a4b596666ac4187200",
+              "file": "functional.spec.ts",
+              "line": 88,
+              "column": 3
+            },
+            {
+              "title": "F05 duplicate: \"(kopya)\", \"(kopya 2)\", fields copied and independent of the original",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1058,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:01.149Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-ade4aa1269a1babe7411",
+              "file": "functional.spec.ts",
+              "line": 101,
+              "column": 3
+            },
+            {
+              "title": "F06 delete form: Vazgeç, Escape and backdrop cancel; \"Formu sil\" deletes and survives reload",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1307,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:02.216Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-531703383949fdb4c7d8",
+              "file": "functional.spec.ts",
+              "line": 120,
+              "column": 3
+            },
+            {
+              "title": "F07 every field type: defaults, preview control, unique JSON names",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1328,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:03.532Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-e90ff7eb63a4dd8870bc",
+              "file": "functional.spec.ts",
+              "line": 143,
+              "column": 3
+            },
+            {
+              "title": "F08 placeholder and help text reach the preview; hidden where they do not apply",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1140,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:04.867Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-bd179bc7a4058bac9641",
+              "file": "functional.spec.ts",
+              "line": 164,
+              "column": 3
+            },
+            {
+              "title": "F09 required: marker in list and preview, aria-required, checkbox message",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 849,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:06.014Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-df6e02f03fb9663768d4",
+              "file": "functional.spec.ts",
+              "line": 181,
+              "column": 3
+            },
+            {
+              "title": "F10 rules: invalid e-mail, number range, text length, date range, select choice",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1152,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:06.871Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-e84767fa34c59e786f5e",
+              "file": "functional.spec.ts",
+              "line": 196,
+              "column": 3
+            },
+            {
+              "title": "F11 empty required submit, live re-validation, \"Temizle\" resets",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1172,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:08.033Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-7e4b4bec7c9341997967",
+              "file": "functional.spec.ts",
+              "line": 236,
+              "column": 3
+            },
+            {
+              "title": "F12 live preview follows label, type, options and order changes",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1228,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:09.215Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-199adb2ef1127f3c63ea",
+              "file": "functional.spec.ts",
+              "line": 255,
+              "column": 3
+            },
+            {
+              "title": "F13 delete field: cancel keeps it; confirm removes it from list, preview and storage",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1004,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:10.453Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-4774ecdf0f73ea2d7f37",
+              "file": "functional.spec.ts",
+              "line": 271,
+              "column": 3
+            },
+            {
+              "title": "F14 reorder with ↑/↓: list, preview, storage and export follow; edge buttons are disabled",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 928,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:11.466Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-a2d3ef7951065b21b597",
+              "file": "functional.spec.ts",
+              "line": 288,
+              "column": 3
+            },
+            {
+              "title": "F15 export: JSON content, real download, clipboard, warnings, three ways to close, focus return",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1587,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:12.403Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-334d7a4a700bcc5074e8",
+              "file": "functional.spec.ts",
+              "line": 305,
+              "column": 3
+            },
+            {
+              "title": "F16 persistence: real reload in the editor keeps every setting; browser back/forward work",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1093,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:13.999Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-45a75eb10a0c211b178b",
+              "file": "functional.spec.ts",
+              "line": 334,
+              "column": 3
+            },
+            {
+              "title": "F17 broken storage: corrupt JSON, wrong shape, partly invalid data, unknown form link",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1998,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:15.103Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-41b33e64a4d254abd6d4",
+              "file": "functional.spec.ts",
+              "line": 352,
+              "column": 3
+            },
+            {
+              "title": "F18 storage full / blocked: warning banner instead of silent data loss",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1164,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:17.111Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-779162f95178e231efe6",
+              "file": "functional.spec.ts",
+              "line": 378,
+              "column": 3
+            },
+            {
+              "title": "F19 keyboard: create, add a field and delete via dialog without a mouse; Escape and focus order",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 934,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:18.285Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-3ec214c002fdd2a0fd7e",
+              "file": "functional.spec.ts",
+              "line": 392,
+              "column": 3
+            },
+            {
+              "title": "F20 BUG-003 regression: skip link moves focus to the content and does not leave the editor",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 871,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:19.226Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-44f66e245f2f1038204e",
+              "file": "functional.spec.ts",
+              "line": 417,
+              "column": 3
+            },
+            {
+              "title": "F21 BUG-001 regression: two tabs never overwrite each other's forms",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3588,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:20.108Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-5dddf6aa20565fdd7329",
+              "file": "functional.spec.ts",
+              "line": 428,
+              "column": 3
+            },
+            {
+              "title": "F22 BUG-002 regression: \"Temiz başlat\" never deletes forms created after the warning",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1127,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:23.703Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-0f5190c97a6b944b69dc",
+              "file": "functional.spec.ts",
+              "line": 447,
+              "column": 3
+            },
+            {
+              "title": "F24 BUG-004 regression: one click on \"Gönder (test)\" submits even when the last field turns invalid on blur",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1090,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:24.839Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-bff3794774816ff2cb5a",
+              "file": "functional.spec.ts",
+              "line": 462,
+              "column": 3
+            },
+            {
+              "title": "F25 JSON name: auto-sync with the label until edited by hand; invalid and duplicate names are flagged",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 885,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:25.935Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-fcada3e72e38ff9991bd",
+              "file": "functional.spec.ts",
+              "line": 475,
+              "column": 3
+            },
+            {
+              "title": "F23 network: the app loads without login and sends no form data anywhere",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 740,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:26.831Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-a0c7235b0670f486982e",
+              "file": "functional.spec.ts",
+              "line": 497,
+              "column": 3
+            },
+            {
+              "title": "F26 BUG-005 regression: unparsable number input is rejected, optional or required; \"Temizle\" clears it",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1241,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:27.583Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-4c4afbfb5514010ea33f",
+              "file": "functional.spec.ts",
+              "line": 516,
+              "column": 3
+            },
+            {
+              "title": "F27 BUG-006 regression: options are trimmed, de-duplicated and identical in storage, preview, validation and export",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 788,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:28.836Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-8f8af7b28fdd662f302d",
+              "file": "functional.spec.ts",
+              "line": 538,
+              "column": 3
+            },
+            {
+              "title": "F28 BUG-007 regression: preview errors follow schema changes (required on/off)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 772,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:29.634Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-68274a32556101cc1bfe",
+              "file": "functional.spec.ts",
+              "line": 553,
+              "column": 3
+            },
+            {
+              "title": "F29 BUG-008 regression: export file names keep Turkish letters correctly (İ ı Ş ş Ğ ğ Ü ü Ö ö Ç ç)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 801,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:30.415Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-e9bf1408913f28c99389",
+              "file": "functional.spec.ts",
+              "line": 564,
+              "column": 3
+            },
+            {
+              "title": "F30 BUG-009 regression: Tab and Shift+Tab stay inside both modals; focus returns to a sensible trigger",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 881,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:31.230Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-2d86f800f5eaedf30cc5",
+              "file": "functional.spec.ts",
+              "line": 572,
+              "column": 3
+            },
+            {
+              "title": "F31 BUG-010 regression: an empty title or label still gives every button a meaningful accessible name",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 788,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:32.121Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-94a101033d49984a7c8c",
+              "file": "functional.spec.ts",
+              "line": 592,
+              "column": 3
+            },
+            {
+              "title": "F01 first visit: empty state, nothing stored before the user acts",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 147,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:42.515Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-bc5fce59d5dd954fc9e0",
+              "file": "functional.spec.ts",
+              "line": 49,
+              "column": 3
+            },
+            {
+              "title": "F02 first form from the empty state opens the editor and is stored",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 93,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:42.856Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-037e747c93e5b61542fc",
+              "file": "functional.spec.ts",
+              "line": 60,
+              "column": 3
+            },
+            {
+              "title": "F03 second form, listing (newest first, counts, date) and \"Düzenle\" opens the right form",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 96,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:42.959Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-12f16f26bc42b352d5e9",
+              "file": "functional.spec.ts",
+              "line": 71,
+              "column": 3
+            },
+            {
+              "title": "F04 title and description: live preview, list card and storage",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 91,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:43.062Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-f137bae0ebd6d00dc082",
+              "file": "functional.spec.ts",
+              "line": 88,
+              "column": 3
+            },
+            {
+              "title": "F05 duplicate: \"(kopya)\", \"(kopya 2)\", fields copied and independent of the original",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 91,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:43.160Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-1adea05a5ba3f9db94f9",
+              "file": "functional.spec.ts",
+              "line": 101,
+              "column": 3
+            },
+            {
+              "title": "F06 delete form: Vazgeç, Escape and backdrop cancel; \"Formu sil\" deletes and survives reload",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 95,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:43.259Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-42243c7835991151c4b2",
+              "file": "functional.spec.ts",
+              "line": 120,
+              "column": 3
+            },
+            {
+              "title": "F07 every field type: defaults, preview control, unique JSON names",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 95,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:43.360Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-00c9b69120150710a41f",
+              "file": "functional.spec.ts",
+              "line": 143,
+              "column": 3
+            },
+            {
+              "title": "F08 placeholder and help text reach the preview; hidden where they do not apply",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 95,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:43.463Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-a819ce915ccb8a6a9052",
+              "file": "functional.spec.ts",
+              "line": 164,
+              "column": 3
+            },
+            {
+              "title": "F09 required: marker in list and preview, aria-required, checkbox message",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 88,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:43.565Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-a96f8b9adf568f1aa750",
+              "file": "functional.spec.ts",
+              "line": 181,
+              "column": 3
+            },
+            {
+              "title": "F10 rules: invalid e-mail, number range, text length, date range, select choice",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 95,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:43.661Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-45c9f2b019244096ca16",
+              "file": "functional.spec.ts",
+              "line": 196,
+              "column": 3
+            },
+            {
+              "title": "F11 empty required submit, live re-validation, \"Temizle\" resets",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 94,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:43.764Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-42211785a68745e53b0e",
+              "file": "functional.spec.ts",
+              "line": 236,
+              "column": 3
+            },
+            {
+              "title": "F12 live preview follows label, type, options and order changes",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 85,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:43.865Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-79d8fa350907fbfae202",
+              "file": "functional.spec.ts",
+              "line": 255,
+              "column": 3
+            },
+            {
+              "title": "F13 delete field: cancel keeps it; confirm removes it from list, preview and storage",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 91,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:43.957Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-aee618fb86dc9dc30e5e",
+              "file": "functional.spec.ts",
+              "line": 271,
+              "column": 3
+            },
+            {
+              "title": "F14 reorder with ↑/↓: list, preview, storage and export follow; edge buttons are disabled",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 91,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:44.056Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-30613770047b633aaf94",
+              "file": "functional.spec.ts",
+              "line": 288,
+              "column": 3
+            },
+            {
+              "title": "F15 export: JSON content, real download, clipboard, warnings, three ways to close, focus return",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 89,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:44.154Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-0196dc9f0048327ae68a",
+              "file": "functional.spec.ts",
+              "line": 305,
+              "column": 3
+            },
+            {
+              "title": "F16 persistence: real reload in the editor keeps every setting; browser back/forward work",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 88,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:44.249Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-d4ded22a91c58ccdd9a4",
+              "file": "functional.spec.ts",
+              "line": 334,
+              "column": 3
+            },
+            {
+              "title": "F17 broken storage: corrupt JSON, wrong shape, partly invalid data, unknown form link",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 88,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:44.345Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-037c380b87007918a2c0",
+              "file": "functional.spec.ts",
+              "line": 352,
+              "column": 3
+            },
+            {
+              "title": "F18 storage full / blocked: warning banner instead of silent data loss",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 87,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:44.439Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-52342a24f2a177b147b7",
+              "file": "functional.spec.ts",
+              "line": 378,
+              "column": 3
+            },
+            {
+              "title": "F19 keyboard: create, add a field and delete via dialog without a mouse; Escape and focus order",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 93,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:44.532Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-749423bd73b4e9a31373",
+              "file": "functional.spec.ts",
+              "line": 392,
+              "column": 3
+            },
+            {
+              "title": "F20 BUG-003 regression: skip link moves focus to the content and does not leave the editor",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 91,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:44.631Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-aa2789fa2f8f2f85b02b",
+              "file": "functional.spec.ts",
+              "line": 417,
+              "column": 3
+            },
+            {
+              "title": "F21 BUG-001 regression: two tabs never overwrite each other's forms",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 89,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:44.728Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-2701e88ab3d7301ba35b",
+              "file": "functional.spec.ts",
+              "line": 428,
+              "column": 3
+            },
+            {
+              "title": "F22 BUG-002 regression: \"Temiz başlat\" never deletes forms created after the warning",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 88,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:44.824Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-4efab1342f7ddcfa4a91",
+              "file": "functional.spec.ts",
+              "line": 447,
+              "column": 3
+            },
+            {
+              "title": "F24 BUG-004 regression: one click on \"Gönder (test)\" submits even when the last field turns invalid on blur",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 96,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:44.918Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-0a82f2807ea64566c66b",
+              "file": "functional.spec.ts",
+              "line": 462,
+              "column": 3
+            },
+            {
+              "title": "F25 JSON name: auto-sync with the label until edited by hand; invalid and duplicate names are flagged",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 88,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:45.020Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-9795888f0f4a19bb9124",
+              "file": "functional.spec.ts",
+              "line": 475,
+              "column": 3
+            },
+            {
+              "title": "F23 network: the app loads without login and sends no form data anywhere",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 90,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:45.114Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-da5fb1c8ace75ac4f637",
+              "file": "functional.spec.ts",
+              "line": 497,
+              "column": 3
+            },
+            {
+              "title": "F26 BUG-005 regression: unparsable number input is rejected, optional or required; \"Temizle\" clears it",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 91,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:45.213Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-89a1979b96e6d4ae870c",
+              "file": "functional.spec.ts",
+              "line": 516,
+              "column": 3
+            },
+            {
+              "title": "F27 BUG-006 regression: options are trimmed, de-duplicated and identical in storage, preview, validation and export",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 91,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:45.315Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-5b162df61ee38e4965db",
+              "file": "functional.spec.ts",
+              "line": 538,
+              "column": 3
+            },
+            {
+              "title": "F28 BUG-007 regression: preview errors follow schema changes (required on/off)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 84,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:45.418Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-a7e1ab16b5e7f4e3e3a9",
+              "file": "functional.spec.ts",
+              "line": 553,
+              "column": 3
+            },
+            {
+              "title": "F29 BUG-008 regression: export file names keep Turkish letters correctly (İ ı Ş ş Ğ ğ Ü ü Ö ö Ç ç)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 91,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:45.512Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-7800741663dc9657fde3",
+              "file": "functional.spec.ts",
+              "line": 564,
+              "column": 3
+            },
+            {
+              "title": "F30 BUG-009 regression: Tab and Shift+Tab stay inside both modals; focus returns to a sensible trigger",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 107,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:45.615Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-c27a641871284ea95e3a",
+              "file": "functional.spec.ts",
+              "line": 572,
+              "column": 3
+            },
+            {
+              "title": "F31 BUG-010 regression: an empty title or label still gives every button a meaningful accessible name",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 119,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:45.732Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-76b4eaf75b85966854b5",
+              "file": "functional.spec.ts",
+              "line": 592,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "title": "scenarios",
+          "file": "functional.spec.ts",
+          "line": 604,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Scenario A: customer contact form — build, validate, autosave, reload, export",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1596,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:32.916Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-ef0899f803ec248cdf2c",
+              "file": "functional.spec.ts",
+              "line": 607,
+              "column": 3
+            },
+            {
+              "title": "Scenario B: registration form with 6 field types — invalid data, edit the schema, test again",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1550,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:34.520Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-9cfdfe915bd90676bbab",
+              "file": "functional.spec.ts",
+              "line": 641,
+              "column": 3
+            },
+            {
+              "title": "Scenario C: several forms — switch, delete one, keep the others, reload",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1386,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:36.083Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-a33156eb6737c7a2e86c",
+              "file": "functional.spec.ts",
+              "line": 670,
+              "column": 3
+            },
+            {
+              "title": "Scenario A: customer contact form — build, validate, autosave, reload, export",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 605,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 114,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:45.863Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 605,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-706a262d534401164d8d",
+              "file": "functional.spec.ts",
+              "line": 607,
+              "column": 3
+            },
+            {
+              "title": "Scenario B: registration form with 6 field types — invalid data, edit the schema, test again",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 605,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 128,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:45.989Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 605,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-cab50a98f3c42e938060",
+              "file": "functional.spec.ts",
+              "line": 641,
+              "column": 3
+            },
+            {
+              "title": "Scenario C: several forms — switch, delete one, keep the others, reload",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 605,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 104,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:46.128Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 605,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-e88a098eb0d984c420c7",
+              "file": "functional.spec.ts",
+              "line": 670,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "title": "mobile",
+          "file": "functional.spec.ts",
+          "line": 688,
+          "column": 6,
+          "specs": [
+            {
+              "title": "M01 mobile: create, edit, preview, export and delete; no horizontal overflow; dialogs fit the screen",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "mobile only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 689,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 137,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:37.478Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "mobile only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 689,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-6d0d2751b0521eea757a",
+              "file": "functional.spec.ts",
+              "line": 691,
+              "column": 3
+            },
+            {
+              "title": "M01 mobile: create, edit, preview, export and delete; no horizontal overflow; dialogs fit the screen",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1500,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:46.242Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-89aaa60c1d72982715f0",
+              "file": "functional.spec.ts",
+              "line": 691,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "schemaforge.spec.ts",
+      "file": "schemaforge.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "desktop",
+          "file": "schemaforge.spec.ts",
+          "line": 19,
+          "column": 6,
+          "specs": [
+            {
+              "title": "full flow: create, fields, rules, validation, export, real reload, delete",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2458,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:37.646Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "dde79d502a5592d4383d-5e1588d94da9fd487e1e",
+              "file": "schemaforge.spec.ts",
+              "line": 22,
+              "column": 3
+            },
+            {
+              "title": "11 corrupt LocalStorage: no white page, clear message",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 979,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:40.115Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "dde79d502a5592d4383d-366632afc499c6d555a9",
+              "file": "schemaforge.spec.ts",
+              "line": 120,
+              "column": 3
+            },
+            {
+              "title": "keyboard: create a form and add a field without a mouse; focus is visible",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 790,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:41.104Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "dde79d502a5592d4383d-eaa4b0ae1251f3b7a2c5",
+              "file": "schemaforge.spec.ts",
+              "line": 132,
+              "column": 3
+            },
+            {
+              "title": "full flow: create, fields, rules, validation, export, real reload, delete",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\schemaforge.spec.ts",
+                        "line": 20,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:47.760Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\schemaforge.spec.ts",
+                            "line": 20,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "dde79d502a5592d4383d-9736b697a21bf9fb5884",
+              "file": "schemaforge.spec.ts",
+              "line": 22,
+              "column": 3
+            },
+            {
+              "title": "11 corrupt LocalStorage: no white page, clear message",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\schemaforge.spec.ts",
+                        "line": 20,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:47.766Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\schemaforge.spec.ts",
+                            "line": 20,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "dde79d502a5592d4383d-d28e7d3fd8cb6496b6a3",
+              "file": "schemaforge.spec.ts",
+              "line": 120,
+              "column": 3
+            },
+            {
+              "title": "keyboard: create a form and add a field without a mouse; focus is visible",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\schemaforge.spec.ts",
+                        "line": 20,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:47.776Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\schemaforge.spec.ts",
+                            "line": 20,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "dde79d502a5592d4383d-a4dbbe79f913771bd84e",
+              "file": "schemaforge.spec.ts",
+              "line": 132,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "title": "mobile",
+          "file": "schemaforge.spec.ts",
+          "line": 148,
+          "column": 6,
+          "specs": [
+            {
+              "title": "12 mobile layout is usable and has no horizontal overflow",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "mobile only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\schemaforge.spec.ts",
+                        "line": 149,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:41.907Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "mobile only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\schemaforge.spec.ts",
+                            "line": 149,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "dde79d502a5592d4383d-be12b5abf2ec7becb67d",
+              "file": "schemaforge.spec.ts",
+              "line": 151,
+              "column": 3
+            },
+            {
+              "title": "12 mobile layout is usable and has no horizontal overflow",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1159,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:39:47.781Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "dde79d502a5592d4383d-82fa2fe0be1165989954",
+              "file": "schemaforge.spec.ts",
+              "line": 151,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-19T15:38:56.034Z",
+    "duration": 53164.693999999996,
+    "expected": 39,
+    "skipped": 39,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
