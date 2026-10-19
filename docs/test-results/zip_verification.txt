@@ -1,5 +1,5 @@
 SchemaForge - Delivery Verification
-Generated: 2026-10-19 18:12:28
+Generated: 2026-10-19 18:13:29
 
 [PASS] Required files: 27/27
 [PASS] package.json author + scripts: author=Tugay Sinan Ergün; scripts=['build', 'dev', 'lint', 'preview', 'test', 'test:e2e', 'typecheck']
@@ -15,8 +15,8 @@ Generated: 2026-10-19 18:12:28
 [PASS] All GitHub/Netlify links in the docs are live (HTTP 200): https://github.com/TCoderr/SchemaForge -> 200, https://github.com/TCoderr/SchemaForge.git -> 200, https://schemaforge-tcoderr.netlify.app -> 200
 [PASS] Browser tests against the live Netlify site: 33 run, 0 failed, 6 known-defect tests
 [PASS] No dangerouslySetInnerHTML in source: none
-[PASS] ZIP integrity and contents: 118 files, 2.78 MB, CRC ok=True, leaked=none, missing=none
-[PASS] ZIP source == git HEAD: HEAD a4237a5; 112/112 tracked files identical (line endings ignored)
+[PASS] ZIP integrity and contents: 117 files, 2.78 MB, CRC ok=True, leaked=none, missing=none
+[PASS] ZIP source == git HEAD: HEAD 537a8f1; 112/112 tracked files identical (line endings ignored)
 [PASS] ZIP dist == live Netlify files: assets/index-7_u-jkvg.css 961b57af0a49 == live; assets/index-DtpLGSyl.js 3a1c943a1d55 == live; favicon.svg e30fb7291f79 == live
 
 OVERALL: PASS (17/17)
