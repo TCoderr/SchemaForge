@@ -35,9 +35,11 @@ export function PreviewPanel({ form }: { form: FormSchema }) {
         <form noValidate onSubmit={onSubmit} aria-label="Form önizlemesi" className="space-y-4">
           {form.fields.map((f) => <PreviewField key={f.id} field={f} value={values[f.id]} error={errors[f.id]}
             onChange={(v) => setValue(f, v)} onBlur={() => onBlur(f)} />)}
+          {/* preventDefault on mousedown keeps focus in the field: otherwise its blur validation inserts an error message,
+              the buttons shift down under the pointer and the click is lost. Keyboard and touch activation are unchanged. */}
           <div className="flex flex-wrap gap-2 pt-2">
-            <Button type="submit" variant="primary">Gönder (test)</Button>
-            <Button onClick={reset}>Temizle</Button>
+            <Button type="submit" variant="primary" onMouseDown={(e) => e.preventDefault()}>Gönder (test)</Button>
+            <Button onClick={reset} onMouseDown={(e) => e.preventDefault()}>Temizle</Button>
           </div>
           <div aria-live="polite">
             {result === 'ok' && <p className="rounded-lg bg-emerald-50 p-3 text-sm text-emerald-800">Form geçerli. Bu bir önizlemedir; veriler hiçbir yere gönderilmedi.</p>}

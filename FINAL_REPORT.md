@@ -1,7 +1,25 @@
 # SchemaForge — Final Raporu
 
 **Author / Maintainer:** Tugay Sinan Ergün · **GitHub:** TCoderr · **Tarih:** 19 Ekim 2026
-**Eğitim:** Web Geliştirme; Yapay Zeka
+**Eğitim:** Web Geliştirme; Yapay Zeka · **Sürüm:** 1.1
+
+## 0. Sürüm 1.1 — Kapsamlı fonksiyonel ve uçtan uca test (19.10.2026)
+
+- **Envanter:** 62 etkileşimli kontrol ve etkileşim. 61'i gerçek tarayıcıda sonucu doğrulanarak test edildi; 1'i (hata ekranındaki "Sayfayı yenile") tetiklenemedi.
+- **Bulunan hatalar:** 10.
+  - **Düzeltildi (4):**
+    - BUG-001 CRITICAL: İki sekmede çalışırken bir sekme diğerinin formlarını siliyordu.
+    - BUG-002 HIGH: "Temiz başlat", uyarıdan sonra oluşturulan formları onaysız siliyordu.
+    - BUG-003 HIGH: "İçeriğe atla" düzenleyiciyi kapatıyordu.
+    - BUG-004 HIGH: "Gönder (test)" ilk tıklamada çalışmıyordu.
+  - **Belgelendi, düzeltilmedi:** 2 MEDIUM ve 4 LOW (BUG-005…010).
+- **Testler:**
+  - Vitest 37/37 (+4 regresyon testi).
+  - Playwright: 39 test çalıştı; 33 başarılı, 6 bilinen kusur testi (`test.fail`), 0 başarısız.
+  - TypeScript, ESLint ve build: çıkış kodu 0.
+- **Raporlar:** `reports/UI_INTERACTION_AUDIT.md`, `FUNCTIONAL_TEST_REPORT.md`, `BUG_FIX_REPORT.md`, `LIVE_SITE_VERIFICATION.md`.
+
+Aşağıdaki 1–3. bölümler sürüm 1.0 içindir. Oradaki 33/33 ve 4/4 sayıları o sürümün sonuçlarıdır.
 
 ## 1. Sonuç
 

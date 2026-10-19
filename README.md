@@ -74,14 +74,16 @@ node scripts/collect-results.mjs   # hepsini çalıştırır, docs/TEST_REPORT.m
 
 Ayrıntılar: [docs/TEST_REPORT.md](docs/TEST_REPORT.md). Ham çıktılar: `docs/test-results/`.
 
+**1.1 (19.10.2026) — Kapsamlı fonksiyonel denetim:** 62 etkileşim envanteri, 35 yeni tarayıcı testi, 10 hata bulundu (1 CRITICAL, 3 HIGH düzeltildi; 2 MEDIUM, 4 LOW belgelendi). Raporlar: `reports/UI_INTERACTION_AUDIT.md`, `reports/FUNCTIONAL_TEST_REPORT.md`, `reports/BUG_FIX_REPORT.md`, `reports/LIVE_SITE_VERIFICATION.md`.
+
 | Kontrol | Sonuç |
 |---|---|
 | TypeScript (`tsc -b`) | Hatasız |
 | ESLint | Hatasız |
-| Vitest + React Testing Library | 33/33 |
+| Vitest + React Testing Library | 37/37 |
 | `npm run build` | Başarılı |
-| Playwright (Edge, masaüstü + mobil) | 4/4 |
-| Playwright, **canlı Netlify sitesine karşı** | 4/4 |
+| Playwright (Edge, masaüstü + mobil) | 33/33 başarılı + 6 bilinen kusur testi (`test.fail`; başarılı sayılmaz) |
+| Playwright, **canlı Netlify sitesine karşı** | `reports/LIVE_SITE_VERIFICATION.md` |
 
 Görevdeki 12 kullanıcı senaryosunun tamamı otomatik testle doğrulandı:
 1. form oluşturma
@@ -116,8 +118,9 @@ src/
 ├── pages/                    # DashboardPage, EditorPage
 ├── App.tsx, main.tsx
 └── *.test.ts(x)              # Vitest testleri
-e2e/                          # Playwright testleri
+e2e/                          # Playwright testleri (schemaforge.spec.ts, functional.spec.ts)
 docs/                         # TEST_REPORT, DEPLOYMENT, ekran görüntüleri, ham test çıktıları
+reports/                      # fonksiyonel denetim: envanter, test, hata ve canlı site raporları
 ```
 
 ## Dağıtım
@@ -128,7 +131,7 @@ Netlify ayarları `netlify.toml` dosyasında: build `npm run build`, publish `di
 - **Canlı site (Netlify Free):** https://schemaforge-tcoderr.netlify.app
 - **GitHub deposu (public):** https://github.com/TCoderr/SchemaForge
 
-Canlı sitede de tarayıcı testlerinin tamamı çalıştırıldı ve geçti (4/4).
+Canlı sitedeki test sonuçları ve yayımlanan sürümün commit kimliği: [reports/LIVE_SITE_VERIFICATION.md](reports/LIVE_SITE_VERIFICATION.md).
 
 Not: Site, Netlify CLI ile `dist` klasöründen elle yayımlandı. GitHub'dan otomatik yayın (sürekli dağıtım) henüz bağlanmadı; adımlar `docs/DEPLOYMENT.md` içinde.
 

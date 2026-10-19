@@ -2,8 +2,8 @@ import type { LoadStatus } from '../lib/storage'
 import { Button } from './ui'
 
 /** Explains recovered / corrupt LocalStorage data instead of crashing or silently losing it. */
-export function StorageBanner({ status, saveFailed, onReset, onDismiss }: {
-  status: LoadStatus; saveFailed: boolean; onReset: () => void; onDismiss: () => void
+export function StorageBanner({ status, saveFailed, canReset, onReset, onDismiss }: {
+  status: LoadStatus; saveFailed: boolean; canReset: boolean; onReset: () => void; onDismiss: () => void
 }) {
   if (saveFailed) {
     return (
@@ -23,7 +23,9 @@ export function StorageBanner({ status, saveFailed, onReset, onDismiss }: {
           {status.kind === 'corrupt' && status.backupKey ? ` Ham veri "${status.backupKey}" anahtarına yedeklendi.` : ''}
         </p>
         <div className="flex gap-2">
-          {status.kind === 'corrupt' && <Button onClick={onReset}>Temiz başlat</Button>}
+          {/* Only while nothing new exists: once the user has created forms they already replaced the unreadable value,
+              and "start clean" would delete their new work. */}
+          {status.kind === 'corrupt' && canReset && <Button onClick={onReset}>Temiz başlat</Button>}
           <Button variant="ghost" onClick={onDismiss}>Kapat</Button>
         </div>
       </div>

@@ -10,7 +10,9 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900">
-      <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:m-2 focus:rounded focus:bg-white focus:p-2">İçeriğe atla</a>
+      {/* "#main" must not reach the hash router (it would leave the editor), so focus the content directly. */}
+      <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:m-2 focus:rounded focus:bg-white focus:p-2"
+        onClick={(e) => { e.preventDefault(); document.getElementById('main')?.focus() }}>İçeriğe atla</a>
       <header className="border-b border-slate-200 bg-white">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-3">
           <a href="#/" className="flex items-center gap-2 rounded focus-visible:outline-2 focus-visible:outline-indigo-600">
@@ -22,8 +24,8 @@ export default function App() {
           </p>
         </div>
       </header>
-      <StorageBanner status={status} saveFailed={saveFailed} onReset={resetStorage} onDismiss={dismissStatus} />
-      <div id="main">
+      <StorageBanner status={status} saveFailed={saveFailed} canReset={forms.length === 0} onReset={resetStorage} onDismiss={dismissStatus} />
+      <div id="main" tabIndex={-1} className="outline-none">
         {route.page === 'editor'
           ? <EditorPage key={route.formId} form={forms.find((f) => f.id === route.formId)} onChange={update} />
           : <DashboardPage forms={forms} onCreate={create} onDuplicate={duplicate} onDelete={remove} />}

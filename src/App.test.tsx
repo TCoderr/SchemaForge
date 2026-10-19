@@ -1,5 +1,5 @@
 /** User scenarios from the task (1-11) on the whole app with React Testing Library. Scenario 12 (mobile) runs in Playwright. */
-import { render, screen, within, waitFor } from '@testing-library/react'
+import { act, fireEvent, render, screen, within, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { describe, expect, it } from 'vitest'
 import App from './App'
@@ -182,6 +182,49 @@ describe('SchemaForge user scenarios', () => {
     window.location.hash = '#/forms/olmayan-id'
     render(<App />)
     expect(await screen.findByText('Form bulunamadı')).toBeInTheDocument()
+  })
+
+  it('BUG-001: a save from another tab is adopted, so this tab never overwrites it with a stale list', async () => {
+    seed([createForm('Bu sekme')])
+    const user = userEvent.setup()
+    render(<App />)
+    const other = [createForm('Diğer sekme'), ...stored()]
+    const newValue = JSON.stringify({ version: 1, forms: other })
+    localStorage.setItem(STORAGE_KEY, newValue) // what the other tab wrote
+    act(() => { window.dispatchEvent(new StorageEvent('storage', { key: STORAGE_KEY, newValue })) })
+    expect(await screen.findByText('Diğer sekme')).toBeInTheDocument()
+    await user.click(screen.getByRole('button', { name: '+ Yeni form' })) // this tab saves next
+    expect(stored().map((f) => f.title)).toEqual(['Adsız form', 'Diğer sekme', 'Bu sekme'])
+  })
+
+  it('BUG-002: "Temiz başlat" disappears once the user has created a form after a corrupt-data warning', async () => {
+    localStorage.setItem(STORAGE_KEY, '{bozuk')
+    const user = userEvent.setup()
+    render(<App />)
+    expect(screen.getByRole('button', { name: 'Temiz başlat' })).toBeInTheDocument()
+    await user.click(screen.getByRole('button', { name: 'İlk formu oluştur' }))
+    await screen.findByLabelText('Form başlığı')
+    expect(screen.queryByRole('button', { name: 'Temiz başlat' })).not.toBeInTheDocument()
+    expect(stored()).toHaveLength(1)
+  })
+
+  it('BUG-003: the skip link focuses the content without changing the route', async () => {
+    const user = await newFormInEditor()
+    const hash = window.location.hash
+    await user.click(screen.getByRole('link', { name: 'İçeriğe atla' }))
+    expect(window.location.hash).toBe(hash)
+    expect(screen.getByLabelText('Form başlığı')).toBeInTheDocument()
+    expect(document.activeElement?.id).toBe('main')
+  })
+
+  it('BUG-004: pressing the preview buttons does not move focus out of the field (no layout shift before the click)', async () => {
+    const user = await newFormInEditor()
+    await user.click(screen.getByRole('button', { name: 'Kısa metin alanı ekle' }))
+    const preview = screen.getByRole('form', { name: 'Form önizlemesi' })
+    for (const name of ['Gönder (test)', 'Temizle']) {
+      // fireEvent returns false when the default action (moving focus) was prevented
+      expect(fireEvent.mouseDown(within(preview).getByRole('button', { name }))).toBe(false)
+    }
   })
 
   it('security: user text is rendered as text, never as HTML', async () => {

@@ -38,14 +38,16 @@ def junit(path):
     cases = re.findall(r'<testcase\b[^>]*?(?:/>|>([\s\S]*?)</testcase>)', x)
     run = [c for c in cases if '<skipped' not in c]
     failed = [c for c in run if '<failure' in c or '<error' in c]
-    return len(run), len(failed)
-u_total, u_fail = junit('docs/test-results/unit-junit.xml')
-e_total, e_fail = junit('docs/test-results/e2e-junit.xml')
+    known = [c for c in run if c not in failed and '<property name="fail"' in c]  # test.fail(): documented, unfixed defect
+    return len(run) - len(known), len(failed), len(known)
+u_total, u_fail, _ = junit('docs/test-results/unit-junit.xml')
+e_total, e_fail, e_known = junit('docs/test-results/e2e-junit.xml')
 check('Unit/integration tests (JUnit)', u_total >= 30 and u_fail == 0, f'{u_total} run, {u_fail} failed')
-check('Browser tests (JUnit)', e_total >= 4 and e_fail == 0, f'{e_total} run, {e_fail} failed (skips excluded)')
+check('Browser tests (JUnit)', e_total >= 4 and e_fail == 0, f'{e_total} run, {e_fail} failed (skips excluded); {e_known} known-defect tests (test.fail) not counted as passed')
 readme = (ROOT / 'README.md').read_text(encoding='utf-8'); report = (ROOT / 'docs/TEST_REPORT.md').read_text(encoding='utf-8')
-check('README/TEST_REPORT numbers match JUnit', f'| {u_total}/{u_total} |' in readme and f'| {e_total}/{e_total} |' in readme
-      and f'{u_total} test · {u_total} başarılı' in report and f'{e_total} test · {e_total} başarılı' in report, f'unit {u_total}, e2e {e_total}')
+check('README/TEST_REPORT numbers match JUnit', f'| {u_total}/{u_total} |' in readme and f'| {e_total}/{e_total} ' in readme
+      and f'{u_total} test · {u_total} başarılı' in report and f'{e_total + e_known} test · {e_total} başarılı · {e_known} bilinen kusur' in report,
+      f'unit {u_total}, e2e {e_total} + {e_known} known defects')
 build = (ROOT / 'docs/test-results/build.txt').read_text(encoding='utf-8')
 check('npm run build output recorded and successful', '# exit: 0' in build and 'built in' in build, 'docs/test-results/build.txt')
 for name in ('typecheck', 'lint'):
@@ -77,8 +79,8 @@ for u in links:
 check('All GitHub/Netlify links in the docs are live (HTTP 200)', links and all(c == 200 for c in status.values()), ', '.join(f'{u} -> {c}' for u, c in status.items()))
 live_junit = ROOT / 'docs/test-results/e2e-live-junit.xml'
 if live_junit.exists():
-    l_total, l_fail = junit('docs/test-results/e2e-live-junit.xml')
-    check('Browser tests against the live Netlify site', l_total >= 4 and l_fail == 0, f'{l_total} run, {l_fail} failed')
+    l_total, l_fail, l_known = junit('docs/test-results/e2e-live-junit.xml')
+    check('Browser tests against the live Netlify site', l_total >= 4 and l_fail == 0, f'{l_total} run, {l_fail} failed, {l_known} known-defect tests')
 
 src_text = '\n'.join(p.read_text(encoding='utf-8') for p in (ROOT / 'src').rglob('*.tsx'))
 check('No dangerouslySetInnerHTML in source', 'dangerouslySetInnerHTML' not in src_text, 'none')

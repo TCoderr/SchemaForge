@@ -1,0 +1,3957 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\Project\\SchemaForge\\node_modules\\@playwright\\test\\cli.js",
+      "test"
+    ],
+    "configFile": "D:\\Project\\SchemaForge\\playwright.config.ts",
+    "rootDir": "D:/Project/SchemaForge/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/Project/SchemaForge/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "desktop",
+        "name": "desktop",
+        "testDir": "D:/Project/SchemaForge/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "D:/Project/SchemaForge/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "mobile",
+        "name": "mobile",
+        "testDir": "D:/Project/SchemaForge/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\Project\\SchemaForge\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "desktop",
+        "testDir": "D:\\Project\\SchemaForge\\e2e",
+        "snapshotDir": "D:\\Project\\SchemaForge\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://localhost:4173",
+          "channel": "msedge",
+          "locale": "tr-TR",
+          "acceptDownloads": true,
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "desktop"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "D:\\Project\\SchemaForge\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "mobile",
+        "testDir": "D:\\Project\\SchemaForge\\e2e",
+        "snapshotDir": "D:\\Project\\SchemaForge\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://localhost:4173",
+          "channel": "msedge",
+          "locale": "tr-TR",
+          "acceptDownloads": true,
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "isMobile": true,
+          "hasTouch": true,
+          "deviceScaleFactor": 2
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "mobile"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "docs/test-results/e2e-junit.xml"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "reports/test-results/e2e-local.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run build && npm run preview",
+      "url": "http://localhost:4173",
+      "reuseExistingServer": false,
+      "timeout": 120000
+    }
+  },
+  "suites": [
+    {
+      "title": "functional.spec.ts",
+      "file": "functional.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "desktop",
+          "file": "functional.spec.ts",
+          "line": 46,
+          "column": 6,
+          "specs": [
+            {
+              "title": "F01 first visit: empty state, nothing stored before the user acts",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 308,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:25.247Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-1cfae4049e61aab86ec3",
+              "file": "functional.spec.ts",
+              "line": 49,
+              "column": 3
+            },
+            {
+              "title": "F02 first form from the empty state opens the editor and is stored",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 246,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:25.751Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-f50bf767b27cd6b45f07",
+              "file": "functional.spec.ts",
+              "line": 60,
+              "column": 3
+            },
+            {
+              "title": "F03 second form, listing (newest first, counts, date) and \"Düzenle\" opens the right form",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 442,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:26.007Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-674984cd8ee16a88c23b",
+              "file": "functional.spec.ts",
+              "line": 71,
+              "column": 3
+            },
+            {
+              "title": "F04 title and description: live preview, list card and storage",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 319,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:26.457Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-d6a4b596666ac4187200",
+              "file": "functional.spec.ts",
+              "line": 88,
+              "column": 3
+            },
+            {
+              "title": "F05 duplicate: \"(kopya)\", \"(kopya 2)\", fields copied and independent of the original",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 415,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:26.783Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-ade4aa1269a1babe7411",
+              "file": "functional.spec.ts",
+              "line": 101,
+              "column": 3
+            },
+            {
+              "title": "F06 delete form: Vazgeç, Escape and backdrop cancel; \"Formu sil\" deletes and survives reload",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 532,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:27.206Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-531703383949fdb4c7d8",
+              "file": "functional.spec.ts",
+              "line": 120,
+              "column": 3
+            },
+            {
+              "title": "F07 every field type: defaults, preview control, unique JSON names",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 580,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:27.745Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-e90ff7eb63a4dd8870bc",
+              "file": "functional.spec.ts",
+              "line": 143,
+              "column": 3
+            },
+            {
+              "title": "F08 placeholder and help text reach the preview; hidden where they do not apply",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 419,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:28.336Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-bd179bc7a4058bac9641",
+              "file": "functional.spec.ts",
+              "line": 164,
+              "column": 3
+            },
+            {
+              "title": "F09 required: marker in list and preview, aria-required, checkbox message",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 448,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:28.766Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-df6e02f03fb9663768d4",
+              "file": "functional.spec.ts",
+              "line": 181,
+              "column": 3
+            },
+            {
+              "title": "F10 rules: invalid e-mail, number range, text length, date range, select choice",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 720,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:29.224Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-e84767fa34c59e786f5e",
+              "file": "functional.spec.ts",
+              "line": 196,
+              "column": 3
+            },
+            {
+              "title": "F11 empty required submit, live re-validation, \"Temizle\" resets",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 458,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:29.951Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-7e4b4bec7c9341997967",
+              "file": "functional.spec.ts",
+              "line": 236,
+              "column": 3
+            },
+            {
+              "title": "F12 live preview follows label, type, options and order changes",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 380,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:30.416Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-199adb2ef1127f3c63ea",
+              "file": "functional.spec.ts",
+              "line": 255,
+              "column": 3
+            },
+            {
+              "title": "F13 delete field: cancel keeps it; confirm removes it from list, preview and storage",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 410,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:30.803Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-4774ecdf0f73ea2d7f37",
+              "file": "functional.spec.ts",
+              "line": 271,
+              "column": 3
+            },
+            {
+              "title": "F14 reorder with ↑/↓: list, preview, storage and export follow; edge buttons are disabled",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 406,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:31.222Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-a2d3ef7951065b21b597",
+              "file": "functional.spec.ts",
+              "line": 288,
+              "column": 3
+            },
+            {
+              "title": "F15 export: JSON content, real download, clipboard, warnings, three ways to close, focus return",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 734,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:31.635Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-334d7a4a700bcc5074e8",
+              "file": "functional.spec.ts",
+              "line": 305,
+              "column": 3
+            },
+            {
+              "title": "F16 persistence: real reload in the editor keeps every setting; browser back/forward work",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 474,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:32.375Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-45a75eb10a0c211b178b",
+              "file": "functional.spec.ts",
+              "line": 334,
+              "column": 3
+            },
+            {
+              "title": "F17 broken storage: corrupt JSON, wrong shape, partly invalid data, unknown form link",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 502,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:32.858Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-41b33e64a4d254abd6d4",
+              "file": "functional.spec.ts",
+              "line": 352,
+              "column": 3
+            },
+            {
+              "title": "F18 storage full / blocked: warning banner instead of silent data loss",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 266,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:33.366Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-779162f95178e231efe6",
+              "file": "functional.spec.ts",
+              "line": 378,
+              "column": 3
+            },
+            {
+              "title": "F19 keyboard: create, add a field and delete via dialog without a mouse; Escape and focus order",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 292,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:33.641Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-3ec214c002fdd2a0fd7e",
+              "file": "functional.spec.ts",
+              "line": 392,
+              "column": 3
+            },
+            {
+              "title": "F20 BUG-003 regression: skip link moves focus to the content and does not leave the editor",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 280,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:33.946Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-44f66e245f2f1038204e",
+              "file": "functional.spec.ts",
+              "line": 417,
+              "column": 3
+            },
+            {
+              "title": "F21 BUG-001 regression: two tabs never overwrite each other's forms",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 640,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:34.233Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-5dddf6aa20565fdd7329",
+              "file": "functional.spec.ts",
+              "line": 428,
+              "column": 3
+            },
+            {
+              "title": "F22 BUG-002 regression: \"Temiz başlat\" never deletes forms created after the warning",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 382,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:34.880Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-0f5190c97a6b944b69dc",
+              "file": "functional.spec.ts",
+              "line": 447,
+              "column": 3
+            },
+            {
+              "title": "F24 BUG-004 regression: one click on \"Gönder (test)\" submits even when the last field turns invalid on blur",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 370,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:35.269Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-bff3794774816ff2cb5a",
+              "file": "functional.spec.ts",
+              "line": 462,
+              "column": 3
+            },
+            {
+              "title": "F25 JSON name: auto-sync with the label until edited by hand; invalid and duplicate names are flagged",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 384,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:35.650Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-fcada3e72e38ff9991bd",
+              "file": "functional.spec.ts",
+              "line": 475,
+              "column": 3
+            },
+            {
+              "title": "F23 network: the app loads without login and sends no form data anywhere",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 361,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:36.042Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-a0c7235b0670f486982e",
+              "file": "functional.spec.ts",
+              "line": 497,
+              "column": 3
+            },
+            {
+              "title": "K01 BUG-005 [MEDIUM] optional number field with unparsable input is reported as valid",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "fail",
+                      "description": "BUG-005 known defect",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 518,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "expectedStatus": "failed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 2332,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]')\nExpected substring: \u001b[32m\"1 alanda hata var\"\u001b[39m\nReceived string:    \u001b[31m\"Form geçerli. Bu bir önizlemedir; veriler hiçbir yere gönderilmedi.\"\u001b[39m\nTimeout: 2000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]') with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]')\u001b[22m\n\u001b[2m    20 × locator resolved to <div aria-live=\"polite\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Form geçerli. Bu bir önizlemedir; veriler hiçbir yere gönderilmedi.\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]')\nExpected substring: \u001b[32m\"1 alanda hata var\"\u001b[39m\nReceived string:    \u001b[31m\"Form geçerli. Bu bir önizlemedir; veriler hiçbir yere gönderilmedi.\"\u001b[39m\nTimeout: 2000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]') with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]')\u001b[22m\n\u001b[2m    20 × locator resolved to <div aria-live=\"polite\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Form geçerli. Bu bir önizlemedir; veriler hiçbir yere gönderilmedi.\"\u001b[22m\n\n    at D:\\Project\\SchemaForge\\e2e\\functional.spec.ts:522:32",
+                        "location": {
+                          "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                          "column": 32,
+                          "line": 522
+                        },
+                        "snippet": "  520 |     await preview(page).getByLabel('Yaş').pressSequentially('1-2')\n  521 |     await submit(page)\n> 522 |     await expect(result(page)).toContainText('1 alanda hata var', { timeout: 2000 })\n      |                                ^\n  523 |   })\n  524 |\n  525 |   test('K02 BUG-006 [MEDIUM] select option with surrounding spaces can never pass validation', async ({ page }) => {"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "column": 32,
+                            "line": 522
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]')\nExpected substring: \u001b[32m\"1 alanda hata var\"\u001b[39m\nReceived string:    \u001b[31m\"Form geçerli. Bu bir önizlemedir; veriler hiçbir yere gönderilmedi.\"\u001b[39m\nTimeout: 2000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]') with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]')\u001b[22m\n\u001b[2m    20 × locator resolved to <div aria-live=\"polite\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Form geçerli. Bu bir önizlemedir; veriler hiçbir yere gönderilmedi.\"\u001b[22m\n\n\n  520 |     await preview(page).getByLabel('Yaş').pressSequentially('1-2')\n  521 |     await submit(page)\n> 522 |     await expect(result(page)).toContainText('1 alanda hata var', { timeout: 2000 })\n      |                                ^\n  523 |   })\n  524 |\n  525 |   test('K02 BUG-006 [MEDIUM] select option with surrounding spaces can never pass validation', async ({ page }) => {\n    at D:\\Project\\SchemaForge\\e2e\\functional.spec.ts:522:32"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:36.409Z",
+                      "annotations": [
+                        {
+                          "type": "fail",
+                          "description": "BUG-005 known defect",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 518,
+                            "column": 10
+                          }
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "D:\\Project\\SchemaForge\\test-results\\functional-desktop-K01-BUG-ccdcb--input-is-reported-as-valid-desktop\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "column": 32,
+                        "line": 522
+                      }
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-0c21445eab4f1bc032ad",
+              "file": "functional.spec.ts",
+              "line": 517,
+              "column": 3
+            },
+            {
+              "title": "K02 BUG-006 [MEDIUM] select option with surrounding spaces can never pass validation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "fail",
+                      "description": "BUG-006 known defect",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 526,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "expectedStatus": "failed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 2336,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]')\nExpected substring: \u001b[32m\"Form geçerli\"\u001b[39m\nReceived string:    \u001b[31m\"1 alanda hata var. Lütfen işaretli alanları düzeltin.\"\u001b[39m\nTimeout: 2000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]') with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]')\u001b[22m\n\u001b[2m    20 × locator resolved to <div aria-live=\"polite\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"1 alanda hata var. Lütfen işaretli alanları düzeltin.\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]')\nExpected substring: \u001b[32m\"Form geçerli\"\u001b[39m\nReceived string:    \u001b[31m\"1 alanda hata var. Lütfen işaretli alanları düzeltin.\"\u001b[39m\nTimeout: 2000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]') with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]')\u001b[22m\n\u001b[2m    20 × locator resolved to <div aria-live=\"polite\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"1 alanda hata var. Lütfen işaretli alanları düzeltin.\"\u001b[22m\n\n    at D:\\Project\\SchemaForge\\e2e\\functional.spec.ts:531:32",
+                        "location": {
+                          "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                          "column": 32,
+                          "line": 531
+                        },
+                        "snippet": "  529 |     await preview(page).getByLabel('Şehir').selectOption({ index: 1 })\n  530 |     await submit(page)\n> 531 |     await expect(result(page)).toContainText('Form geçerli', { timeout: 2000 })\n      |                                ^\n  532 |   })\n  533 |\n  534 |   test('K03 BUG-007 [LOW] preview keeps a stale error after the field is made optional', async ({ page }) => {"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "column": 32,
+                            "line": 531
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]')\nExpected substring: \u001b[32m\"Form geçerli\"\u001b[39m\nReceived string:    \u001b[31m\"1 alanda hata var. Lütfen işaretli alanları düzeltin.\"\u001b[39m\nTimeout: 2000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]') with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live=\"polite\"]')\u001b[22m\n\u001b[2m    20 × locator resolved to <div aria-live=\"polite\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"1 alanda hata var. Lütfen işaretli alanları düzeltin.\"\u001b[22m\n\n\n  529 |     await preview(page).getByLabel('Şehir').selectOption({ index: 1 })\n  530 |     await submit(page)\n> 531 |     await expect(result(page)).toContainText('Form geçerli', { timeout: 2000 })\n      |                                ^\n  532 |   })\n  533 |\n  534 |   test('K03 BUG-007 [LOW] preview keeps a stale error after the field is made optional', async ({ page }) => {\n    at D:\\Project\\SchemaForge\\e2e\\functional.spec.ts:531:32"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:38.753Z",
+                      "annotations": [
+                        {
+                          "type": "fail",
+                          "description": "BUG-006 known defect",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 526,
+                            "column": 10
+                          }
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "D:\\Project\\SchemaForge\\test-results\\functional-desktop-K02-BUG-02e1b-s-can-never-pass-validation-desktop\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "column": 32,
+                        "line": 531
+                      }
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-ab8627b4bd27f2496828",
+              "file": "functional.spec.ts",
+              "line": 525,
+              "column": 3
+            },
+            {
+              "title": "K03 BUG-007 [LOW] preview keeps a stale error after the field is made optional",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "fail",
+                      "description": "BUG-007 known defect",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 535,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "expectedStatus": "failed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 2416,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('form', { name: 'Form önizlemesi' }).getByText('Bu alan zorunludur.')\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  2000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" getByRole('form', { name: 'Form önizlemesi' }).getByText('Bu alan zorunludur.') with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('form', { name: 'Form önizlemesi' }).getByText('Bu alan zorunludur.')\u001b[22m\n\u001b[2m    20 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('form', { name: 'Form önizlemesi' }).getByText('Bu alan zorunludur.')\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  2000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" getByRole('form', { name: 'Form önizlemesi' }).getByText('Bu alan zorunludur.') with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('form', { name: 'Form önizlemesi' }).getByText('Bu alan zorunludur.')\u001b[22m\n\u001b[2m    20 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n\n    at D:\\Project\\SchemaForge\\e2e\\functional.spec.ts:539:66",
+                        "location": {
+                          "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                          "column": 66,
+                          "line": 539
+                        },
+                        "snippet": "  537 |     await submit(page)\n  538 |     await page.getByLabel('Zorunlu alan').uncheck()\n> 539 |     await expect(preview(page).getByText('Bu alan zorunludur.')).toHaveCount(0, { timeout: 2000 })\n      |                                                                  ^\n  540 |   })\n  541 |\n  542 |   test('K04 BUG-008 [LOW] export file name breaks the Turkish capital İ', async ({ page }) => {"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "column": 66,
+                            "line": 539
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('form', { name: 'Form önizlemesi' }).getByText('Bu alan zorunludur.')\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  2000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" getByRole('form', { name: 'Form önizlemesi' }).getByText('Bu alan zorunludur.') with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('form', { name: 'Form önizlemesi' }).getByText('Bu alan zorunludur.')\u001b[22m\n\u001b[2m    20 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n\n\n  537 |     await submit(page)\n  538 |     await page.getByLabel('Zorunlu alan').uncheck()\n> 539 |     await expect(preview(page).getByText('Bu alan zorunludur.')).toHaveCount(0, { timeout: 2000 })\n      |                                                                  ^\n  540 |   })\n  541 |\n  542 |   test('K04 BUG-008 [LOW] export file name breaks the Turkish capital İ', async ({ page }) => {\n    at D:\\Project\\SchemaForge\\e2e\\functional.spec.ts:539:66"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:41.099Z",
+                      "annotations": [
+                        {
+                          "type": "fail",
+                          "description": "BUG-007 known defect",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 535,
+                            "column": 10
+                          }
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "D:\\Project\\SchemaForge\\test-results\\functional-desktop-K03-BUG-415f2--the-field-is-made-optional-desktop\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "column": 66,
+                        "line": 539
+                      }
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-9e0be49007721403bef8",
+              "file": "functional.spec.ts",
+              "line": 534,
+              "column": 3
+            },
+            {
+              "title": "K04 BUG-008 [LOW] export file name breaks the Turkish capital İ",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "fail",
+                      "description": "BUG-008 known defect",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 543,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "expectedStatus": "failed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 2321,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog')\nTimeout: 2000ms\n\u001b[32m- Expected substring  -  1\u001b[39m\n\u001b[31m+ Received string     + 10\u001b[39m\n\n\u001b[32m- \u001b[7mi\u001b[27mletişim.schemaforge.json\u001b[39m\n\u001b[31m+ \u001b[7mJSON dışa aktarmai-\u001b[27mletişim.schemaforge.json\u001b[7m · 0 alan · biçim schemaforge.form v1✕{\u001b[27m\u001b[39m\n\u001b[31m+   \"format\": \"schemaforge.form\",\u001b[39m\n\u001b[31m+   \"version\": 1,\u001b[39m\n\u001b[31m+   \"exportedAt\": \"2026-10-19T15:03:43.820Z\",\u001b[39m\n\u001b[31m+   \"form\": {\u001b[39m\n\u001b[31m+     \"title\": \"İletişim\",\u001b[39m\n\u001b[31m+     \"description\": \"\",\u001b[39m\n\u001b[31m+     \"fields\": []\u001b[39m\n\u001b[31m+   }\u001b[39m\n\u001b[31m+ }Panoya kopyalaJSON indir\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('dialog') with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog')\u001b[22m\n\u001b[2m    20 × locator resolved to <div role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"export-title\" class=\"flex max-h-[90vh] w-full max-w-3xl flex-col rounded-2xl bg-white shadow-xl\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"JSON dışa aktarmai-letişim.schemaforge.json · 0 alan · biçim schemaforge.form v1✕{\u001b[22m\n\u001b[2m  \"format\": \"schemaforge.form\",\u001b[22m\n\u001b[2m  \"version\": 1,\u001b[22m\n\u001b[2m  \"exportedAt\": \"2026-10-19T15:03:43.820Z\",\u001b[22m\n\u001b[2m  \"form\": {\u001b[22m\n\u001b[2m    \"title\": \"İletişim\",\u001b[22m\n\u001b[2m    \"description\": \"\",\u001b[22m\n\u001b[2m    \"fields\": []\u001b[22m\n\u001b[2m  }\u001b[22m\n\u001b[2m}Panoya kopyalaJSON indir\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog')\nTimeout: 2000ms\n\u001b[32m- Expected substring  -  1\u001b[39m\n\u001b[31m+ Received string     + 10\u001b[39m\n\n\u001b[32m- \u001b[7mi\u001b[27mletişim.schemaforge.json\u001b[39m\n\u001b[31m+ \u001b[7mJSON dışa aktarmai-\u001b[27mletişim.schemaforge.json\u001b[7m · 0 alan · biçim schemaforge.form v1✕{\u001b[27m\u001b[39m\n\u001b[31m+   \"format\": \"schemaforge.form\",\u001b[39m\n\u001b[31m+   \"version\": 1,\u001b[39m\n\u001b[31m+   \"exportedAt\": \"2026-10-19T15:03:43.820Z\",\u001b[39m\n\u001b[31m+   \"form\": {\u001b[39m\n\u001b[31m+     \"title\": \"İletişim\",\u001b[39m\n\u001b[31m+     \"description\": \"\",\u001b[39m\n\u001b[31m+     \"fields\": []\u001b[39m\n\u001b[31m+   }\u001b[39m\n\u001b[31m+ }Panoya kopyalaJSON indir\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('dialog') with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog')\u001b[22m\n\u001b[2m    20 × locator resolved to <div role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"export-title\" class=\"flex max-h-[90vh] w-full max-w-3xl flex-col rounded-2xl bg-white shadow-xl\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"JSON dışa aktarmai-letişim.schemaforge.json · 0 alan · biçim schemaforge.form v1✕{\u001b[22m\n\u001b[2m  \"format\": \"schemaforge.form\",\u001b[22m\n\u001b[2m  \"version\": 1,\u001b[22m\n\u001b[2m  \"exportedAt\": \"2026-10-19T15:03:43.820Z\",\u001b[22m\n\u001b[2m  \"form\": {\u001b[22m\n\u001b[2m    \"title\": \"İletişim\",\u001b[22m\n\u001b[2m    \"description\": \"\",\u001b[22m\n\u001b[2m    \"fields\": []\u001b[22m\n\u001b[2m  }\u001b[22m\n\u001b[2m}Panoya kopyalaJSON indir\"\u001b[22m\n\n    at D:\\Project\\SchemaForge\\e2e\\functional.spec.ts:546:44",
+                        "location": {
+                          "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                          "column": 44,
+                          "line": 546
+                        },
+                        "snippet": "  544 |     await page.goto('/'); await newForm(page, 'İletişim')\n  545 |     await page.getByRole('button', { name: \"JSON'u dışa aktar\" }).click()\n> 546 |     await expect(page.getByRole('dialog')).toContainText('iletişim.schemaforge.json', { timeout: 2000 })\n      |                                            ^\n  547 |   })\n  548 |\n  549 |   test('K05 BUG-009 [LOW] Tab can move focus out of an open modal dialog', async ({ page }) => {"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "column": 44,
+                            "line": 546
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog')\nTimeout: 2000ms\n\u001b[32m- Expected substring  -  1\u001b[39m\n\u001b[31m+ Received string     + 10\u001b[39m\n\n\u001b[32m- \u001b[7mi\u001b[27mletişim.schemaforge.json\u001b[39m\n\u001b[31m+ \u001b[7mJSON dışa aktarmai-\u001b[27mletişim.schemaforge.json\u001b[7m · 0 alan · biçim schemaforge.form v1✕{\u001b[27m\u001b[39m\n\u001b[31m+   \"format\": \"schemaforge.form\",\u001b[39m\n\u001b[31m+   \"version\": 1,\u001b[39m\n\u001b[31m+   \"exportedAt\": \"2026-10-19T15:03:43.820Z\",\u001b[39m\n\u001b[31m+   \"form\": {\u001b[39m\n\u001b[31m+     \"title\": \"İletişim\",\u001b[39m\n\u001b[31m+     \"description\": \"\",\u001b[39m\n\u001b[31m+     \"fields\": []\u001b[39m\n\u001b[31m+   }\u001b[39m\n\u001b[31m+ }Panoya kopyalaJSON indir\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('dialog') with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog')\u001b[22m\n\u001b[2m    20 × locator resolved to <div role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"export-title\" class=\"flex max-h-[90vh] w-full max-w-3xl flex-col rounded-2xl bg-white shadow-xl\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"JSON dışa aktarmai-letişim.schemaforge.json · 0 alan · biçim schemaforge.form v1✕{\u001b[22m\n\u001b[2m  \"format\": \"schemaforge.form\",\u001b[22m\n\u001b[2m  \"version\": 1,\u001b[22m\n\u001b[2m  \"exportedAt\": \"2026-10-19T15:03:43.820Z\",\u001b[22m\n\u001b[2m  \"form\": {\u001b[22m\n\u001b[2m    \"title\": \"İletişim\",\u001b[22m\n\u001b[2m    \"description\": \"\",\u001b[22m\n\u001b[2m    \"fields\": []\u001b[22m\n\u001b[2m  }\u001b[22m\n\u001b[2m}Panoya kopyalaJSON indir\"\u001b[22m\n\n\n  544 |     await page.goto('/'); await newForm(page, 'İletişim')\n  545 |     await page.getByRole('button', { name: \"JSON'u dışa aktar\" }).click()\n> 546 |     await expect(page.getByRole('dialog')).toContainText('iletişim.schemaforge.json', { timeout: 2000 })\n      |                                            ^\n  547 |   })\n  548 |\n  549 |   test('K05 BUG-009 [LOW] Tab can move focus out of an open modal dialog', async ({ page }) => {\n    at D:\\Project\\SchemaForge\\e2e\\functional.spec.ts:546:44"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:43.528Z",
+                      "annotations": [
+                        {
+                          "type": "fail",
+                          "description": "BUG-008 known defect",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 543,
+                            "column": 10
+                          }
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "D:\\Project\\SchemaForge\\test-results\\functional-desktop-K04-BUG-2f5d1-reaks-the-Turkish-capital-İ-desktop\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "column": 44,
+                        "line": 546
+                      }
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-9b8799a46f19b5fefb24",
+              "file": "functional.spec.ts",
+              "line": 542,
+              "column": 3
+            },
+            {
+              "title": "K05 BUG-009 [LOW] Tab can move focus out of an open modal dialog",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "fail",
+                      "description": "BUG-009 known defect",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 550,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "expectedStatus": "failed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 309,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at D:\\Project\\SchemaForge\\e2e\\functional.spec.ts:554:98",
+                        "location": {
+                          "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                          "column": 98,
+                          "line": 554
+                        },
+                        "snippet": "  552 |     await page.getByRole('button', { name: \"JSON'u dışa aktar\" }).click()\n  553 |     for (let i = 0; i < 6; i++) await page.keyboard.press('Tab')\n> 554 |     expect(await page.evaluate(() => Boolean(document.activeElement?.closest('[role=dialog]')))).toBe(true)\n      |                                                                                                  ^\n  555 |   })\n  556 |\n  557 |   test('K06 BUG-010 [LOW] a form with an empty title gets nameless card buttons', async ({ page }) => {"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "column": 98,
+                            "line": 554
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n  552 |     await page.getByRole('button', { name: \"JSON'u dışa aktar\" }).click()\n  553 |     for (let i = 0; i < 6; i++) await page.keyboard.press('Tab')\n> 554 |     expect(await page.evaluate(() => Boolean(document.activeElement?.closest('[role=dialog]')))).toBe(true)\n      |                                                                                                  ^\n  555 |   })\n  556 |\n  557 |   test('K06 BUG-010 [LOW] a form with an empty title gets nameless card buttons', async ({ page }) => {\n    at D:\\Project\\SchemaForge\\e2e\\functional.spec.ts:554:98"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:45.861Z",
+                      "annotations": [
+                        {
+                          "type": "fail",
+                          "description": "BUG-009 known defect",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 550,
+                            "column": 10
+                          }
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "D:\\Project\\SchemaForge\\test-results\\functional-desktop-K05-BUG-59f88-out-of-an-open-modal-dialog-desktop\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "column": 98,
+                        "line": 554
+                      }
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-bea4cd1e65c10a8b7b79",
+              "file": "functional.spec.ts",
+              "line": 549,
+              "column": 3
+            },
+            {
+              "title": "K06 BUG-010 [LOW] a form with an empty title gets nameless card buttons",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "fail",
+                      "description": "BUG-010 known defect",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 558,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "expectedStatus": "failed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 2356,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('button', { name: 'Adsız form formunu sil' })\nExpected: visible\nTimeout: 2000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('button', { name: 'Adsız form formunu sil' }) with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: 'Adsız form formunu sil' })\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('button', { name: 'Adsız form formunu sil' })\nExpected: visible\nTimeout: 2000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('button', { name: 'Adsız form formunu sil' }) with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: 'Adsız form formunu sil' })\u001b[22m\n\n    at D:\\Project\\SchemaForge\\e2e\\functional.spec.ts:560:80",
+                        "location": {
+                          "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                          "column": 80,
+                          "line": 560
+                        },
+                        "snippet": "  558 |     test.fail(true, 'BUG-010 known defect')\n  559 |     await page.goto('/'); await newForm(page, ''); await toList(page)\n> 560 |     await expect(page.getByRole('button', { name: 'Adsız form formunu sil' })).toBeVisible({ timeout: 2000 })\n      |                                                                                ^\n  561 |   })\n  562 | })\n  563 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "column": 80,
+                            "line": 560
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('button', { name: 'Adsız form formunu sil' })\nExpected: visible\nTimeout: 2000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('button', { name: 'Adsız form formunu sil' }) with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: 'Adsız form formunu sil' })\u001b[22m\n\n\n  558 |     test.fail(true, 'BUG-010 known defect')\n  559 |     await page.goto('/'); await newForm(page, ''); await toList(page)\n> 560 |     await expect(page.getByRole('button', { name: 'Adsız form formunu sil' })).toBeVisible({ timeout: 2000 })\n      |                                                                                ^\n  561 |   })\n  562 | })\n  563 |\n    at D:\\Project\\SchemaForge\\e2e\\functional.spec.ts:560:80"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:46.180Z",
+                      "annotations": [
+                        {
+                          "type": "fail",
+                          "description": "BUG-010 known defect",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 558,
+                            "column": 10
+                          }
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "D:\\Project\\SchemaForge\\test-results\\functional-desktop-K06-BUG-54e7a--gets-nameless-card-buttons-desktop\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "column": 80,
+                        "line": 560
+                      }
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-a1c825d570f61c86b20b",
+              "file": "functional.spec.ts",
+              "line": 557,
+              "column": 3
+            },
+            {
+              "title": "F01 first visit: empty state, nothing stored before the user acts",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 140,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:53.813Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-bc5fce59d5dd954fc9e0",
+              "file": "functional.spec.ts",
+              "line": 49,
+              "column": 3
+            },
+            {
+              "title": "F02 first form from the empty state opens the editor and is stored",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 91,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:54.151Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-037e747c93e5b61542fc",
+              "file": "functional.spec.ts",
+              "line": 60,
+              "column": 3
+            },
+            {
+              "title": "F03 second form, listing (newest first, counts, date) and \"Düzenle\" opens the right form",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 89,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:54.250Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-12f16f26bc42b352d5e9",
+              "file": "functional.spec.ts",
+              "line": 71,
+              "column": 3
+            },
+            {
+              "title": "F04 title and description: live preview, list card and storage",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 88,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:54.346Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-f137bae0ebd6d00dc082",
+              "file": "functional.spec.ts",
+              "line": 88,
+              "column": 3
+            },
+            {
+              "title": "F05 duplicate: \"(kopya)\", \"(kopya 2)\", fields copied and independent of the original",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 93,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:54.442Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-1adea05a5ba3f9db94f9",
+              "file": "functional.spec.ts",
+              "line": 101,
+              "column": 3
+            },
+            {
+              "title": "F06 delete form: Vazgeç, Escape and backdrop cancel; \"Formu sil\" deletes and survives reload",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 90,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:54.541Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-42243c7835991151c4b2",
+              "file": "functional.spec.ts",
+              "line": 120,
+              "column": 3
+            },
+            {
+              "title": "F07 every field type: defaults, preview control, unique JSON names",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 91,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:54.637Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-00c9b69120150710a41f",
+              "file": "functional.spec.ts",
+              "line": 143,
+              "column": 3
+            },
+            {
+              "title": "F08 placeholder and help text reach the preview; hidden where they do not apply",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 88,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:54.735Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-a819ce915ccb8a6a9052",
+              "file": "functional.spec.ts",
+              "line": 164,
+              "column": 3
+            },
+            {
+              "title": "F09 required: marker in list and preview, aria-required, checkbox message",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 89,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:54.829Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-a96f8b9adf568f1aa750",
+              "file": "functional.spec.ts",
+              "line": 181,
+              "column": 3
+            },
+            {
+              "title": "F10 rules: invalid e-mail, number range, text length, date range, select choice",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 87,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:54.925Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-45c9f2b019244096ca16",
+              "file": "functional.spec.ts",
+              "line": 196,
+              "column": 3
+            },
+            {
+              "title": "F11 empty required submit, live re-validation, \"Temizle\" resets",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 99,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:55.020Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-42211785a68745e53b0e",
+              "file": "functional.spec.ts",
+              "line": 236,
+              "column": 3
+            },
+            {
+              "title": "F12 live preview follows label, type, options and order changes",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 85,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:55.126Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-79d8fa350907fbfae202",
+              "file": "functional.spec.ts",
+              "line": 255,
+              "column": 3
+            },
+            {
+              "title": "F13 delete field: cancel keeps it; confirm removes it from list, preview and storage",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 87,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:55.218Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-aee618fb86dc9dc30e5e",
+              "file": "functional.spec.ts",
+              "line": 271,
+              "column": 3
+            },
+            {
+              "title": "F14 reorder with ↑/↓: list, preview, storage and export follow; edge buttons are disabled",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 90,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:55.313Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-30613770047b633aaf94",
+              "file": "functional.spec.ts",
+              "line": 288,
+              "column": 3
+            },
+            {
+              "title": "F15 export: JSON content, real download, clipboard, warnings, three ways to close, focus return",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 89,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:55.409Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-0196dc9f0048327ae68a",
+              "file": "functional.spec.ts",
+              "line": 305,
+              "column": 3
+            },
+            {
+              "title": "F16 persistence: real reload in the editor keeps every setting; browser back/forward work",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 85,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:55.506Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-d4ded22a91c58ccdd9a4",
+              "file": "functional.spec.ts",
+              "line": 334,
+              "column": 3
+            },
+            {
+              "title": "F17 broken storage: corrupt JSON, wrong shape, partly invalid data, unknown form link",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 90,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:55.597Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-037c380b87007918a2c0",
+              "file": "functional.spec.ts",
+              "line": 352,
+              "column": 3
+            },
+            {
+              "title": "F18 storage full / blocked: warning banner instead of silent data loss",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 89,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:55.693Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-52342a24f2a177b147b7",
+              "file": "functional.spec.ts",
+              "line": 378,
+              "column": 3
+            },
+            {
+              "title": "F19 keyboard: create, add a field and delete via dialog without a mouse; Escape and focus order",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 86,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:55.788Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-749423bd73b4e9a31373",
+              "file": "functional.spec.ts",
+              "line": 392,
+              "column": 3
+            },
+            {
+              "title": "F20 BUG-003 regression: skip link moves focus to the content and does not leave the editor",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 86,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:55.881Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-aa2789fa2f8f2f85b02b",
+              "file": "functional.spec.ts",
+              "line": 417,
+              "column": 3
+            },
+            {
+              "title": "F21 BUG-001 regression: two tabs never overwrite each other's forms",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 95,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:55.973Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-2701e88ab3d7301ba35b",
+              "file": "functional.spec.ts",
+              "line": 428,
+              "column": 3
+            },
+            {
+              "title": "F22 BUG-002 regression: \"Temiz başlat\" never deletes forms created after the warning",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 87,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:56.074Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-4efab1342f7ddcfa4a91",
+              "file": "functional.spec.ts",
+              "line": 447,
+              "column": 3
+            },
+            {
+              "title": "F24 BUG-004 regression: one click on \"Gönder (test)\" submits even when the last field turns invalid on blur",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 89,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:56.167Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-0a82f2807ea64566c66b",
+              "file": "functional.spec.ts",
+              "line": 462,
+              "column": 3
+            },
+            {
+              "title": "F25 JSON name: auto-sync with the label until edited by hand; invalid and duplicate names are flagged",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 85,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:56.262Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-9795888f0f4a19bb9124",
+              "file": "functional.spec.ts",
+              "line": 475,
+              "column": 3
+            },
+            {
+              "title": "F23 network: the app loads without login and sends no form data anywhere",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 92,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:56.353Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-da5fb1c8ace75ac4f637",
+              "file": "functional.spec.ts",
+              "line": 497,
+              "column": 3
+            },
+            {
+              "title": "K01 BUG-005 [MEDIUM] optional number field with unparsable input is reported as valid",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 93,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:56.452Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-395cfe785d97c04ecbbb",
+              "file": "functional.spec.ts",
+              "line": 517,
+              "column": 3
+            },
+            {
+              "title": "K02 BUG-006 [MEDIUM] select option with surrounding spaces can never pass validation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 93,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:56.553Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-09c5bf7671978b73ca21",
+              "file": "functional.spec.ts",
+              "line": 525,
+              "column": 3
+            },
+            {
+              "title": "K03 BUG-007 [LOW] preview keeps a stale error after the field is made optional",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 84,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:56.658Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-4b0c2dae3c559590777c",
+              "file": "functional.spec.ts",
+              "line": 534,
+              "column": 3
+            },
+            {
+              "title": "K04 BUG-008 [LOW] export file name breaks the Turkish capital İ",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 81,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:56.752Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-1222aebfef2fb9eb33cb",
+              "file": "functional.spec.ts",
+              "line": 542,
+              "column": 3
+            },
+            {
+              "title": "K05 BUG-009 [LOW] Tab can move focus out of an open modal dialog",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 119,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:56.842Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-53b5e111863cfff2c23c",
+              "file": "functional.spec.ts",
+              "line": 549,
+              "column": 3
+            },
+            {
+              "title": "K06 BUG-010 [LOW] a form with an empty title gets nameless card buttons",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 47,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 114,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:56.971Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 47,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-3bf7b8f9f969688c2e62",
+              "file": "functional.spec.ts",
+              "line": 557,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "title": "scenarios",
+          "file": "functional.spec.ts",
+          "line": 564,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Scenario A: customer contact form — build, validate, autosave, reload, export",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 881,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:48.547Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-ef0899f803ec248cdf2c",
+              "file": "functional.spec.ts",
+              "line": 567,
+              "column": 3
+            },
+            {
+              "title": "Scenario B: registration form with 6 field types — invalid data, edit the schema, test again",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 810,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:49.435Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-9cfdfe915bd90676bbab",
+              "file": "functional.spec.ts",
+              "line": 601,
+              "column": 3
+            },
+            {
+              "title": "Scenario C: several forms — switch, delete one, keep the others, reload",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 778,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:50.255Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-a33156eb6737c7a2e86c",
+              "file": "functional.spec.ts",
+              "line": 630,
+              "column": 3
+            },
+            {
+              "title": "Scenario A: customer contact form — build, validate, autosave, reload, export",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 565,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 113,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:57.093Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 565,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-706a262d534401164d8d",
+              "file": "functional.spec.ts",
+              "line": 567,
+              "column": 3
+            },
+            {
+              "title": "Scenario B: registration form with 6 field types — invalid data, edit the schema, test again",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 565,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 107,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:57.214Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 565,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-cab50a98f3c42e938060",
+              "file": "functional.spec.ts",
+              "line": 601,
+              "column": 3
+            },
+            {
+              "title": "Scenario C: several forms — switch, delete one, keep the others, reload",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 565,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 117,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:57.327Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 565,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-e88a098eb0d984c420c7",
+              "file": "functional.spec.ts",
+              "line": 630,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "title": "mobile",
+          "file": "functional.spec.ts",
+          "line": 648,
+          "column": 6,
+          "specs": [
+            {
+              "title": "M01 mobile: create, edit, preview, export and delete; no horizontal overflow; dialogs fit the screen",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "mobile only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                        "line": 649,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 122,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:51.041Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "mobile only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\functional.spec.ts",
+                            "line": 649,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-6d0d2751b0521eea757a",
+              "file": "functional.spec.ts",
+              "line": 651,
+              "column": 3
+            },
+            {
+              "title": "M01 mobile: create, edit, preview, export and delete; no horizontal overflow; dialogs fit the screen",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 896,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:57.453Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "011e9001526c2e3d879a-89aaa60c1d72982715f0",
+              "file": "functional.spec.ts",
+              "line": 651,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "schemaforge.spec.ts",
+      "file": "schemaforge.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "desktop",
+          "file": "schemaforge.spec.ts",
+          "line": 19,
+          "column": 6,
+          "specs": [
+            {
+              "title": "full flow: create, fields, rules, validation, export, real reload, delete",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1394,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:51.196Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "dde79d502a5592d4383d-5e1588d94da9fd487e1e",
+              "file": "schemaforge.spec.ts",
+              "line": 22,
+              "column": 3
+            },
+            {
+              "title": "11 corrupt LocalStorage: no white page, clear message",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 328,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:52.601Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "dde79d502a5592d4383d-366632afc499c6d555a9",
+              "file": "schemaforge.spec.ts",
+              "line": 120,
+              "column": 3
+            },
+            {
+              "title": "keyboard: create a form and add a field without a mouse; focus is visible",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 281,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:52.937Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "dde79d502a5592d4383d-eaa4b0ae1251f3b7a2c5",
+              "file": "schemaforge.spec.ts",
+              "line": 132,
+              "column": 3
+            },
+            {
+              "title": "full flow: create, fields, rules, validation, export, real reload, delete",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\schemaforge.spec.ts",
+                        "line": 20,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:58.378Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\schemaforge.spec.ts",
+                            "line": 20,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "dde79d502a5592d4383d-9736b697a21bf9fb5884",
+              "file": "schemaforge.spec.ts",
+              "line": 22,
+              "column": 3
+            },
+            {
+              "title": "11 corrupt LocalStorage: no white page, clear message",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\schemaforge.spec.ts",
+                        "line": 20,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:58.388Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\schemaforge.spec.ts",
+                            "line": 20,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "dde79d502a5592d4383d-d28e7d3fd8cb6496b6a3",
+              "file": "schemaforge.spec.ts",
+              "line": 120,
+              "column": 3
+            },
+            {
+              "title": "keyboard: create a form and add a field without a mouse; focus is visible",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "desktop only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\schemaforge.spec.ts",
+                        "line": 20,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:58.396Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "desktop only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\schemaforge.spec.ts",
+                            "line": 20,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "dde79d502a5592d4383d-a4dbbe79f913771bd84e",
+              "file": "schemaforge.spec.ts",
+              "line": 132,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "title": "mobile",
+          "file": "schemaforge.spec.ts",
+          "line": 148,
+          "column": 6,
+          "specs": [
+            {
+              "title": "12 mobile layout is usable and has no horizontal overflow",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "mobile only",
+                      "location": {
+                        "file": "D:\\Project\\SchemaForge\\e2e\\schemaforge.spec.ts",
+                        "line": 149,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "desktop",
+                  "projectName": "desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:53.225Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "mobile only",
+                          "location": {
+                            "file": "D:\\Project\\SchemaForge\\e2e\\schemaforge.spec.ts",
+                            "line": 149,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "dde79d502a5592d4383d-be12b5abf2ec7becb67d",
+              "file": "schemaforge.spec.ts",
+              "line": 151,
+              "column": 3
+            },
+            {
+              "title": "12 mobile layout is usable and has no horizontal overflow",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile",
+                  "projectName": "mobile",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 515,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-19T15:03:58.407Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "dde79d502a5592d4383d-82fa2fe0be1165989954",
+              "file": "schemaforge.spec.ts",
+              "line": 151,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-19T15:03:20.916Z",
+    "duration": 38591.776,
+    "expected": 39,
+    "skipped": 39,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

@@ -39,12 +39,13 @@ Durum: ✅ tamamlandı ve doğrulandı · ⚠️ tamamlandı, açık not var · 
 | Erişilebilirlik (semantik, label, klavye, odak, kontrast) | e2e klavye; aria-invalid/aria-describedby; Tailwind slate/indigo paleti | ⚠️ Otomatik kontrast denetimi yapılmadı |
 | Güvenlik: HTML enjeksiyonu yok, `dangerouslySetInnerHTML` yok | App.test security; doğrulama scripti | ✅ |
 | TypeScript derlemesi hatasız, `npm run build` başarılı | `docs/test-results/typecheck.txt`, `build.txt` | ✅ |
-| Lint ve testler çalıştırıldı | `lint.txt`; Vitest 33/33; Playwright 4/4 | ✅ |
+| Lint ve testler çalıştırıldı | `lint.txt`; Vitest 37/37; Playwright 33/33 + 6 bilinen kusur testi (1.1; 1.0'da 33/33 ve 4/4) | ✅ |
 | Konsolda önemli hata yok | e2e testleri konsol hatasında başarısız olur; hata yok | ✅ |
+| **1.1:** Kapsamlı fonksiyonel denetim | 62 etkileşim; 10 hata: 4'ü düzeltildi (1 CRITICAL, 3 HIGH), 6 MEDIUM/LOW belgelendi | `reports/` | ✅ |
 | LocalStorage'ın yalnızca bu tarayıcıda olduğu açıklaması | Başlık, alt bilgi, README | ✅ |
 | Gerçek ekran görüntüleri | `docs/screenshots/` (Playwright + Edge) | ✅ |
 | README yeterli | Kurulum, komutlar, test sonuçları, yapı, dağıtım | ✅ |
-| `ACTUAL_FEATURES.md` (4 durum) | 44 madde; FormPilot vaatleriyle eşleşme tablosu | ✅ |
+| `ACTUAL_FEATURES.md` (4 durum) | 45 madde (1.1: F36 çoklu sekme eklendi; önce 44); FormPilot vaatleriyle eşleşme tablosu | ✅ |
 | GitHub ve Netlify bağlantıları (yalnızca gerçekse) | Gerçek ve doğrulandı; doğrulama scripti her bağlantının HTTP 200 döndürdüğünü kontrol ediyor | ✅ |
 | ZIP | `release/SchemaForge_Teslim.zip` (`node_modules` ve `.git` yok, `dist` dahil) | ✅ |
 

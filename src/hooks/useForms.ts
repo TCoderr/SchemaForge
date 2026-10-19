@@ -17,6 +17,19 @@ export function useForms() {
     setSaveFailed(!saveForms(forms))
   }, [forms])
 
+  // Another tab saved: adopt its list, otherwise this tab's next save would overwrite that tab's forms with a stale copy.
+  useEffect(() => {
+    const onStorage = (e: StorageEvent) => {
+      if (e.key !== STORAGE_KEY || e.newValue === null) return
+      const next = loadForms()
+      if (next.status.kind !== 'ok') return
+      dirty.current = false
+      setForms(next.forms)
+    }
+    window.addEventListener('storage', onStorage)
+    return () => window.removeEventListener('storage', onStorage)
+  }, [])
+
   const mutate = useCallback((fn: (prev: FormSchema[]) => FormSchema[]) => {
     dirty.current = true
     setForms(fn)

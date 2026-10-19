@@ -1,10 +1,340 @@
-<testsuites id="" name="" tests="8" failures="0" skipped="4" errors="0" time="9.09725">
-<testsuite name="schemaforge.spec.ts" timestamp="2026-10-19T00:25:51.754Z" hostname="desktop" tests="4" failures="0" skipped="1" time="6.212" errors="0">
-<testcase name="desktop › full flow: create, fields, rules, validation, export, real reload, delete" classname="schemaforge.spec.ts" time="2.735">
+<testsuites id="" name="" tests="76" failures="6" skipped="38" errors="0" time="96.34009700000001">
+<testsuite name="functional.spec.ts" timestamp="2026-10-19T14:54:43.368Z" hostname="desktop" tests="34" failures="6" skipped="1" time="78.529" errors="0">
+<testcase name="desktop › F01 first visit: empty state, nothing stored before the user acts" classname="functional.spec.ts" time="1.565">
 </testcase>
-<testcase name="desktop › 11 corrupt LocalStorage: no white page, clear message" classname="schemaforge.spec.ts" time="1.378">
+<testcase name="desktop › F02 first form from the empty state opens the editor and is stored" classname="functional.spec.ts" time="0.859">
 </testcase>
-<testcase name="desktop › keyboard: create a form and add a field without a mouse; focus is visible" classname="schemaforge.spec.ts" time="2.099">
+<testcase name="desktop › F03 second form, listing (newest first, counts, date) and &quot;Düzenle&quot; opens the right form" classname="functional.spec.ts" time="1.279">
+</testcase>
+<testcase name="desktop › F04 title and description: live preview, list card and storage" classname="functional.spec.ts" time="1.123">
+</testcase>
+<testcase name="desktop › F05 duplicate: &quot;(kopya)&quot;, &quot;(kopya 2)&quot;, fields copied and independent of the original" classname="functional.spec.ts" time="1.025">
+</testcase>
+<testcase name="desktop › F06 delete form: Vazgeç, Escape and backdrop cancel; &quot;Formu sil&quot; deletes and survives reload" classname="functional.spec.ts" time="1.304">
+</testcase>
+<testcase name="desktop › F07 every field type: defaults, preview control, unique JSON names" classname="functional.spec.ts" time="1.221">
+</testcase>
+<testcase name="desktop › F08 placeholder and help text reach the preview; hidden where they do not apply" classname="functional.spec.ts" time="1.313">
+</testcase>
+<testcase name="desktop › F09 required: marker in list and preview, aria-required, checkbox message" classname="functional.spec.ts" time="1.281">
+</testcase>
+<testcase name="desktop › F10 rules: invalid e-mail, number range, text length, date range, select choice" classname="functional.spec.ts" time="5.917">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\..\test-results\functional-desktop-F10-rul-1178e-th-date-range-select-choice-desktop\error-context.md]]
+]]>
+</system-out>
+<failure message="expect(locator).toContainText(expected) failed" type="expect.toContainText">
+<![CDATA[  [desktop] › functional.spec.ts:196:3 › desktop › F10 rules: invalid e-mail, number range, text length, date range, select choice 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live="polite"]')
+    Expected substring: "5 alanda hata var"
+    Received string:    ""
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toContainText" getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live="polite"]') with timeout 5000ms
+      - waiting for getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live="polite"]')
+        14 × locator resolved to <div aria-live="polite"></div>
+           - unexpected value ""
+
+
+      208 |     await pv.getByLabel('Başlangıç tarihi').fill('2025-12-31')
+      209 |     await submit(page)
+    > 210 |     await expect(result(page)).toContainText('5 alanda hata var')
+          |                                ^
+      211 |     await expect(pv.getByText('Geçerli bir e-posta adresi girin (ör. ornek@alanadi.com).')).toBeVisible()
+      212 |     await expect(pv.getByText('Değer en az 18 olmalıdır.')).toBeVisible()
+      213 |     await expect(pv.getByText('En az 3 karakter girin.')).toBeVisible()
+        at D:\Project\SchemaForge\e2e\functional.spec.ts:210:32
+
+    Error Context: ..\test-results\functional-desktop-F10-rul-1178e-th-date-range-select-choice-desktop\error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="desktop › F11 empty required submit, live re-validation, &quot;Temizle&quot; resets" classname="functional.spec.ts" time="0.948">
+</testcase>
+<testcase name="desktop › F12 live preview follows label, type, options and order changes" classname="functional.spec.ts" time="0.789">
+</testcase>
+<testcase name="desktop › F13 delete field: cancel keeps it; confirm removes it from list, preview and storage" classname="functional.spec.ts" time="1.074">
+</testcase>
+<testcase name="desktop › F14 reorder with ↑/↓: list, preview, storage and export follow; edge buttons are disabled" classname="functional.spec.ts" time="0.84">
+</testcase>
+<testcase name="desktop › F15 export: JSON content, real download, clipboard, warnings, three ways to close, focus return" classname="functional.spec.ts" time="1.451">
+</testcase>
+<testcase name="desktop › F16 persistence: real reload in the editor keeps every setting; browser back/forward work" classname="functional.spec.ts" time="1.289">
+</testcase>
+<testcase name="desktop › F17 broken storage: corrupt JSON, wrong shape, partly invalid data, unknown form link" classname="functional.spec.ts" time="1.416">
+</testcase>
+<testcase name="desktop › F18 storage full / blocked: warning banner instead of silent data loss" classname="functional.spec.ts" time="0.795">
+</testcase>
+<testcase name="desktop › F19 keyboard: create, add a field and delete via dialog without a mouse; Escape and focus order" classname="functional.spec.ts" time="0.709">
+</testcase>
+<testcase name="desktop › F20 BUG-003 regression: skip link moves focus to the content and does not leave the editor" classname="functional.spec.ts" time="5.864">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\..\test-results\functional-desktop-F20-BUG-c4077-d-does-not-leave-the-editor-desktop\error-context.md]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [desktop] › functional.spec.ts:417:3 › desktop › F20 BUG-003 regression: skip link moves focus to the content and does not leave the editor 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByLabel('Form başlığı')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByLabel('Form başlığı') with timeout 5000ms
+      - waiting for getByLabel('Form başlığı')
+
+
+      421 |     await page.getByRole('link', { name: 'İçeriğe atla' }).focus()
+      422 |     await page.keyboard.press('Enter')
+    > 423 |     await expect(page.getByLabel('Form başlığı')).toBeVisible()
+          |                                                   ^
+      424 |     expect(page.url()).toBe(url)
+      425 |     expect(await page.evaluate(() => document.activeElement?.id)).toBe('main')
+      426 |   })
+        at D:\Project\SchemaForge\e2e\functional.spec.ts:423:51
+
+    Error Context: ..\test-results\functional-desktop-F20-BUG-c4077-d-does-not-leave-the-editor-desktop\error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="desktop › F21 BUG-001 regression: two tabs never overwrite each other&apos;s forms" classname="functional.spec.ts" time="7.433">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\..\test-results\functional-desktop-F21-BUG-c2ce9-verwrite-each-other-s-forms-desktop\error-context.md]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [desktop] › functional.spec.ts:428:3 › desktop › F21 BUG-001 regression: two tabs never overwrite each other's forms 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText('Sekme A ikinci form')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByText('Sekme A ikinci form') with timeout 5000ms
+      - waiting for getByText('Sekme A ikinci form')
+
+
+      434 |     await toList(page)
+      435 |     await newForm(page, 'Sekme A ikinci form') // tab B has not reloaded since
+    > 436 |     await expect(b.getByText('Sekme A ikinci form')).toBeVisible() // B picks up A's change
+          |                                                      ^
+      437 |     await newForm(b, 'Sekme B formu')
+      438 |     await page.reload()
+      439 |     await expect(page.getByLabel('Form başlığı')).toHaveValue('Sekme A ikinci form') // A was in its editor
+        at D:\Project\SchemaForge\e2e\functional.spec.ts:436:54
+
+    Error Context: ..\test-results\functional-desktop-F21-BUG-c2ce9-verwrite-each-other-s-forms-desktop\error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="desktop › F22 BUG-002 regression: &quot;Temiz başlat&quot; never deletes forms created after the warning" classname="functional.spec.ts" time="6.148">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\..\test-results\functional-desktop-F22-BUG-81bdc-s-created-after-the-warning-desktop\error-context.md]]
+]]>
+</system-out>
+<failure message="expect(locator).toHaveCount(expected) failed" type="expect.toHaveCount">
+<![CDATA[  [desktop] › functional.spec.ts:447:3 › desktop › F22 BUG-002 regression: "Temiz başlat" never deletes forms created after the warning 
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  getByRole('button', { name: 'Temiz başlat' })
+    Expected: 0
+    Received: 1
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" getByRole('button', { name: 'Temiz başlat' }) with timeout 5000ms
+      - waiting for getByRole('button', { name: 'Temiz başlat' })
+        14 × locator resolved to 1 element
+           - unexpected value "1"
+
+
+      453 |     await page.getByLabel('Form başlığı').fill('Uyarıdan sonra yeni form')
+      454 |     await toList(page)
+    > 455 |     await expect(page.getByRole('button', { name: 'Temiz başlat' })).toHaveCount(0) // nothing left to clean: the new data replaced the corrupt value
+          |                                                                      ^
+      456 |     await expect(page.getByRole('alert')).toContainText('yedeklendi') // the raw backup is still mentioned
+      457 |     await page.reload()
+      458 |     await expect(cards(page)).toHaveCount(1)
+        at D:\Project\SchemaForge\e2e\functional.spec.ts:455:70
+
+    Error Context: ..\test-results\functional-desktop-F22-BUG-81bdc-s-created-after-the-warning-desktop\error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="desktop › F24 BUG-004 regression: one click on &quot;Gönder (test)&quot; submits even when the last field turns invalid on blur" classname="functional.spec.ts" time="5.878">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\..\test-results\functional-desktop-F24-BUG-25fca-field-turns-invalid-on-blur-desktop\error-context.md]]
+]]>
+</system-out>
+<failure message="expect(locator).toHaveText(expected) failed" type="expect.toHaveText">
+<![CDATA[  [desktop] › functional.spec.ts:462:3 › desktop › F24 BUG-004 regression: one click on "Gönder (test)" submits even when the last field turns invalid on blur 
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator:  getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live="polite"]')
+    Expected: "2 alanda hata var. Lütfen işaretli alanları düzeltin."
+    Received: ""
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveText" getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live="polite"]') with timeout 5000ms
+      - waiting for getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live="polite"]')
+        14 × locator resolved to <div aria-live="polite"></div>
+           - unexpected value ""
+
+
+      467 |     await preview(page).getByLabel('Başlangıç tarihi').fill('2025-06-01') // focus stays in the date field
+      468 |     await preview(page).getByRole('button', { name: 'Gönder (test)' }).click() // a single real mouse click
+    > 469 |     await expect(result(page)).toHaveText('2 alanda hata var. Lütfen işaretli alanları düzeltin.')
+          |                                ^
+      470 |     await preview(page).getByLabel(/Ad Soyad/).fill('Ali')
+      471 |     await preview(page).getByRole('button', { name: 'Temizle' }).click()
+      472 |     await expect(preview(page).getByLabel(/Ad Soyad/)).toHaveValue('')
+        at D:\Project\SchemaForge\e2e\functional.spec.ts:469:32
+
+    Error Context: ..\test-results\functional-desktop-F24-BUG-25fca-field-turns-invalid-on-blur-desktop\error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="desktop › F23 network: the app loads without login and sends no form data anywhere" classname="functional.spec.ts" time="1.089">
+</testcase>
+<testcase name="desktop › K01 BUG-005 [MEDIUM] optional number field with unparsable input is reported as valid" classname="functional.spec.ts" time="3.389">
+<properties>
+<property name="fail" value="BUG-005 known defect">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\..\test-results\functional-desktop-K01-BUG-ccdcb--input-is-reported-as-valid-desktop\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="desktop › K02 BUG-006 [MEDIUM] select option with surrounding spaces can never pass validation" classname="functional.spec.ts" time="2.89">
+<properties>
+<property name="fail" value="BUG-006 known defect">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\..\test-results\functional-desktop-K02-BUG-02e1b-s-can-never-pass-validation-desktop\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="desktop › K03 BUG-007 [LOW] preview keeps a stale error after the field is made optional" classname="functional.spec.ts" time="2.894">
+<properties>
+<property name="fail" value="BUG-007 known defect">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\..\test-results\functional-desktop-K03-BUG-415f2--the-field-is-made-optional-desktop\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="desktop › K04 BUG-008 [LOW] export file name breaks the Turkish capital İ" classname="functional.spec.ts" time="2.705">
+<properties>
+<property name="fail" value="BUG-008 known defect">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\..\test-results\functional-desktop-K04-BUG-2f5d1-reaks-the-Turkish-capital-İ-desktop\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="desktop › K05 BUG-009 [LOW] Tab can move focus out of an open modal dialog" classname="functional.spec.ts" time="0.852">
+<properties>
+<property name="fail" value="BUG-009 known defect">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\..\test-results\functional-desktop-K05-BUG-59f88-out-of-an-open-modal-dialog-desktop\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="desktop › K06 BUG-010 [LOW] a form with an empty title gets nameless card buttons" classname="functional.spec.ts" time="2.796">
+<properties>
+<property name="fail" value="BUG-010 known defect">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\..\test-results\functional-desktop-K06-BUG-54e7a--gets-nameless-card-buttons-desktop\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="scenarios › Scenario A: customer contact form — build, validate, autosave, reload, export" classname="functional.spec.ts" time="2.433">
+</testcase>
+<testcase name="scenarios › Scenario B: registration form with 6 field types — invalid data, edit the schema, test again" classname="functional.spec.ts" time="6.084">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\..\test-results\functional-scenarios-Scena-3bdf6--edit-the-schema-test-again-desktop\error-context.md]]
+]]>
+</system-out>
+<failure message="expect(locator).toContainText(expected) failed" type="expect.toContainText">
+<![CDATA[  [desktop] › functional.spec.ts:579:3 › scenarios › Scenario B: registration form with 6 field types — invalid data, edit the schema, test again 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live="polite"]')
+    Expected substring: "6 alanda hata var"
+    Received string:    ""
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toContainText" getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live="polite"]') with timeout 5000ms
+      - waiting for getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live="polite"]')
+        14 × locator resolved to <div aria-live="polite"></div>
+           - unexpected value ""
+
+
+      592 |     await pv.getByLabel('Katılım tarihi').fill('2026-10-01')
+      593 |     await submit(page)
+    > 594 |     await expect(result(page)).toContainText('6 alanda hata var')
+          |                                ^
+      595 |     await page.screenshot({ path: `${SHOTS}/B-kayit-hatalar.png`, fullPage: true })
+      596 |     // edit the schema: age limit lowered, ticket no longer required, consent removed
+      597 |     await page.getByRole('button', { name: /^3\. Yaş/ }).click(); await page.getByLabel('En küçük değer').fill('16')
+        at D:\Project\SchemaForge\e2e\functional.spec.ts:594:32
+
+    Error Context: ..\test-results\functional-scenarios-Scena-3bdf6--edit-the-schema-test-again-desktop\error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="scenarios › Scenario C: several forms — switch, delete one, keep the others, reload" classname="functional.spec.ts" time="1.76">
+</testcase>
+<testcase name="mobile › M01 mobile: create, edit, preview, export and delete; no horizontal overflow; dialogs fit the screen" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="mobile only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="schemaforge.spec.ts" timestamp="2026-10-19T14:54:43.368Z" hostname="desktop" tests="4" failures="0" skipped="1" time="4.684" errors="0">
+<testcase name="desktop › full flow: create, fields, rules, validation, export, real reload, delete" classname="schemaforge.spec.ts" time="2.848">
+</testcase>
+<testcase name="desktop › 11 corrupt LocalStorage: no white page, clear message" classname="schemaforge.spec.ts" time="1.08">
+</testcase>
+<testcase name="desktop › keyboard: create a form and add a field without a mouse; focus is visible" classname="schemaforge.spec.ts" time="0.755">
 </testcase>
 <testcase name="mobile › 12 mobile layout is usable and has no horizontal overflow" classname="schemaforge.spec.ts">
 <properties>
@@ -15,7 +345,275 @@
 </skipped>
 </testcase>
 </testsuite>
-<testsuite name="schemaforge.spec.ts" timestamp="2026-10-19T00:25:51.754Z" hostname="mobile" tests="4" failures="0" skipped="3" time="1.302" errors="0">
+<testsuite name="functional.spec.ts" timestamp="2026-10-19T14:54:43.368Z" hostname="mobile" tests="34" failures="0" skipped="33" time="4.988" errors="0">
+<testcase name="desktop › F01 first visit: empty state, nothing stored before the user acts" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › F02 first form from the empty state opens the editor and is stored" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › F03 second form, listing (newest first, counts, date) and &quot;Düzenle&quot; opens the right form" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › F04 title and description: live preview, list card and storage" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › F05 duplicate: &quot;(kopya)&quot;, &quot;(kopya 2)&quot;, fields copied and independent of the original" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › F06 delete form: Vazgeç, Escape and backdrop cancel; &quot;Formu sil&quot; deletes and survives reload" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › F07 every field type: defaults, preview control, unique JSON names" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › F08 placeholder and help text reach the preview; hidden where they do not apply" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › F09 required: marker in list and preview, aria-required, checkbox message" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › F10 rules: invalid e-mail, number range, text length, date range, select choice" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › F11 empty required submit, live re-validation, &quot;Temizle&quot; resets" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › F12 live preview follows label, type, options and order changes" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › F13 delete field: cancel keeps it; confirm removes it from list, preview and storage" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › F14 reorder with ↑/↓: list, preview, storage and export follow; edge buttons are disabled" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › F15 export: JSON content, real download, clipboard, warnings, three ways to close, focus return" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › F16 persistence: real reload in the editor keeps every setting; browser back/forward work" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › F17 broken storage: corrupt JSON, wrong shape, partly invalid data, unknown form link" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › F18 storage full / blocked: warning banner instead of silent data loss" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › F19 keyboard: create, add a field and delete via dialog without a mouse; Escape and focus order" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › F20 BUG-003 regression: skip link moves focus to the content and does not leave the editor" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › F21 BUG-001 regression: two tabs never overwrite each other&apos;s forms" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › F22 BUG-002 regression: &quot;Temiz başlat&quot; never deletes forms created after the warning" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › F24 BUG-004 regression: one click on &quot;Gönder (test)&quot; submits even when the last field turns invalid on blur" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › F23 network: the app loads without login and sends no form data anywhere" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › K01 BUG-005 [MEDIUM] optional number field with unparsable input is reported as valid" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › K02 BUG-006 [MEDIUM] select option with surrounding spaces can never pass validation" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › K03 BUG-007 [LOW] preview keeps a stale error after the field is made optional" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › K04 BUG-008 [LOW] export file name breaks the Turkish capital İ" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › K05 BUG-009 [LOW] Tab can move focus out of an open modal dialog" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › K06 BUG-010 [LOW] a form with an empty title gets nameless card buttons" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="scenarios › Scenario A: customer contact form — build, validate, autosave, reload, export" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="scenarios › Scenario B: registration form with 6 field types — invalid data, edit the schema, test again" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="scenarios › Scenario C: several forms — switch, delete one, keep the others, reload" classname="functional.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="mobile › M01 mobile: create, edit, preview, export and delete; no horizontal overflow; dialogs fit the screen" classname="functional.spec.ts" time="1.557">
+</testcase>
+</testsuite>
+<testsuite name="schemaforge.spec.ts" timestamp="2026-10-19T14:54:43.368Z" hostname="mobile" tests="4" failures="0" skipped="3" time="1.171" errors="0">
 <testcase name="desktop › full flow: create, fields, rules, validation, export, real reload, delete" classname="schemaforge.spec.ts">
 <properties>
 <property name="skip" value="desktop only">
@@ -40,7 +638,7 @@
 <skipped>
 </skipped>
 </testcase>
-<testcase name="mobile › 12 mobile layout is usable and has no horizontal overflow" classname="schemaforge.spec.ts" time="1.301">
+<testcase name="mobile › 12 mobile layout is usable and has no horizontal overflow" classname="schemaforge.spec.ts" time="1.171">
 </testcase>
 </testsuite>
 </testsuites>

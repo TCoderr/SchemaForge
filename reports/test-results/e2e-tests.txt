@@ -1,0 +1,87 @@
+$ npx playwright test
+# exit: 0
+
+
+Running 78 tests using 1 worker
+
+  ✓   1 [desktop] › e2e\functional.spec.ts:49:3 › desktop › F01 first visit: empty state, nothing stored before the user acts (308ms)
+  ✓   2 [desktop] › e2e\functional.spec.ts:60:3 › desktop › F02 first form from the empty state opens the editor and is stored (246ms)
+  ✓   3 [desktop] › e2e\functional.spec.ts:71:3 › desktop › F03 second form, listing (newest first, counts, date) and "Düzenle" opens the right form (442ms)
+  ✓   4 [desktop] › e2e\functional.spec.ts:88:3 › desktop › F04 title and description: live preview, list card and storage (319ms)
+  ✓   5 [desktop] › e2e\functional.spec.ts:101:3 › desktop › F05 duplicate: "(kopya)", "(kopya 2)", fields copied and independent of the original (415ms)
+  ✓   6 [desktop] › e2e\functional.spec.ts:120:3 › desktop › F06 delete form: Vazgeç, Escape and backdrop cancel; "Formu sil" deletes and survives reload (532ms)
+  ✓   7 [desktop] › e2e\functional.spec.ts:143:3 › desktop › F07 every field type: defaults, preview control, unique JSON names (580ms)
+  ✓   8 [desktop] › e2e\functional.spec.ts:164:3 › desktop › F08 placeholder and help text reach the preview; hidden where they do not apply (419ms)
+  ✓   9 [desktop] › e2e\functional.spec.ts:181:3 › desktop › F09 required: marker in list and preview, aria-required, checkbox message (448ms)
+  ✓  10 [desktop] › e2e\functional.spec.ts:196:3 › desktop › F10 rules: invalid e-mail, number range, text length, date range, select choice (720ms)
+  ✓  11 [desktop] › e2e\functional.spec.ts:236:3 › desktop › F11 empty required submit, live re-validation, "Temizle" resets (458ms)
+  ✓  12 [desktop] › e2e\functional.spec.ts:255:3 › desktop › F12 live preview follows label, type, options and order changes (380ms)
+  ✓  13 [desktop] › e2e\functional.spec.ts:271:3 › desktop › F13 delete field: cancel keeps it; confirm removes it from list, preview and storage (410ms)
+  ✓  14 [desktop] › e2e\functional.spec.ts:288:3 › desktop › F14 reorder with ↑/↓: list, preview, storage and export follow; edge buttons are disabled (406ms)
+  ✓  15 [desktop] › e2e\functional.spec.ts:305:3 › desktop › F15 export: JSON content, real download, clipboard, warnings, three ways to close, focus return (734ms)
+  ✓  16 [desktop] › e2e\functional.spec.ts:334:3 › desktop › F16 persistence: real reload in the editor keeps every setting; browser back/forward work (474ms)
+  ✓  17 [desktop] › e2e\functional.spec.ts:352:3 › desktop › F17 broken storage: corrupt JSON, wrong shape, partly invalid data, unknown form link (502ms)
+  ✓  18 [desktop] › e2e\functional.spec.ts:378:3 › desktop › F18 storage full / blocked: warning banner instead of silent data loss (266ms)
+  ✓  19 [desktop] › e2e\functional.spec.ts:392:3 › desktop › F19 keyboard: create, add a field and delete via dialog without a mouse; Escape and focus order (292ms)
+  ✓  20 [desktop] › e2e\functional.spec.ts:417:3 › desktop › F20 BUG-003 regression: skip link moves focus to the content and does not leave the editor (280ms)
+  ✓  21 [desktop] › e2e\functional.spec.ts:428:3 › desktop › F21 BUG-001 regression: two tabs never overwrite each other's forms (640ms)
+  ✓  22 [desktop] › e2e\functional.spec.ts:447:3 › desktop › F22 BUG-002 regression: "Temiz başlat" never deletes forms created after the warning (382ms)
+  ✓  23 [desktop] › e2e\functional.spec.ts:462:3 › desktop › F24 BUG-004 regression: one click on "Gönder (test)" submits even when the last field turns invalid on blur (370ms)
+  ✓  24 [desktop] › e2e\functional.spec.ts:475:3 › desktop › F25 JSON name: auto-sync with the label until edited by hand; invalid and duplicate names are flagged (384ms)
+  ✓  25 [desktop] › e2e\functional.spec.ts:497:3 › desktop › F23 network: the app loads without login and sends no form data anywhere (361ms)
+  ✘  26 [desktop] › e2e\functional.spec.ts:517:3 › desktop › K01 BUG-005 [MEDIUM] optional number field with unparsable input is reported as valid (2.3s)
+  ✘  27 [desktop] › e2e\functional.spec.ts:525:3 › desktop › K02 BUG-006 [MEDIUM] select option with surrounding spaces can never pass validation (2.3s)
+  ✘  28 [desktop] › e2e\functional.spec.ts:534:3 › desktop › K03 BUG-007 [LOW] preview keeps a stale error after the field is made optional (2.4s)
+  ✘  29 [desktop] › e2e\functional.spec.ts:542:3 › desktop › K04 BUG-008 [LOW] export file name breaks the Turkish capital İ (2.3s)
+  ✘  30 [desktop] › e2e\functional.spec.ts:549:3 › desktop › K05 BUG-009 [LOW] Tab can move focus out of an open modal dialog (309ms)
+  ✘  31 [desktop] › e2e\functional.spec.ts:557:3 › desktop › K06 BUG-010 [LOW] a form with an empty title gets nameless card buttons (2.4s)
+  ✓  32 [desktop] › e2e\functional.spec.ts:567:3 › scenarios › Scenario A: customer contact form — build, validate, autosave, reload, export (881ms)
+  ✓  33 [desktop] › e2e\functional.spec.ts:601:3 › scenarios › Scenario B: registration form with 6 field types — invalid data, edit the schema, test again (810ms)
+  ✓  34 [desktop] › e2e\functional.spec.ts:630:3 › scenarios › Scenario C: several forms — switch, delete one, keep the others, reload (778ms)
+  -  35 [desktop] › e2e\functional.spec.ts:651:3 › mobile › M01 mobile: create, edit, preview, export and delete; no horizontal overflow; dialogs fit the screen
+  ✓  36 [desktop] › e2e\schemaforge.spec.ts:22:3 › desktop › full flow: create, fields, rules, validation, export, real reload, delete (1.4s)
+  ✓  37 [desktop] › e2e\schemaforge.spec.ts:120:3 › desktop › 11 corrupt LocalStorage: no white page, clear message (328ms)
+  ✓  38 [desktop] › e2e\schemaforge.spec.ts:132:3 › desktop › keyboard: create a form and add a field without a mouse; focus is visible (281ms)
+  -  39 [desktop] › e2e\schemaforge.spec.ts:151:3 › mobile › 12 mobile layout is usable and has no horizontal overflow
+  -  40 [mobile] › e2e\functional.spec.ts:49:3 › desktop › F01 first visit: empty state, nothing stored before the user acts
+  -  41 [mobile] › e2e\functional.spec.ts:60:3 › desktop › F02 first form from the empty state opens the editor and is stored
+  -  42 [mobile] › e2e\functional.spec.ts:71:3 › desktop › F03 second form, listing (newest first, counts, date) and "Düzenle" opens the right form
+  -  43 [mobile] › e2e\functional.spec.ts:88:3 › desktop › F04 title and description: live preview, list card and storage
+  -  44 [mobile] › e2e\functional.spec.ts:101:3 › desktop › F05 duplicate: "(kopya)", "(kopya 2)", fields copied and independent of the original
+  -  45 [mobile] › e2e\functional.spec.ts:120:3 › desktop › F06 delete form: Vazgeç, Escape and backdrop cancel; "Formu sil" deletes and survives reload
+  -  46 [mobile] › e2e\functional.spec.ts:143:3 › desktop › F07 every field type: defaults, preview control, unique JSON names
+  -  47 [mobile] › e2e\functional.spec.ts:164:3 › desktop › F08 placeholder and help text reach the preview; hidden where they do not apply
+  -  48 [mobile] › e2e\functional.spec.ts:181:3 › desktop › F09 required: marker in list and preview, aria-required, checkbox message
+  -  49 [mobile] › e2e\functional.spec.ts:196:3 › desktop › F10 rules: invalid e-mail, number range, text length, date range, select choice
+  -  50 [mobile] › e2e\functional.spec.ts:236:3 › desktop › F11 empty required submit, live re-validation, "Temizle" resets
+  -  51 [mobile] › e2e\functional.spec.ts:255:3 › desktop › F12 live preview follows label, type, options and order changes
+  -  52 [mobile] › e2e\functional.spec.ts:271:3 › desktop › F13 delete field: cancel keeps it; confirm removes it from list, preview and storage
+  -  53 [mobile] › e2e\functional.spec.ts:288:3 › desktop › F14 reorder with ↑/↓: list, preview, storage and export follow; edge buttons are disabled
+  -  54 [mobile] › e2e\functional.spec.ts:305:3 › desktop › F15 export: JSON content, real download, clipboard, warnings, three ways to close, focus return
+  -  55 [mobile] › e2e\functional.spec.ts:334:3 › desktop › F16 persistence: real reload in the editor keeps every setting; browser back/forward work
+  -  56 [mobile] › e2e\functional.spec.ts:352:3 › desktop › F17 broken storage: corrupt JSON, wrong shape, partly invalid data, unknown form link
+  -  57 [mobile] › e2e\functional.spec.ts:378:3 › desktop › F18 storage full / blocked: warning banner instead of silent data loss
+  -  58 [mobile] › e2e\functional.spec.ts:392:3 › desktop › F19 keyboard: create, add a field and delete via dialog without a mouse; Escape and focus order
+  -  59 [mobile] › e2e\functional.spec.ts:417:3 › desktop › F20 BUG-003 regression: skip link moves focus to the content and does not leave the editor
+  -  60 [mobile] › e2e\functional.spec.ts:428:3 › desktop › F21 BUG-001 regression: two tabs never overwrite each other's forms
+  -  61 [mobile] › e2e\functional.spec.ts:447:3 › desktop › F22 BUG-002 regression: "Temiz başlat" never deletes forms created after the warning
+  -  62 [mobile] › e2e\functional.spec.ts:462:3 › desktop › F24 BUG-004 regression: one click on "Gönder (test)" submits even when the last field turns invalid on blur
+  -  63 [mobile] › e2e\functional.spec.ts:475:3 › desktop › F25 JSON name: auto-sync with the label until edited by hand; invalid and duplicate names are flagged
+  -  64 [mobile] › e2e\functional.spec.ts:497:3 › desktop › F23 network: the app loads without login and sends no form data anywhere
+  -  65 [mobile] › e2e\functional.spec.ts:517:3 › desktop › K01 BUG-005 [MEDIUM] optional number field with unparsable input is reported as valid
+  -  66 [mobile] › e2e\functional.spec.ts:525:3 › desktop › K02 BUG-006 [MEDIUM] select option with surrounding spaces can never pass validation
+  -  67 [mobile] › e2e\functional.spec.ts:534:3 › desktop › K03 BUG-007 [LOW] preview keeps a stale error after the field is made optional
+  -  68 [mobile] › e2e\functional.spec.ts:542:3 › desktop › K04 BUG-008 [LOW] export file name breaks the Turkish capital İ
+  -  69 [mobile] › e2e\functional.spec.ts:549:3 › desktop › K05 BUG-009 [LOW] Tab can move focus out of an open modal dialog
+  -  70 [mobile] › e2e\functional.spec.ts:557:3 › desktop › K06 BUG-010 [LOW] a form with an empty title gets nameless card buttons
+  -  71 [mobile] › e2e\functional.spec.ts:567:3 › scenarios › Scenario A: customer contact form — build, validate, autosave, reload, export
+  -  72 [mobile] › e2e\functional.spec.ts:601:3 › scenarios › Scenario B: registration form with 6 field types — invalid data, edit the schema, test again
+  -  73 [mobile] › e2e\functional.spec.ts:630:3 › scenarios › Scenario C: several forms — switch, delete one, keep the others, reload
+  ✓  74 [mobile] › e2e\functional.spec.ts:651:3 › mobile › M01 mobile: create, edit, preview, export and delete; no horizontal overflow; dialogs fit the screen (896ms)
+  -  75 [mobile] › e2e\schemaforge.spec.ts:22:3 › desktop › full flow: create, fields, rules, validation, export, real reload, delete
+  -  76 [mobile] › e2e\schemaforge.spec.ts:120:3 › desktop › 11 corrupt LocalStorage: no white page, clear message
+  -  77 [mobile] › e2e\schemaforge.spec.ts:132:3 › desktop › keyboard: create a form and add a field without a mouse; focus is visible
+  ✓  78 [mobile] › e2e\schemaforge.spec.ts:151:3 › mobile › 12 mobile layout is usable and has no horizontal overflow (515ms)
+
+  39 skipped
+  39 passed (38.6s)

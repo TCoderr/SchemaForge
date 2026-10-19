@@ -1,6 +1,6 @@
 # SchemaForge — Gerçek Özellikler (ACTUAL_FEATURES)
 
-**Author / Maintainer:** Tugay Sinan Ergün · **GitHub:** TCoderr · **Tarih:** 19 Ekim 2026 · **Sürüm:** 1.0.0
+**Author / Maintainer:** Tugay Sinan Ergün · **GitHub:** TCoderr · **Tarih:** 19 Ekim 2026 · **Sürüm:** 1.0.0 · **Güncelleme:** 1.1 fonksiyonel denetim (19.10.2026)
 
 Bu belge SchemaForge'un **bugün gerçekten ne yaptığını** kaydeder. FormPilot AI kampanyasının (`D:\Project\FormPilot-AI\PRODUCT_ALIGNMENT_CHECKLIST.md`) vaatleri, sonradan bu belgeye göre kontrol edilebilir.
 
@@ -13,7 +13,7 @@ Durumlar:
 Test dosyaları:
 - **Birim:** `src/lib/lib.test.ts`
 - **Entegrasyon:** `src/App.test.tsx` (React Testing Library)
-- **Tarayıcı:** `e2e/schemaforge.spec.ts` (Playwright + Microsoft Edge)
+- **Tarayıcı:** `e2e/schemaforge.spec.ts`, `e2e/functional.spec.ts` (F.., K.., Senaryo A–C, M01; Playwright + Microsoft Edge)
 
 ## 1. Özellikler
 
@@ -40,20 +40,21 @@ Test dosyaları:
 | F19 | Bozuk LocalStorage verisi: çökmez, uyarı gösterir, ham veriyi yedekler, "Temiz başlat" sunar | Implemented and tested | App.test `11a.`; lib.test corrupt/wrong shape; e2e corrupt |
 | F20 | Kısmen geçersiz kayıtlar: geçerli formlar kurtarılır, kaç kaydın atlandığı bildirilir | Implemented and tested | App.test `11b.`; lib.test partial |
 | F21 | Depolama erişilemezse veya dolarsa uygulama çökmez | Implemented and tested | lib.test "storage that throws" |
-| F22 | Kayıt başarısız olursa kullanıcıya uyarı bandı | Implemented but not tested | UI testi yok (yalnızca `saveForms` dönüş değeri test edildi) |
+| F22 | Kayıt başarısız olursa kullanıcıya uyarı bandı | Implemented and tested | functional F18 (depo dolu taklidi) |
 | F23 | JSON dışa aktarma: geçerli JSON (biçim `schemaforge.form` v1); alan sırası, tür, etiket, ad, zorunluluk, kurallar ve seçenekler | Implemented and tested | lib.test JSON export; App.test `10.`; e2e (**indirilen dosya** okundu) |
 | F24 | JSON dosyası indirme | Implemented and tested | e2e full flow (download olayı) |
-| F25 | JSON'u panoya kopyalama | Implemented but not tested | Tarayıcı izni gerektirdiği için test edilmedi |
-| F26 | Dışa aktarmadan önce tasarım sorunları uyarısı | Implemented but not tested | Mantık lib.test'te; pencere içindeki görünüm test edilmedi |
+| F25 | JSON'u panoya kopyalama | Implemented and tested | functional F15 (izin verildi, pano içeriği okundu) |
+| F26 | Dışa aktarmadan önce tasarım sorunları uyarısı | Implemented and tested | functional F15, F25 |
 | F27 | Bilinmeyen form bağlantısında "Form bulunamadı" sayfası | Implemented and tested | App.test `11c.` |
 | F28 | Hata sınırı (ErrorBoundary): beklenmeyen hatada beyaz sayfa yerine kurtarma ekranı | Implemented but not tested | — |
 | F29 | Kullanıcı metni HTML olarak işlenmez (`dangerouslySetInnerHTML` kullanılmaz) | Implemented and tested | App.test "security" |
 | F30 | Duyarlı (responsive) arayüz; mobilde yatay taşma yok | Implemented and tested | e2e mobile (390 px) |
 | F31 | Klavye ile kullanım ve görünür odak göstergesi | Implemented and tested | e2e keyboard |
 | F32 | Onay penceresinde odak yönetimi (Vazgeç'e odaklanır, Escape kapatır) | Implemented and tested | App.test `8.` (Escape) |
-| F33 | "İçeriğe atla" bağlantısı | Implemented but not tested | — |
+| F33 | "İçeriğe atla" bağlantısı | Implemented and tested | functional F19, F20; App.test BUG-003 (1.1'de düzeltildi: düzenleyiciyi kapatıyordu) |
 | F34 | Verinin yalnızca bu tarayıcıda saklandığı açıklaması | Implemented and tested | Başlık ve alt bilgide sabit metin; ekran görüntüleri |
 | F35 | Hash tabanlı yönlendirme ve Netlify yönlendirme kuralı (`netlify.toml`, `public/_redirects`) | Implemented and tested | Canlı sitede (https://schemaforge-tcoderr.netlify.app) Playwright 4/4; `/forms/abc` → HTTP 200 |
+| F36 | Çoklu sekme: başka sekmede kaydedilen değişiklik bu sekmeye alınır, üzerine yazılmaz | Implemented and tested | functional F21 (iki gerçek sekme); App.test BUG-001 (1.1'de eklendi) |
 | P1 | JSON içe aktarma (şema doğrulamalı) | Planned | Kod yok |
 | P2 | Alanları sürükle-bırak ile sıralama | Planned | Şu an yukarı/aşağı butonları var |
 | P3 | Koşullu alanlar (bir cevaba göre alan gösterme) | Planned | Kod yok |
@@ -78,13 +79,13 @@ Kampanya vaatleri `FormPilot-AI/PRODUCT_ALIGNMENT_CHECKLIST.md` dosyasındaki ko
 | A6 E-posta biçimi | Karşılanıyor: F13 |
 | A7 En az / en fazla uzunluk | Karşılanıyor: F13 |
 | A8 Canlı önizleme | Karşılanıyor: F15, F16 |
-| A9 "Anında" önizleme | Değişiklik aynı render içinde önizlemeye yansıyor (F15). Süre ölçümü yapılmadı |
-| A10 Tarayıcıda saklama, sunucuya istek yok | Karşılanıyor: F18. Uygulama ağ isteği yapmıyor; ayrı bir ağ testi yazılmadı |
-| A11 "Şablonunu kaydet" | **Kısmen.** Form kaydedilip kopyalanabiliyor (F5, F18) ama ayrı bir "şablon" kavramı yok (P4). Kampanya metni "tasarımını kaydet" olarak düzeltilmeli |
+| A9 "Anında" önizleme | Değişiklik aynı render içinde önizlemeye yansıyor (F15). *(19.10.2026: canlı sitede ölçüldü, en fazla 0,8 ms; FormPilot-AI denetimi)* |
+| A10 Tarayıcıda saklama, sunucuya istek yok | Karşılanıyor: F18. *(1.1: ağ testi eklendi, functional F23: veri taşıyan istek yok)* |
+| A11 "Şablonunu kaydet" | **Kısmen.** Form kaydedilip kopyalanabiliyor (F5, F18) ama ayrı bir "şablon" kavramı yok (P4). Kampanya metni "tasarımını kaydet" olarak düzeltilmeli. *(19.10.2026: FormPilot v1.3'te video "Tasarımın otomatik kaydedilir" olarak düzeltildi; karşılanıyor)* |
 | A12 JSON dışa aktarma | Karşılanıyor: F23, F24 |
 | A13 Kod yazmadan form tasarlama | Karşılanıyor: arayüz kod gerektirmiyor |
 | A14 Kurulum gerektirmeyen, tarayıcıda çalışan | Karşılanıyor: https://schemaforge-tcoderr.netlify.app (canlı sitede testler geçti) |
 | A15 Hesap veya sunucu gerektirmeyen | Karşılanıyor (U4: hesap yok) |
 | A16 Tek ekranda alan + kural + önizleme | Karşılanıyor: masaüstünde üç panel; mobilde alt alta |
-| A17 Demo formu | Kısmen: Herkese açık sitede (https://schemaforge-tcoderr.netlify.app) form oluşturulabiliyor. Hazır bir "demo formu" şablonu yok |
+| A17 Demo formu | Kısmen: Herkese açık sitede (https://schemaforge-tcoderr.netlify.app) form oluşturulabiliyor. Hazır bir "demo formu" şablonu yok. *(19.10.2026: FormPilot v1.3'te CTA "İlk formunu oluştur" olarak düzeltildi; boş ekrandaki "İlk formu oluştur" düğmesiyle karşılanıyor)* |
 | C1–C5 (yapay zekâ, PDF, entegrasyon, sunucu, yanıt toplama) | Uygulamada yok (U1–U5); kampanyanın "vaat etmiyoruz" ifadeleriyle uyumlu |

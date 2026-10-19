@@ -9,7 +9,8 @@ export default defineConfig({
   timeout: 60_000,
   fullyParallel: false,
   workers: 1,
-  reporter: [['list'], ['junit', { outputFile: live ? 'docs/test-results/e2e-live-junit.xml' : 'docs/test-results/e2e-junit.xml' }]],
+  reporter: [['list'], ['junit', { outputFile: live ? 'docs/test-results/e2e-live-junit.xml' : 'docs/test-results/e2e-junit.xml' }],
+    ['json', { outputFile: live ? 'reports/test-results/e2e-live.json' : 'reports/test-results/e2e-local.json' }]],
   use: { baseURL: live ?? 'http://localhost:4173', channel: 'msedge', locale: 'tr-TR', acceptDownloads: true },
   projects: [
     { name: 'desktop', use: { viewport: { width: 1440, height: 900 } } },

@@ -6,12 +6,13 @@ import { readFileSync, writeFileSync, mkdirSync } from 'node:fs'
 const OUT = 'docs/test-results'
 mkdirSync(OUT, { recursive: true })
 const run = (name, cmd) => {
-  let out, ok = true
+  let out, code = 0
   try { out = execSync(cmd, { encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'], env: { ...process.env, FORCE_COLOR: '0', NO_COLOR: '1' } }) }
-  catch (e) { out = `${e.stdout ?? ''}${e.stderr ?? ''}`; ok = false }
+  catch (e) { out = `${e.stdout ?? ''}${e.stderr ?? ''}`; code = e.status ?? 1 }
+  const ok = code === 0
   const clean = out.replace(/\x1b\[[0-9;]*m/g, '').split('\n').filter((l) => !l.startsWith('npm notice')).join('\n')
-  writeFileSync(`${OUT}/${name}.txt`, `$ ${cmd}\n# exit: ${ok ? 0 : 'non-zero'}\n\n${clean}`)
-  console.log(`${name}: ${ok ? 'OK' : 'FAILED'}`)
+  writeFileSync(`${OUT}/${name}.txt`, `$ ${cmd}\n# exit: ${code}\n\n${clean}`)
+  console.log(`${name}: exit ${code}`)
   return ok
 }
 const results = {
@@ -27,7 +28,9 @@ function junit(file) {
   const cases = [...xml.matchAll(/<testcase\b([^>]*?)(\/>|>([\s\S]*?)<\/testcase>)/g)].map((m) => {
     const attr = (k) => (m[1].match(new RegExp(`${k}="([^"]*)"`)) ?? [])[1] ?? ''
     const body = m[3] ?? ''
-    const status = /<failure|<error/.test(body) ? 'BAŞARISIZ' : /<skipped/.test(body) ? 'ATLANDI' : 'BAŞARILI'
+    // test.fail() documents a known, unfixed defect: it passes only while the defect is still there, so it is never counted as a success
+    const status = /<failure|<error/.test(body) ? 'BAŞARISIZ' : /<skipped/.test(body) ? 'ATLANDI'
+      : /<property name="fail"/.test(body) ? 'BİLİNEN KUSUR (beklenen hata)' : 'BAŞARILI'
     return { name: attr('name').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&amp;/g, '&'), suite: attr('classname'), time: Number(attr('time')), status }
   })
   return cases
@@ -36,7 +39,8 @@ const unit = junit(`${OUT}/unit-junit.xml`)
 const e2e = junit(`${OUT}/e2e-junit.xml`).filter((c) => c.status !== 'ATLANDI')
 let live = []
 try { live = junit(`${OUT}/e2e-live-junit.xml`).filter((c) => c.status !== 'ATLANDI') } catch { /* live run optional */ }
-const count = (cs) => `${cs.length} test · ${cs.filter((c) => c.status === 'BAŞARILI').length} başarılı · ${cs.filter((c) => c.status === 'BAŞARISIZ').length} başarısız`
+const count = (cs) => `${cs.length} test · ${cs.filter((c) => c.status === 'BAŞARILI').length} başarılı · ` +
+  `${cs.filter((c) => c.status.startsWith('BİLİNEN')).length} bilinen kusur (beklenen hata) · ${cs.filter((c) => c.status === 'BAŞARISIZ').length} başarısız`
 const build = readFileSync(`${OUT}/build.txt`, 'utf8').split('\n').filter((l) => /dist\/|built in/.test(l)).join('\n')
 const md = [
   '# SchemaForge — Test Raporu', '',
@@ -58,6 +62,6 @@ const md = [
   'Ekran görüntüleri tarayıcı testleri sırasında gerçek Edge penceresinden alınır: `docs/screenshots/` (yerel üretim derlemesi) ve `docs/screenshots/live/` (canlı site).',
 ].join('\n')
 writeFileSync('docs/TEST_REPORT.md', md + '\n')
-const allOk = Object.values(results).every(Boolean) && [...unit, ...e2e].every((c) => c.status === 'BAŞARILI')
+const allOk = Object.values(results).every(Boolean) && [...unit, ...e2e].every((c) => c.status !== 'BAŞARISIZ')
 console.log(allOk ? 'ALL OK' : 'SOMETHING FAILED')
 process.exit(allOk ? 0 : 1)
