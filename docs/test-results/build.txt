@@ -1,0 +1,13 @@
+$ npm run build
+# exit: 0
+
+vite v8.3.4 building client environment for production...
+transforming...
+✓ 33 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.74 kB │ gzip:  0.46 kB
+dist/assets/index-DlspW7K1.css   18.65 kB │ gzip:  4.70 kB
+dist/assets/index-DOlT0oG3.js   251.34 kB │ gzip: 78.09 kB
+
+✓ built in 125ms

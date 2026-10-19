@@ -1,0 +1,3 @@
+$ npx tsc -b --pretty false
+# exit: 0
+

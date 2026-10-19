@@ -1,0 +1,46 @@
+<testsuites id="" name="" tests="8" failures="0" skipped="4" errors="0" time="8.343812">
+<testsuite name="schemaforge.spec.ts" timestamp="2026-10-19T00:05:06.050Z" hostname="desktop" tests="4" failures="0" skipped="1" time="1.965" errors="0">
+<testcase name="desktop › full flow: create, fields, rules, validation, export, real reload, delete" classname="schemaforge.spec.ts" time="1.463">
+</testcase>
+<testcase name="desktop › 11 corrupt LocalStorage: no white page, clear message" classname="schemaforge.spec.ts" time="0.254">
+</testcase>
+<testcase name="desktop › keyboard: create a form and add a field without a mouse; focus is visible" classname="schemaforge.spec.ts" time="0.248">
+</testcase>
+<testcase name="mobile › 12 mobile layout is usable and has no horizontal overflow" classname="schemaforge.spec.ts">
+<properties>
+<property name="skip" value="mobile only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="schemaforge.spec.ts" timestamp="2026-10-19T00:05:06.050Z" hostname="mobile" tests="4" failures="0" skipped="3" time="0.626" errors="0">
+<testcase name="desktop › full flow: create, fields, rules, validation, export, real reload, delete" classname="schemaforge.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › 11 corrupt LocalStorage: no white page, clear message" classname="schemaforge.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="desktop › keyboard: create a form and add a field without a mouse; focus is visible" classname="schemaforge.spec.ts">
+<properties>
+<property name="skip" value="desktop only">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="mobile › 12 mobile layout is usable and has no horizontal overflow" classname="schemaforge.spec.ts" time="0.625">
+</testcase>
+</testsuite>
+</testsuites>
