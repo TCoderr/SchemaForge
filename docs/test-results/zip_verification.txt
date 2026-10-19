@@ -1,22 +1,22 @@
 SchemaForge - Delivery Verification
-Generated: 2026-10-19 18:13:29
+Generated: 2026-10-19 18:41:23
 
 [PASS] Required files: 27/27
 [PASS] package.json author + scripts: author=Tugay Sinan Ergün; scripts=['build', 'dev', 'lint', 'preview', 'test', 'test:e2e', 'typecheck']
 [PASS] Required stack present: react ^19.3.1, typescript ^6.0.3, vite ^8.3.4, tailwindcss ^4.3.3, vitest ^5.0.5, @playwright/test ^1.64.1
-[PASS] Unit/integration tests (JUnit): 37 run, 0 failed
-[PASS] Browser tests (JUnit): 33 run, 0 failed (skips excluded); 6 known-defect tests (test.fail) not counted as passed
-[PASS] README/TEST_REPORT numbers match JUnit: unit 37, e2e 33 + 6 known defects
+[PASS] Unit/integration tests (JUnit): 43 run, 0 failed
+[PASS] Browser tests (JUnit): 39 run, 0 failed (skips excluded); 0 known-defect tests (test.fail) not counted as passed
+[PASS] README/TEST_REPORT numbers match JUnit: unit 43, e2e 39 + 0 known defects
 [PASS] npm run build output recorded and successful: docs/test-results/build.txt
 [PASS] typecheck clean: docs/test-results/typecheck.txt
 [PASS] lint clean: docs/test-results/lint.txt
 [PASS] Real screenshots (desktop + mobile): 8 PNG; sizes [(780, 1688), (780, 3910), (1440, 900), (1440, 1160)]...
-[PASS] ACTUAL_FEATURES statuses valid: 45 items; Implemented and tested: 35, Implemented but not tested: 1, Planned: 4, Unsupported: 5
+[PASS] ACTUAL_FEATURES statuses valid: 48 items; Implemented and tested: 38, Implemented but not tested: 1, Planned: 4, Unsupported: 5
 [PASS] All GitHub/Netlify links in the docs are live (HTTP 200): https://github.com/TCoderr/SchemaForge -> 200, https://github.com/TCoderr/SchemaForge.git -> 200, https://schemaforge-tcoderr.netlify.app -> 200
-[PASS] Browser tests against the live Netlify site: 33 run, 0 failed, 6 known-defect tests
+[PASS] Browser tests against the live Netlify site: 39 run, 0 failed, 0 known-defect tests
 [PASS] No dangerouslySetInnerHTML in source: none
-[PASS] ZIP integrity and contents: 117 files, 2.78 MB, CRC ok=True, leaked=none, missing=none
-[PASS] ZIP source == git HEAD: HEAD 537a8f1; 112/112 tracked files identical (line endings ignored)
-[PASS] ZIP dist == live Netlify files: assets/index-7_u-jkvg.css 961b57af0a49 == live; assets/index-DtpLGSyl.js 3a1c943a1d55 == live; favicon.svg e30fb7291f79 == live
+[PASS] ZIP integrity and contents: 122 files, 2.80 MB, CRC ok=True, leaked=none, missing=none
+[PASS] ZIP source == git HEAD: HEAD 75859f9; 117/117 tracked files identical (line endings ignored)
+[PASS] ZIP dist == live Netlify files: assets/index-7_u-jkvg.css 961b57af0a49 == live; assets/index-wxSCGASN.js bcf1e5be90c2 == live; favicon.svg e30fb7291f79 == live
 
 OVERALL: PASS (17/17)
