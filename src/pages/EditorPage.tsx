@@ -66,7 +66,7 @@ export function EditorPage({ form, onChange }: Props) {
       </div>
 
       <ConfirmDialog open={pendingField !== null} title="Alan silinsin mi?"
-        message={`"${pendingField?.label ?? ''}" alanı formdan kaldırılacak.`} confirmLabel="Alanı sil"
+        message={`"${pendingField?.label || '(etiketsiz)'}" alanı formdan kaldırılacak.`} confirmLabel="Alanı sil"
         onCancel={() => setPendingField(null)}
         onConfirm={() => { if (pendingField) deleteField(pendingField.id); setPendingField(null) }} />
       {exporting && <ExportDialog form={form} onClose={() => setExporting(false)} />}

@@ -1,81 +1,93 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites name="vitest tests" tests="37" failures="0" errors="0" time="4.2554255">
-    <testsuite name="src/App.test.tsx" timestamp="2026-10-19T15:11:16.935Z" hostname="Sinan" tests="20" failures="0" errors="0" skipped="0" time="4.2449813">
-        <testcase classname="src/App.test.tsx" name="SchemaForge user scenarios &gt; 1. creates a new form and opens the editor" time="0.1546666">
+<testsuites name="vitest tests" tests="43" failures="0" errors="0" time="4.9001957">
+    <testsuite name="src/App.test.tsx" timestamp="2026-10-19T15:24:07.547Z" hostname="Sinan" tests="23" failures="0" errors="0" skipped="0" time="4.8887315">
+        <testcase classname="src/App.test.tsx" name="SchemaForge user scenarios &gt; 1. creates a new form and opens the editor" time="0.1402475">
         </testcase>
-        <testcase classname="src/App.test.tsx" name="SchemaForge user scenarios &gt; 2. lists stored forms on the dashboard" time="0.0139912">
+        <testcase classname="src/App.test.tsx" name="SchemaForge user scenarios &gt; 2. lists stored forms on the dashboard" time="0.0139325">
         </testcase>
-        <testcase classname="src/App.test.tsx" name="SchemaForge user scenarios &gt; 3. edits the form title (saved and visible in the list)" time="0.3837939">
+        <testcase classname="src/App.test.tsx" name="SchemaForge user scenarios &gt; 3. edits the form title (saved and visible in the list)" time="0.2964541">
         </testcase>
-        <testcase classname="src/App.test.tsx" name="SchemaForge user scenarios &gt; 4. adds a field; it appears in the field list and the live preview" time="0.1102427">
+        <testcase classname="src/App.test.tsx" name="SchemaForge user scenarios &gt; 4. adds a field; it appears in the field list and the live preview" time="0.0917335">
         </testcase>
-        <testcase classname="src/App.test.tsx" name="SchemaForge user scenarios &gt; 4b. label edits update the preview live and keep the JSON name in sync" time="0.3048241">
+        <testcase classname="src/App.test.tsx" name="SchemaForge user scenarios &gt; 4b. label edits update the preview live and keep the JSON name in sync" time="0.2475935">
         </testcase>
-        <testcase classname="src/App.test.tsx" name="SchemaForge user scenarios &gt; 5. changes the field type (text -&gt; email, then -&gt; select with options)" time="0.2274041">
+        <testcase classname="src/App.test.tsx" name="SchemaForge user scenarios &gt; 5. changes the field type (text -&gt; email, then -&gt; select with options)" time="0.1856372">
         </testcase>
-        <testcase classname="src/App.test.tsx" name="SchemaForge user scenarios &gt; 6. required and rule validation works in the preview" time="0.846751">
+        <testcase classname="src/App.test.tsx" name="SchemaForge user scenarios &gt; 6. required and rule validation works in the preview" time="0.7321742">
         </testcase>
-        <testcase classname="src/App.test.tsx" name="SchemaForge user scenarios &gt; 7. deletes a field after confirmation (cancel keeps it)" time="0.3831234">
+        <testcase classname="src/App.test.tsx" name="SchemaForge user scenarios &gt; 7. deletes a field after confirmation (cancel keeps it)" time="0.3618261">
         </testcase>
-        <testcase classname="src/App.test.tsx" name="SchemaForge user scenarios &gt; 8. deletes a form only after confirmation" time="0.1694007">
+        <testcase classname="src/App.test.tsx" name="SchemaForge user scenarios &gt; 8. deletes a form only after confirmation" time="0.2180058">
         </testcase>
-        <testcase classname="src/App.test.tsx" name="SchemaForge user scenarios &gt; 8b. duplicates and reorders" time="0.1886137">
+        <testcase classname="src/App.test.tsx" name="SchemaForge user scenarios &gt; 8b. duplicates and reorders" time="0.1865084">
         </testcase>
-        <testcase classname="src/App.test.tsx" name="SchemaForge user scenarios &gt; 9. data survives a reload (unmount + fresh mount reading LocalStorage)" time="0.1044805">
+        <testcase classname="src/App.test.tsx" name="SchemaForge user scenarios &gt; 9. data survives a reload (unmount + fresh mount reading LocalStorage)" time="0.1131582">
         </testcase>
-        <testcase classname="src/App.test.tsx" name="SchemaForge user scenarios &gt; 10. exports valid JSON with types, labels, rules and order" time="0.3817826">
+        <testcase classname="src/App.test.tsx" name="SchemaForge user scenarios &gt; 10. exports valid JSON with types, labels, rules and order" time="0.4108007">
         </testcase>
-        <testcase classname="src/App.test.tsx" name="SchemaForge user scenarios &gt; 11a. corrupt LocalStorage does not crash the app; it reports and can start clean" time="0.0450445">
+        <testcase classname="src/App.test.tsx" name="SchemaForge user scenarios &gt; 11a. corrupt LocalStorage does not crash the app; it reports and can start clean" time="0.0493015">
         </testcase>
-        <testcase classname="src/App.test.tsx" name="SchemaForge user scenarios &gt; 11b. partially invalid data keeps the valid forms and warns" time="0.0044753">
+        <testcase classname="src/App.test.tsx" name="SchemaForge user scenarios &gt; 11b. partially invalid data keeps the valid forms and warns" time="0.009404">
         </testcase>
-        <testcase classname="src/App.test.tsx" name="SchemaForge user scenarios &gt; 11c. unknown form id shows a message instead of a blank page" time="0.0109606">
+        <testcase classname="src/App.test.tsx" name="SchemaForge user scenarios &gt; 11c. unknown form id shows a message instead of a blank page" time="0.0042397">
         </testcase>
-        <testcase classname="src/App.test.tsx" name="SchemaForge user scenarios &gt; BUG-001: a save from another tab is adopted, so this tab never overwrites it with a stale list" time="0.0627422">
+        <testcase classname="src/App.test.tsx" name="SchemaForge user scenarios &gt; BUG-001: a save from another tab is adopted, so this tab never overwrites it with a stale list" time="0.0614641">
         </testcase>
-        <testcase classname="src/App.test.tsx" name="SchemaForge user scenarios &gt; BUG-002: &quot;Temiz başlat&quot; disappears once the user has created a form after a corrupt-data warning" time="0.0498876">
+        <testcase classname="src/App.test.tsx" name="SchemaForge user scenarios &gt; BUG-002: &quot;Temiz başlat&quot; disappears once the user has created a form after a corrupt-data warning" time="0.0505981">
         </testcase>
-        <testcase classname="src/App.test.tsx" name="SchemaForge user scenarios &gt; BUG-003: the skip link focuses the content without changing the route" time="0.069006">
+        <testcase classname="src/App.test.tsx" name="SchemaForge user scenarios &gt; BUG-003: the skip link focuses the content without changing the route" time="0.0716823">
         </testcase>
-        <testcase classname="src/App.test.tsx" name="SchemaForge user scenarios &gt; BUG-004: pressing the preview buttons does not move focus out of the field (no layout shift before the click)" time="0.1212835">
+        <testcase classname="src/App.test.tsx" name="SchemaForge user scenarios &gt; BUG-004: pressing the preview buttons does not move focus out of the field (no layout shift before the click)" time="0.1404301">
         </testcase>
-        <testcase classname="src/App.test.tsx" name="SchemaForge user scenarios &gt; security: user text is rendered as text, never as HTML" time="0.6108584">
+        <testcase classname="src/App.test.tsx" name="SchemaForge user scenarios &gt; BUG-007: a preview error disappears when its rule is switched off, and returns with the rule" time="0.3467742">
+        </testcase>
+        <testcase classname="src/App.test.tsx" name="SchemaForge user scenarios &gt; BUG-009: Tab and Shift+Tab cycle inside the export dialog; focus goes to the main content when the trigger is gone" time="0.578475">
+        </testcase>
+        <testcase classname="src/App.test.tsx" name="SchemaForge user scenarios &gt; BUG-010: empty titles and labels still give meaningful button names" time="0.0536317">
+        </testcase>
+        <testcase classname="src/App.test.tsx" name="SchemaForge user scenarios &gt; security: user text is rendered as text, never as HTML" time="0.5230493">
         </testcase>
     </testsuite>
-    <testsuite name="src/lib/lib.test.ts" timestamp="2026-10-19T15:11:16.939Z" hostname="Sinan" tests="17" failures="0" errors="0" skipped="0" time="0.0104442">
-        <testcase classname="src/lib/lib.test.ts" name="validateValue &gt; required text / textarea" time="0.0026859">
+    <testsuite name="src/lib/lib.test.ts" timestamp="2026-10-19T15:24:07.554Z" hostname="Sinan" tests="20" failures="0" errors="0" skipped="0" time="0.0114642">
+        <testcase classname="src/lib/lib.test.ts" name="validateValue &gt; required text / textarea" time="0.0026056">
         </testcase>
-        <testcase classname="src/lib/lib.test.ts" name="validateValue &gt; min / max length" time="0.0002881">
+        <testcase classname="src/lib/lib.test.ts" name="validateValue &gt; min / max length" time="0.0003027">
         </testcase>
-        <testcase classname="src/lib/lib.test.ts" name="validateValue &gt; email format" time="0.0003297">
+        <testcase classname="src/lib/lib.test.ts" name="validateValue &gt; email format" time="0.000309">
         </testcase>
-        <testcase classname="src/lib/lib.test.ts" name="validateValue &gt; number range and non-numbers" time="0.0002445">
+        <testcase classname="src/lib/lib.test.ts" name="validateValue &gt; number range and non-numbers" time="0.0002424">
         </testcase>
-        <testcase classname="src/lib/lib.test.ts" name="validateValue &gt; date range" time="0.000294">
+        <testcase classname="src/lib/lib.test.ts" name="validateValue &gt; date range" time="0.0002858">
         </testcase>
-        <testcase classname="src/lib/lib.test.ts" name="validateValue &gt; select must be one of the options; required checkbox must be ticked" time="0.0002588">
+        <testcase classname="src/lib/lib.test.ts" name="validateValue &gt; select must be one of the options; required checkbox must be ticked" time="0.000289">
         </testcase>
-        <testcase classname="src/lib/lib.test.ts" name="fields helpers &gt; Turkish label -&gt; safe unique field name" time="0.0003445">
+        <testcase classname="src/lib/lib.test.ts" name="fields helpers &gt; Turkish label -&gt; safe unique field name" time="0.0003894">
         </testcase>
-        <testcase classname="src/lib/lib.test.ts" name="fields helpers &gt; changing the type drops rules/options that no longer apply" time="0.0006954">
+        <testcase classname="src/lib/lib.test.ts" name="fields helpers &gt; changing the type drops rules/options that no longer apply" time="0.0007174">
         </testcase>
-        <testcase classname="src/lib/lib.test.ts" name="fields helpers &gt; moveItem and duplicateForm" time="0.0007621">
+        <testcase classname="src/lib/lib.test.ts" name="fields helpers &gt; moveItem and duplicateForm" time="0.0007744">
         </testcase>
-        <testcase classname="src/lib/lib.test.ts" name="storage &gt; round-trips forms" time="0.0006995">
+        <testcase classname="src/lib/lib.test.ts" name="storage &gt; round-trips forms" time="0.0008479">
         </testcase>
-        <testcase classname="src/lib/lib.test.ts" name="storage &gt; empty storage" time="0.0001405">
+        <testcase classname="src/lib/lib.test.ts" name="storage &gt; empty storage" time="0.0001683">
         </testcase>
-        <testcase classname="src/lib/lib.test.ts" name="storage &gt; corrupt JSON never throws and is backed up" time="0.0003074">
+        <testcase classname="src/lib/lib.test.ts" name="storage &gt; corrupt JSON never throws and is backed up" time="0.0002133">
         </testcase>
-        <testcase classname="src/lib/lib.test.ts" name="storage &gt; wrong shape is treated as corrupt" time="0.0001064">
+        <testcase classname="src/lib/lib.test.ts" name="storage &gt; wrong shape is treated as corrupt" time="0.0001013">
         </testcase>
-        <testcase classname="src/lib/lib.test.ts" name="storage &gt; invalid forms are skipped, valid ones recovered" time="0.0002423">
+        <testcase classname="src/lib/lib.test.ts" name="storage &gt; invalid forms are skipped, valid ones recovered" time="0.0002502">
         </testcase>
-        <testcase classname="src/lib/lib.test.ts" name="storage &gt; storage that throws is handled" time="0.000139">
+        <testcase classname="src/lib/lib.test.ts" name="storage &gt; storage that throws is handled" time="0.000146">
         </testcase>
-        <testcase classname="src/lib/lib.test.ts" name="JSON export &gt; is valid JSON with order, type, label, rules and options; no internal ids" time="0.0012978">
+        <testcase classname="src/lib/lib.test.ts" name="JSON export &gt; is valid JSON with order, type, label, rules and options; no internal ids" time="0.0013397">
         </testcase>
-        <testcase classname="src/lib/lib.test.ts" name="JSON export &gt; design problems are reported before export" time="0.0002725">
+        <testcase classname="src/lib/lib.test.ts" name="JSON export &gt; design problems are reported before export" time="0.0002716">
+        </testcase>
+        <testcase classname="src/lib/lib.test.ts" name="1.0.2 regressions (BUG-005, BUG-006, BUG-008) &gt; BUG-005: a number the browser could not parse is invalid whether the field is optional or required" time="0.0001337">
+        </testcase>
+        <testcase classname="src/lib/lib.test.ts" name="1.0.2 regressions (BUG-005, BUG-006, BUG-008) &gt; BUG-006: options are trimmed, empty lines and duplicates dropped, and validation/export agree" time="0.00017">
+        </testcase>
+        <testcase classname="src/lib/lib.test.ts" name="1.0.2 regressions (BUG-005, BUG-006, BUG-008) &gt; BUG-008: export file names lower-case Turkish letters correctly" time="0.00042">
         </testcase>
     </testsuite>
 </testsuites>

@@ -227,6 +227,45 @@ describe('SchemaForge user scenarios', () => {
     }
   })
 
+  it('BUG-007: a preview error disappears when its rule is switched off, and returns with the rule', async () => {
+    const user = await newFormInEditor()
+    await user.click(screen.getByRole('button', { name: 'Kısa metin alanı ekle' }))
+    await user.click(screen.getByLabelText('Zorunlu alan'))
+    const preview = screen.getByRole('form', { name: 'Form önizlemesi' })
+    await user.click(within(preview).getByRole('button', { name: 'Gönder (test)' }))
+    expect(within(preview).getByText('Bu alan zorunludur.')).toBeInTheDocument()
+    await user.click(screen.getByLabelText('Zorunlu alan'))
+    expect(within(preview).queryByText('Bu alan zorunludur.')).not.toBeInTheDocument()
+    expect(within(preview).queryByText(/alanda hata var/)).not.toBeInTheDocument()
+    await user.click(screen.getByLabelText('Zorunlu alan'))
+    expect(within(preview).getByText('Bu alan zorunludur.')).toBeInTheDocument()
+  })
+
+  it('BUG-009: Tab and Shift+Tab cycle inside the export dialog; focus goes to the main content when the trigger is gone', async () => {
+    const user = await newFormInEditor()
+    await user.click(screen.getByRole('button', { name: "JSON'u dışa aktar" }))
+    const dialog = screen.getByRole('dialog', { name: 'JSON dışa aktarma' })
+    for (let i = 0; i < 6; i++) { await user.tab(); expect(dialog).toContainElement(document.activeElement as HTMLElement) }
+    within(dialog).getByRole('button', { name: 'Kapat' }).focus()
+    await user.tab({ shift: true })
+    expect(within(dialog).getByRole('button', { name: 'JSON indir' })).toHaveFocus()
+    await user.keyboard('{Escape}')
+    expect(screen.getByRole('button', { name: "JSON'u dışa aktar" })).toHaveFocus()
+    await user.click(screen.getByRole('link', { name: '← Formlar' }))
+    await user.click(await screen.findByRole('button', { name: 'Adsız form formunu sil' }))
+    await user.click(screen.getByRole('button', { name: 'Formu sil' }))
+    expect(document.activeElement?.id).toBe('main')
+  })
+
+  it('BUG-010: empty titles and labels still give meaningful button names', async () => {
+    seed([{ ...createForm(''), fields: [{ ...createField('text'), label: '' }] }])
+    const user = userEvent.setup()
+    render(<App />)
+    for (const action of ['düzenle', 'kopyala', 'sil']) expect(screen.getByRole('button', { name: `Adsız form formunu ${action}` })).toBeInTheDocument()
+    await user.click(screen.getByRole('button', { name: 'Adsız form formunu düzenle' }))
+    expect(await screen.findByRole('button', { name: '(etiketsiz) alanını sil' })).toBeInTheDocument()
+  })
+
   it('security: user text is rendered as text, never as HTML', async () => {
     const user = await newFormInEditor()
     await user.click(screen.getByRole('button', { name: 'Kısa metin alanı ekle' }))

@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import type { FormField, FormSchema } from '../interfaces/form'
-import { buildExport, exportJson } from './exportSchema'
-import { changeFieldType, createField, createForm, duplicateForm, moveItem, toFieldName, uniqueName } from './fields'
+import { buildExport, exportFileName, exportJson } from './exportSchema'
+import { changeFieldType, cleanOptions, createField, createForm, duplicateForm, moveItem, toFieldName, uniqueName } from './fields'
 import { loadForms, saveForms, STORAGE_KEY } from './storage'
 import { formProblems, validateValue } from './validation'
 
@@ -133,5 +133,27 @@ describe('JSON export', () => {
     const p = formProblems(form)
     expect(p.some((x) => x.includes('küçük harfle'))).toBe(true)
     expect(p.some((x) => x.includes('En az uzunluk'))).toBe(true)
+  })
+})
+
+describe('1.0.2 regressions (BUG-005, BUG-006, BUG-008)', () => {
+  it('BUG-005: a number the browser could not parse is invalid whether the field is optional or required', () => {
+    const optional = { ...createField('number'), required: false }
+    expect(validateValue(optional, '', true)).toBe('Lütfen bir sayı girin.')
+    expect(validateValue({ ...optional, required: true }, '', true)).toBe('Lütfen bir sayı girin.')
+    expect(validateValue(optional, '', false)).toBeNull()
+    expect(validateValue(field({}), '', true)).toBeNull() // only number inputs report bad input
+  })
+  it('BUG-006: options are trimmed, empty lines and duplicates dropped, and validation/export agree', () => {
+    expect(cleanOptions(['  İstanbul ', 'Ankara', '', ' Ankara'])).toEqual(['İstanbul', 'Ankara'])
+    const select = { ...createField('select'), required: true, options: ['İstanbul ', 'Ankara'] }
+    expect(validateValue(select, 'İstanbul')).toBeNull()
+    expect(validateValue(select, 'İzmir')).toBe('Listeden bir seçenek seçin.')
+    expect(buildExport({ ...createForm(), fields: [select] }).form.fields[0].options).toEqual(['İstanbul', 'Ankara'])
+  })
+  it('BUG-008: export file names lower-case Turkish letters correctly', () => {
+    expect(exportFileName(createForm('İŞĞÜÖÇ ışğüöç Iİ'))).toBe('işğüöç-ışğüöç-ıi.schemaforge.json')
+    expect(exportFileName(createForm('İletişim Formu'))).toBe('iletişim-formu.schemaforge.json')
+    expect(exportFileName(createForm('   '))).toBe('form.schemaforge.json')
   })
 })

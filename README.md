@@ -74,16 +74,16 @@ node scripts/collect-results.mjs   # hepsini çalıştırır, docs/TEST_REPORT.m
 
 Ayrıntılar: [docs/TEST_REPORT.md](docs/TEST_REPORT.md). Ham çıktılar: `docs/test-results/`.
 
-**1.1 (19.10.2026) — Kapsamlı fonksiyonel denetim:** 62 etkileşim envanteri, 35 yeni tarayıcı testi, 10 hata bulundu (1 CRITICAL, 3 HIGH düzeltildi; 2 MEDIUM, 4 LOW belgelendi). Raporlar: `reports/UI_INTERACTION_AUDIT.md`, `reports/FUNCTIONAL_TEST_REPORT.md`, `reports/BUG_FIX_REPORT.md`, `reports/LIVE_SITE_VERIFICATION.md`.
+**1.1 (19.10.2026) — Kapsamlı fonksiyonel denetim:** 62 etkileşim envanteri, 35 yeni tarayıcı testi, 10 hata bulundu (1 CRITICAL, 3 HIGH düzeltildi; 2 MEDIUM, 4 LOW **1.0.2'de düzeltildi**; önce belgelendi). Raporlar: `reports/UI_INTERACTION_AUDIT.md`, `reports/FUNCTIONAL_TEST_REPORT.md`, `reports/BUG_FIX_REPORT.md`, `reports/LIVE_SITE_VERIFICATION.md`.
 
 | Kontrol | Sonuç |
 |---|---|
 | TypeScript (`tsc -b`) | Hatasız |
 | ESLint | Hatasız |
-| Vitest + React Testing Library | 37/37 |
+| Vitest + React Testing Library | 43/43 |
 | `npm run build` | Başarılı |
-| Playwright (Edge, masaüstü + mobil) | 33/33 başarılı + 6 bilinen kusur testi (`test.fail`; başarılı sayılmaz) |
-| Playwright, **canlı Netlify sitesine karşı** (commit `952fa87`) | 33/33 başarılı + 6 bilinen kusur testi; 0 başarısız |
+| Playwright (Edge, masaüstü + mobil) | 39/39 (bilinen kusur testi yok) |
+| Playwright, **canlı Netlify sitesine karşı** | [reports/LIVE_SITE_VERIFICATION.md](reports/LIVE_SITE_VERIFICATION.md) §4 (1.0.1, `952fa87`: 33 başarılı + 6 bilinen kusur) |
 
 Görevdeki 12 kullanıcı senaryosunun tamamı otomatik testle doğrulandı:
 1. form oluşturma

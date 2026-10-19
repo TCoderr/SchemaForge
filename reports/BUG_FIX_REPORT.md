@@ -9,9 +9,11 @@
 |---|---|---|---|
 | CRITICAL | 1 | 1 | 0 |
 | HIGH | 3 | 3 | 0 |
-| MEDIUM | 2 | 0 | 2 |
-| LOW | 4 | 0 | 4 |
-| **Toplam** | **10** | **4** | **6** |
+| MEDIUM | 2 | 2 (1.0.2) | 0 |
+| LOW | 4 | 4 (1.0.2) | 0 |
+| **Toplam** | **10** | **10** | **0** |
+
+**1.0.2 güncellemesi (19.10.2026):** 1.0.1'de açık kalan 6 MEDIUM/LOW hata da düzeltildi (aşağıda "1.0.2 düzeltmeleri"). Bilinen kusur testleri (K01–K06, `test.fail`) silinmedi veya atlanmadı; normal regresyon testlerine (F26–F31) dönüştürülüp genişletildi.
 
 Görev tanımına göre CRITICAL ve HIGH hatalar düzeltildi. MEDIUM ve LOW hatalar düzeltilmedi; her biri `test.fail()` ile işaretli bir testle belgelendi (`e2e/functional.spec.ts` K01–K06). Bu testler hata sürdükçe "beklenen hata" olarak geçer. Biri düzelirse Playwright bunu ayrıca bildirir. Bu 6 test hiçbir raporda "başarılı" olarak sayılmadı.
 
@@ -77,7 +79,25 @@ Görev tanımına göre CRITICAL ve HIGH hatalar düzeltildi. MEDIUM ve LOW hata
   - **F10, Senaryo B:** Artık geçiyor.
   - **U:BUG-004:** `mousedown` varsayılanının engellendiği doğrulanıyor.
 
-## Açık kalan hatalar (düzeltilmedi, belgelendi)
+## 1.0.2 düzeltmeleri
+
+**Kanıt:**
+- **Tarayıcı:** Dönüştürülen F26–F31 testleri, düzeltmeden önce çalıştırıldı ve 6/6 başarısız oldu (`reports/test-results/v1.0.2-before-fix/`).
+- **Birim:** 6 yeni birim testi var.
+  - Doğrulama ve dışa aktarma düzeltmeleri geçici olarak geri alındığında `lib` testleri 3/3 başarısız oldu.
+  - Bileşen düzeltmeleri geri alındığında `App` testleri 3/3 başarısız oldu.
+  - Düzeltmelerle 6/6 geçti.
+
+| # | Önem | Sorun | Düzeltme | Regresyon testi | Dosyalar |
+|---|---|---|---|---|---|
+| BUG-005 | MEDIUM | Ayrıştırılamayan sayı girdisi (`1-2`, `-`) kabul ediliyordu | Sayı girişinin `validity.badInput` durumu her tuşta `onInput` ile izleniyor (`onChange`, değer "" kaldığında tetiklenmiyor). `validateValue(field, value, badInput)` isteğe bağlı ve zorunlu alanda "Lütfen bir sayı girin." döndürüyor. "Temizle", tarayıcının reddettiği metni de silmek için girişleri yeniden oluşturuyor | F26; lib BUG-005 | `validation.ts`, `PreviewPanel.tsx` |
+| BUG-006 | MEDIUM | Boşluklu seçenekler doğrulanamıyordu; kayıt, önizleme ve dışa aktarma farklıydı | Tek kaynak: `cleanOptions()` (kırp, boş satırı ve yineleneni at, sırayı koru). Önizleme, doğrulama, tasarım uyarısı ve dışa aktarma bunu kullanıyor. Kayıtlı liste, metin alanından çıkılınca normalleştiriliyor (yazarken kırpılmıyor; aksi hâlde kelime arasındaki boşluk yazılamazdı) | F27; lib BUG-006 | `fields.ts`, `validation.ts`, `exportSchema.ts`, `PropertiesPanel.tsx`, `PreviewPanel.tsx` |
+| BUG-007 | LOW | Zorunluluk kaldırılınca eski hata ekranda kalıyordu | Önizleme artık "hangi alanın hatası gösteriliyor" bilgisini tutuyor; mesajın kendisi her render'da güncel şemadan hesaplanıyor. Kural kalkınca mesaj ve "N alanda hata var" kayboluyor, kural geri gelince mesaj geri geliyor. "Form geçerli" de yalnızca form hâlâ geçerliyse gösteriliyor | F28; App BUG-007 | `PreviewPanel.tsx` |
+| BUG-008 | LOW | Dosya adında "İ" bozuluyordu (`i-letişim…`) | `toLocaleLowerCase('tr-TR')`: İ→i, I→ı, Ş→ş, Ğ→ğ, Ü→ü, Ö→ö, Ç→ç; Türkçe harfler korunuyor. Not: Türkçe kurala göre büyük "I" da "ı" olur (ör. "IŞIK" → "ışık") | F29 (indirilen dosya adı); lib BUG-008 | `exportSchema.ts` |
+| BUG-009 | LOW | Modal pencerelerde Tab ile pencere dışına çıkılabiliyordu | Yeni `components/focus.ts`: `trapTab` iki pencerede de Tab ve Shift+Tab'ı içeride döndürüyor. `restoreFocus`, kapanınca odağı tetikleyiciye veriyor; tetikleyici silinmişse (ör. silinen formun "Sil" düğmesi) odak `<body>`'ye düşmüyor, ana içeriğe gidiyor | F30; App BUG-009 | `focus.ts` (yeni), `ConfirmDialog.tsx`, `ExportDialog.tsx` |
+| BUG-010 | LOW | Başlıksız formun düğmelerinin erişilebilir adı " formunu sil" oluyordu | Kartta, düğme adlarında ve silme mesajında "Adsız form" kullanılıyor. Aynı sorun etiketsiz alanların ↑/↓/✕ düğmelerinde de vardı; orada da ekrandaki "(etiketsiz)" metni kullanılıyor | F31; App BUG-010 | `DashboardPage.tsx`, `FieldsPanel.tsx`, `EditorPage.tsx` |
+
+## 1.0.1'de açık kalan hatalar (tarihçe; 1.0.2'de hepsi düzeltildi)
 
 | # | Önem | Sorun | Kanıt (test) | Önerilen küçük düzeltme |
 |---|---|---|---|---|

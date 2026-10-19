@@ -1,4 +1,5 @@
 import { RULES_BY_TYPE, type FormSchema } from '../interfaces/form'
+import { cleanOptions } from './fields'
 
 export const EXPORT_FORMAT = 'schemaforge.form'
 export const EXPORT_VERSION = 1
@@ -27,7 +28,7 @@ export function buildExport(form: FormSchema) {
           ...(f.helpText ? { helpText: f.helpText } : {}),
           required: f.required,
           rules,
-          ...(f.type === 'select' ? { options: f.options.filter((o) => o.trim()) } : {}),
+          ...(f.type === 'select' ? { options: cleanOptions(f.options) } : {}),
         }
       }),
     },
@@ -39,7 +40,8 @@ export function exportJson(form: FormSchema): string {
 }
 
 export function exportFileName(form: FormSchema): string {
-  const base = form.title.trim().toLowerCase().replace(/[^a-z0-9ğüşöçı]+/gi, '-').replace(/^-+|-+$/g, '') || 'form'
+  // Turkish lower-casing: "İ" -> "i" (not "i" + combining dot), "I" -> "ı"; Turkish letters are kept
+  const base = form.title.trim().toLocaleLowerCase('tr-TR').replace(/[^a-z0-9ğüşöçı]+/gi, '-').replace(/^-+|-+$/g, '') || 'form'
   return `${base}.schemaforge.json`
 }
 

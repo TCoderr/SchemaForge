@@ -1,7 +1,20 @@
 # SchemaForge — Final Raporu
 
 **Author / Maintainer:** Tugay Sinan Ergün · **GitHub:** TCoderr · **Tarih:** 19 Ekim 2026
-**Eğitim:** Web Geliştirme; Yapay Zeka · **Sürüm:** 1.1
+**Eğitim:** Web Geliştirme; Yapay Zeka · **Sürüm:** 1.2
+
+## 00. Sürüm 1.2 (uygulama 1.0.2) — Kalan 6 hatanın düzeltilmesi (19.10.2026)
+
+- **Düzeltilen hatalar:** BUG-005…010 (2 MEDIUM, 4 LOW):
+  - Ayrıştırılamayan sayı girdisi
+  - Boşluklu seçenekler
+  - Eski önizleme hatası
+  - Türkçe dosya adı
+  - Modal odak tuzağı
+  - Boş başlık ve etiket için erişilebilir adlar
+- **Denetimde bulunan 10 hatanın 10'u da düzeltildi.**
+- **Testler:** Vitest 43/43. Playwright yerelde 39/39; `test.fail` kalmadı. Bilinen kusur testleri normal regresyon testlerine dönüştürüldü (F26–F31). TypeScript, ESLint ve build: çıkış kodu 0.
+- **Ayrıntılar:** `reports/BUG_FIX_REPORT.md` (1.0.2 düzeltmeleri); canlı sonuç `reports/LIVE_SITE_VERIFICATION.md` §4.
 
 ## 0. Sürüm 1.1 — Kapsamlı fonksiyonel ve uçtan uca test (19.10.2026)
 
@@ -12,7 +25,7 @@
     - BUG-002 HIGH: "Temiz başlat", uyarıdan sonra oluşturulan formları onaysız siliyordu.
     - BUG-003 HIGH: "İçeriğe atla" düzenleyiciyi kapatıyordu.
     - BUG-004 HIGH: "Gönder (test)" ilk tıklamada çalışmıyordu.
-  - **Belgelendi, düzeltilmedi:** 2 MEDIUM ve 4 LOW (BUG-005…010).
+  - **Belgelendi, düzeltilmedi:** 2 MEDIUM ve 4 LOW (BUG-005…010). *(Sürüm 1.2'de düzeltildi.)*
 - **Testler:**
   - Vitest 37/37 (+4 regresyon testi).
   - Playwright: 39 test çalıştı; 33 başarılı, 6 bilinen kusur testi (`test.fail`), 0 başarısız.

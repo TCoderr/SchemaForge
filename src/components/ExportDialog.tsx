@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import type { FormSchema } from '../interfaces/form'
 import { downloadJson, exportFileName, exportJson } from '../lib/exportSchema'
 import { formProblems } from '../lib/validation'
+import { restoreFocus, trapTab } from './focus'
 import { Button } from './ui'
 
 export function ExportDialog({ form, onClose }: { form: FormSchema; onClose: () => void }) {
@@ -15,7 +16,7 @@ export function ExportDialog({ form, onClose }: { form: FormSchema; onClose: () 
     closeRef.current?.focus()
     const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose() }
     window.addEventListener('keydown', onKey)
-    return () => { window.removeEventListener('keydown', onKey); if (opener instanceof HTMLElement) opener.focus() }
+    return () => { window.removeEventListener('keydown', onKey); restoreFocus(opener) }
   }, [onClose])
 
   const copy = async () => {
@@ -24,7 +25,7 @@ export function ExportDialog({ form, onClose }: { form: FormSchema; onClose: () 
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/50 p-4" onClick={onClose}>
-      <div role="dialog" aria-modal="true" aria-labelledby="export-title" onClick={(e) => e.stopPropagation()}
+      <div role="dialog" aria-modal="true" aria-labelledby="export-title" onClick={(e) => e.stopPropagation()} onKeyDown={trapTab}
         className="flex max-h-[90vh] w-full max-w-3xl flex-col rounded-2xl bg-white shadow-xl">
         <header className="flex items-center justify-between gap-2 border-b border-slate-200 px-5 py-4">
           <div>

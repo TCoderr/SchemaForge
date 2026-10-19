@@ -86,3 +86,7 @@ Hepsi ✅. Dağıtımdan önce başarısız olan F10, F20, F21, F22, F24 ve Sena
 | Teslim ZIP'i | `release/SchemaForge_Teslim.zip`; kaynak ve `dist` aynı build. Ayrıntılı karşılaştırma: `FINAL_REPORT.md` §0 |
 
 **Yerel ile canlı farkı:** Test sonuçları aynı (yerel 33 + 6, canlı 33 + 6, ikisinde de 0 başarısız). Tek fark Netlify'ın `index.html`'e eklediği betik.
+
+## 4. Sürüm 1.0.2 (kalan 6 hatanın düzeltilmesi)
+
+*Bu bölüm, proje sahibinin GitHub push ve Netlify dağıtım onayından sonra doldurulacak. O zamana kadar canlı site 1.0.1 (`952fa87`) sürümündedir.*

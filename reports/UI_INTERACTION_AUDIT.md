@@ -14,7 +14,8 @@ Test kimlikleri: `F..`, `K..`, `M01`, `Senaryo A/B/C` → `e2e/functional.spec.t
 | Gerçek tarayıcıda sonucu doğrulanarak test edilen | **61** |
 | Yalnızca kod incelemesi (tarayıcıda tetiklenemedi) | 1 (C05 "Sayfayı yenile", hata ekranı) |
 | Arayüzde görünüp tıklanınca hiçbir şey yapmayan veya yanlış davranan kontrol | **2** bulundu ve düzeltildi: C01 "İçeriğe atla" (BUG-003), C52 "Gönder (test)" ilk tıklamanın kaybolması (BUG-004) |
-| Kontrolle ilgili diğer hatalar | C03 "Temiz başlat" (BUG-002, düzeltildi); otomatik kayıt çoklu sekme (BUG-001, düzeltildi); 6 MEDIUM/LOW kusur (BUG-005…010, belgelendi) |
+| Kontrolle ilgili diğer hatalar | C03 "Temiz başlat" (BUG-002, düzeltildi); otomatik kayıt çoklu sekme (BUG-001, düzeltildi); 6 MEDIUM/LOW kusur (BUG-005…010): 1.0.1'de belgelendi, **1.0.2'de düzeltildi** |
+| **1.0.2 durumu** | Envanterdeki 62 kalemin hiçbirinde bilinen kusur kalmadı. Aşağıdaki ⚠️ notlar 1.0.1 durumunu gösterir; her birinin yanında 1.0.2 düzeltmesi yazılıdır |
 
 Uygulanmamış özellikler (ör. form içe aktarma, sürükle-bırak sıralama, şablon) hata sayılmadı; arayüzde bunlar için bir kontrol de yok.
 
@@ -82,7 +83,7 @@ Sütunlar: **Görünen ad** · **Kaynak dosya** · **Beklenen davranış** · **
 | C35 | "Yer tutucu (placeholder)" | Önizlemede `placeholder` | Metin, uzun metin, sayı, e-posta | F08, Senaryo A | ✅ Onay, seçim ve tarihte gizli (doğrulandı) |
 | C36 | "Açıklama / yardım metni" | Önizlemede yardım metni, `aria-describedby` | Her tür | F08 | ✅ |
 | C37 | "Zorunlu alan" | Listede ve önizlemede `*`, `aria-required`, gönderimde hata | Her tür | F09, F11, Senaryo A/B | ✅ |
-| C38 | "Seçenekler" | Her satır bir seçenek; boş satır dışa aktarılmaz | Seçim kutusu | F12, F15 | ✅ Boşluklu seçenek kusuru: BUG-006 (MEDIUM, belgelendi) |
+| C38 | "Seçenekler" | Her satır bir seçenek; boş satır dışa aktarılmaz | Seçim kutusu | F12, F15 | ✅ Boşluklu seçenekler: BUG-006 **1.0.2'de düzeltildi** (F27; kayıt, önizleme, doğrulama, dışa aktarma aynı) |
 | C39–C40 | "En az / En fazla karakter" | Uzunluk kuralı; tarayıcı fazlasını yazdırmıyor | Metin, uzun metin (e-posta: yalnızca en fazla) | F10, Senaryo A | ✅ |
 | C41–C42 | "En küçük / En büyük değer" | Aralık kuralı; çelişkili kural uyarısı | Sayı | F10, Senaryo B | ✅ |
 | C43–C44 | "En erken / En geç tarih" | Tarih aralığı kuralı | Tarih | F10, F24, Senaryo B | ✅ |
@@ -93,9 +94,9 @@ Sütunlar: **Görünen ad** · **Kaynak dosya** · **Beklenen davranış** · **
 |---|---|---|---|---|
 | C45 | Kısa metin girişi | Zorunlu ve uzunluk doğrulaması | F10, F11 | ✅ |
 | C46 | Uzun metin girişi | Aynı | Senaryo A | ✅ |
-| C47 | Sayı girişi | Aralık doğrulaması; harf yazılamıyor | F10, Senaryo B | ✅ / ⚠️ BUG-005 (MEDIUM): `1-2` gibi ayrıştırılamayan girdi isteğe bağlı alanda geçerli sayılıyor |
+| C47 | Sayı girişi | Aralık doğrulaması; harf yazılamıyor | F10, Senaryo B | ✅ ~~⚠️ BUG-005~~ **1.0.2'de düzeltildi** (F26): ayrıştırılamayan girdi artık "Lütfen bir sayı girin." |
 | C48 | E-posta girişi | Biçim doğrulaması | F10, Senaryo B | ✅ |
-| C49 | Seçim kutusu | "Listeden bir seçenek seçin" / zorunlu | F10, Senaryo A | ✅ / ⚠️ BUG-006 |
+| C49 | Seçim kutusu | "Listeden bir seçenek seçin" / zorunlu | F10, Senaryo A | ✅ ~~⚠️ BUG-006~~ **1.0.2'de düzeltildi** (F27) |
 | C50 | Onay kutusu | Zorunluysa işaretlenmeli | F09, E1 | ✅ |
 | C51 | Tarih girişi | Aralık doğrulaması | F10, F24 | ✅ |
 | C52 | "Gönder (test)" | Bütün alanları doğrular, "N alanda hata var" veya "Form geçerli" | F09–F11, F24, Senaryo A/B | ✅ **Düzeltildi.** Son düzenlenen alan bulanıklaşınca (blur) altına hata eklenip düğme imlecin altından kayıyor, **ilk tıklama kayboluyordu** (BUG-004) |
@@ -107,10 +108,10 @@ Sütunlar: **Görünen ad** · **Kaynak dosya** · **Beklenen davranış** · **
 |---|---|---|---|---|
 | C54 | "✕" (Kapat) | Kapatır, odak açan düğmeye döner | F15 | ✅ |
 | C55 | "Panoya kopyala" | JSON panoya, "Panoya kopyalandı." | F15 (pano gerçekten okundu) | ✅ |
-| C56 | "JSON indir" | `<başlık>.schemaforge.json` indirilir | F15, Senaryo A, E1 (dosya içeriği okundu) | ✅ / ⚠️ BUG-008 (LOW): "İletişim" → `i-letişim…` |
+| C56 | "JSON indir" | `<başlık>.schemaforge.json` indirilir | F15, Senaryo A, E1 (dosya içeriği okundu) | ✅ ~~⚠️ BUG-008~~ **1.0.2'de düzeltildi** (F29): "İletişim" → `iletişim…` |
 | C57 | JSON metni (odaklanabilir) | Dışa aktarılacak içeriğin aynısı | F14, F15 | ✅ İç kimlikler (`id`) dışa aktarılmıyor |
 | C58 | Arka plana tıklama | Kapatır | F15 | ✅ |
-| C59 | Escape | Kapatır, odak geri döner | F15, U:10 | ✅ / ⚠️ BUG-009 (LOW): Tab ile pencere dışına çıkılabiliyor (odak tuzağı yok) |
+| C59 | Escape | Kapatır, odak geri döner | F15, U:10 | ✅ ~~⚠️ BUG-009~~ **1.0.2'de düzeltildi** (F30): Tab/Shift+Tab pencere içinde kalıyor |
 
 ### Klavye, gezinme ve kalıcılık
 

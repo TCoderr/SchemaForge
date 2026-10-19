@@ -512,52 +512,92 @@ test.describe('desktop', () => {
     expect(sent).toEqual([])
   })
 
-  // ---- Known defects (MEDIUM/LOW, not fixed in this round; see reports/BUG_FIX_REPORT.md). Marked test.fail so the
-  //      suite stays honest: each one FAILS today as expected and Playwright will flag it the moment it starts passing.
-  test('K01 BUG-005 [MEDIUM] optional number field with unparsable input is reported as valid', async ({ page }) => {
-    test.fail(true, 'BUG-005 known defect')
+  // ---- Former known defects BUG-005…010 (K01–K06 until 1.0.1, marked test.fail). Fixed in 1.0.2; now normal regression tests.
+  test('F26 BUG-005 regression: unparsable number input is rejected, optional or required; "Temizle" clears it', async ({ page }) => {
     await page.goto('/'); await newForm(page); await add(page, 'Sayı')
-    await preview(page).getByLabel('Yaş').pressSequentially('1-2')
+    const pv = preview(page); const age = pv.getByLabel(/Yaş/)
+    await age.pressSequentially('1-2')
     await submit(page)
-    await expect(result(page)).toContainText('1 alanda hata var', { timeout: 2000 })
+    await expect(result(page)).toHaveText('1 alanda hata var. Lütfen işaretli alanları düzeltin.')
+    await expect(pv.getByText('Lütfen bir sayı girin.')).toBeVisible()
+    await page.getByLabel('Zorunlu alan').check() // required: still "not a number", not "required"
+    await expect(pv.getByText('Lütfen bir sayı girin.')).toBeVisible()
+    await expect(pv.getByText('Bu alan zorunludur.')).toHaveCount(0)
+    await age.fill(''); await age.pressSequentially('-') // bad input from an empty field
+    await submit(page)
+    await expect(pv.getByText('Lütfen bir sayı girin.')).toBeVisible()
+    await age.fill('42'); await submit(page)
+    await expect(result(page)).toHaveText('Form geçerli. Bu bir önizlemedir; veriler hiçbir yere gönderilmedi.')
+    await age.fill(''); await age.pressSequentially('4-')
+    await pv.getByRole('button', { name: 'Temizle' }).click()
+    expect(await age.evaluate((el: HTMLInputElement) => el.validity.badInput)).toBe(false)
+    await page.getByLabel('Zorunlu alan').uncheck(); await submit(page)
+    await expect(result(page)).toContainText('Form geçerli')
   })
 
-  test('K02 BUG-006 [MEDIUM] select option with surrounding spaces can never pass validation', async ({ page }) => {
-    test.fail(true, 'BUG-006 known defect')
+  test('F27 BUG-006 regression: options are trimmed, de-duplicated and identical in storage, preview, validation and export', async ({ page }) => {
     await page.goto('/'); await newForm(page); await add(page, 'Seçim kutusu')
-    await page.getByLabel('Seçenekler').fill('İstanbul \nAnkara')
-    await preview(page).getByLabel('Şehir').selectOption({ index: 1 })
+    await page.getByLabel('Seçenekler').fill('  İstanbul \nAnkara\n\nAnkara')
+    await page.getByLabel('Zorunlu alan').check() // leaving the textarea normalises the stored list
+    const options = preview(page).getByLabel(/Şehir/).locator('option')
+    await expect(options).toHaveText(['Seçiniz…', 'İstanbul', 'Ankara'])
+    await expect(page.getByLabel('Seçenekler')).toHaveValue('İstanbul\nAnkara')
+    expect((await stored(page))[0].fields[0].options).toEqual(['İstanbul', 'Ankara'])
+    await preview(page).getByLabel(/Şehir/).selectOption('İstanbul')
     await submit(page)
-    await expect(result(page)).toContainText('Form geçerli', { timeout: 2000 })
+    await expect(result(page)).toContainText('Form geçerli')
+    await page.getByRole('button', { name: "JSON'u dışa aktar" }).click()
+    expect(JSON.parse(await page.getByLabel('Dışa aktarılan JSON').innerText()).form.fields[0].options).toEqual(['İstanbul', 'Ankara'])
   })
 
-  test('K03 BUG-007 [LOW] preview keeps a stale error after the field is made optional', async ({ page }) => {
-    test.fail(true, 'BUG-007 known defect')
+  test('F28 BUG-007 regression: preview errors follow schema changes (required on/off)', async ({ page }) => {
     await page.goto('/'); await newForm(page); await add(page, 'Kısa metin'); await page.getByLabel('Zorunlu alan').check()
     await submit(page)
+    await expect(preview(page).getByText('Bu alan zorunludur.')).toBeVisible()
     await page.getByLabel('Zorunlu alan').uncheck()
-    await expect(preview(page).getByText('Bu alan zorunludur.')).toHaveCount(0, { timeout: 2000 })
+    await expect(preview(page).getByText('Bu alan zorunludur.')).toHaveCount(0)
+    await expect(result(page)).toHaveText('') // no stale "1 alanda hata var"
+    await page.getByLabel('Zorunlu alan').check()
+    await expect(preview(page).getByText('Bu alan zorunludur.')).toBeVisible() // and come back when the rule returns
   })
 
-  test('K04 BUG-008 [LOW] export file name breaks the Turkish capital İ', async ({ page }) => {
-    test.fail(true, 'BUG-008 known defect')
-    await page.goto('/'); await newForm(page, 'İletişim')
+  test('F29 BUG-008 regression: export file names keep Turkish letters correctly (İ ı Ş ş Ğ ğ Ü ü Ö ö Ç ç)', async ({ page }) => {
+    await page.goto('/'); await newForm(page, 'İŞĞÜÖÇ ışğüöç Iİ')
     await page.getByRole('button', { name: "JSON'u dışa aktar" }).click()
-    await expect(page.getByRole('dialog')).toContainText('iletişim.schemaforge.json', { timeout: 2000 })
+    await expect(page.getByRole('dialog')).toContainText('işğüöç-ışğüöç-ıi.schemaforge.json')
+    const [download] = await Promise.all([page.waitForEvent('download'), page.getByRole('button', { name: 'JSON indir' }).click()])
+    expect(download.suggestedFilename()).toBe('işğüöç-ışğüöç-ıi.schemaforge.json')
   })
 
-  test('K05 BUG-009 [LOW] Tab can move focus out of an open modal dialog', async ({ page }) => {
-    test.fail(true, 'BUG-009 known defect')
-    await page.goto('/'); await newForm(page)
-    await page.getByRole('button', { name: "JSON'u dışa aktar" }).click()
-    for (let i = 0; i < 6; i++) await page.keyboard.press('Tab')
-    expect(await page.evaluate(() => Boolean(document.activeElement?.closest('[role=dialog]')))).toBe(true)
+  test('F30 BUG-009 regression: Tab and Shift+Tab stay inside both modals; focus returns to a sensible trigger', async ({ page }) => {
+    const inside = (role: string) => page.evaluate((r) => Boolean(document.activeElement?.closest(`[role=${r}]`)), role)
+    await page.goto('/'); await newForm(page, 'Odak testi')
+    const open = page.getByRole('button', { name: "JSON'u dışa aktar" })
+    await open.click()
+    for (let i = 0; i < 8; i++) { await page.keyboard.press('Tab'); expect(await inside('dialog')).toBe(true) }
+    await page.getByRole('dialog').getByRole('button', { name: 'Kapat' }).focus()
+    await page.keyboard.press('Shift+Tab') // from the first element to the last
+    await expect(page.getByRole('button', { name: 'JSON indir' })).toBeFocused()
+    await page.keyboard.press('Tab') // and from the last back to the first
+    await expect(page.getByRole('dialog').getByRole('button', { name: 'Kapat' })).toBeFocused()
+    await page.keyboard.press('Escape')
+    await expect(open).toBeFocused()
+    await toList(page)
+    await page.getByRole('button', { name: 'Odak testi formunu sil' }).click()
+    for (const key of ['Tab', 'Tab', 'Shift+Tab', 'Shift+Tab', 'Shift+Tab']) { await page.keyboard.press(key); expect(await inside('alertdialog')).toBe(true) }
+    await page.getByRole('button', { name: 'Formu sil' }).click() // the trigger disappears with the form
+    expect(await page.evaluate(() => document.activeElement?.id)).toBe('main') // focus is not lost to <body>
   })
 
-  test('K06 BUG-010 [LOW] a form with an empty title gets nameless card buttons', async ({ page }) => {
-    test.fail(true, 'BUG-010 known defect')
-    await page.goto('/'); await newForm(page, ''); await toList(page)
-    await expect(page.getByRole('button', { name: 'Adsız form formunu sil' })).toBeVisible({ timeout: 2000 })
+  test('F31 BUG-010 regression: an empty title or label still gives every button a meaningful accessible name', async ({ page }) => {
+    await page.goto('/'); await newForm(page, '')
+    await add(page, 'Kısa metin'); await page.getByLabel('Etiket').fill('')
+    await expect(page.getByRole('button', { name: '(etiketsiz) alanını sil' })).toBeVisible()
+    await expect(page.getByRole('button', { name: '(etiketsiz) alanını yukarı taşı' })).toBeDisabled()
+    await toList(page)
+    for (const action of ['düzenle', 'kopyala', 'sil']) await expect(page.getByRole('button', { name: `Adsız form formunu ${action}` })).toBeVisible()
+    await page.getByRole('button', { name: 'Adsız form formunu sil' }).click()
+    await expect(page.getByRole('alertdialog')).toContainText('"Adsız form" formu ve 1 alanı kalıcı olarak silinecek')
   })
 })
 

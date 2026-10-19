@@ -4,7 +4,22 @@
 **Kontrol edilen commit:** başlangıç `1afb33d`; düzeltmeler `952fa87` (GitHub ve Netlify'da yayında)
 **Ortam:** Windows 11, Node.js, Playwright 1.64 + yüklü Microsoft Edge (`channel: msedge`, yeni tarayıcı indirilmedi). Her test ayrı ve temiz bir tarayıcı bağlamında çalıştı. Yerel testler `npm run build && npm run preview` üretim derlemesine karşı çalıştı.
 
-## Sonuçlar (yerel, düzeltmelerden sonra)
+## Sürüm 1.0.2 (kalan 6 hatanın düzeltilmesi)
+
+| Kontrol | Çıkış kodu | Sonuç |
+|---|---|---|
+| TypeScript | **0** | Hatasız |
+| ESLint | **0** | Hatasız |
+| Vitest | **0** | **43/43** (1.0.1: 37; +6 regresyon testi) |
+| Production build | **0** | Başarılı |
+| Playwright, yerel | **0** | **39 test: 39 başarılı · 0 bilinen kusur · 0 başarısız** |
+
+- **Bilinen kusur testleri:** K01–K06 (`test.fail`) F26–F31 normal testlerine dönüştürüldü. Artık `test.fail` kullanan test yok.
+- **Test sayısı:** Toplam 39 olarak aynı kaldı; hiçbir test silinmedi veya atlanmadı.
+- **Düzeltmeden önce:** F26–F31 6/6 başarısızdı.
+- **Canlı sonuç:** `LIVE_SITE_VERIFICATION.md` §4.
+
+## Sürüm 1.0.1 sonuçları (yerel, ilk düzeltmelerden sonra)
 
 | Kontrol | Komut | Çıkış kodu | Sonuç | Ham çıktı |
 |---|---|---|---|---|
@@ -31,7 +46,7 @@
 | Yeni alan, 7 alan türü | F07 | 7 tür; önizleme denetimi; benzersiz JSON adları |
 | Açıklama ve placeholder | F08 | `placeholder`, `aria-describedby`; uygun olmayan türlerde gizli |
 | Zorunlu alan | F09 | `*`, `aria-required`, mesajlar |
-| Geçersiz e-posta ve sayı | F10, K01 | Hata mesajları; harf yazılamıyor; BUG-005 belgelendi |
+| Geçersiz e-posta ve sayı | F10, F26 | Hata mesajları; harf yazılamıyor; ayrıştırılamayan sayı reddediliyor (BUG-005, 1.0.2) |
 | Boş zorunlu alanla gönderme | F11 | "N alanda hata var", `aria-invalid`, "Temizle" |
 | Canlı önizleme | F12 | Etiket, tür, seçenek ve sıra anında yansıyor |
 | Alan silme, alan sıralama | F13, F14 | Liste, önizleme, depo ve JSON sırası |
@@ -39,7 +54,7 @@
 | Yenileme sonrası kalıcılık | F16, Senaryo A/C | Gerçek `page.reload()`; depo yenilemeden önceki hâliyle birebir aynı |
 | Bozuk LocalStorage | F17, E2 | Bozuk JSON, yanlış biçim, sayı, kısmi veri; yedek anahtarı; "Form bulunamadı" |
 | Depo dolu / engelli | F18 | Kaydedilemedi uyarısı |
-| Klavye ve erişilebilirlik | F19, F20, E3, K05 | Fare olmadan oluşturma, ekleme ve onaylı silme; görünür odak; "İçeriğe atla" |
+| Klavye ve erişilebilirlik | F19, F20, E3, F30, F31 | Fare olmadan oluşturma, ekleme ve onaylı silme; görünür odak; "İçeriğe atla" |
 | Çoklu sekme | F21 | İki gerçek sekme; veri kaybı yok |
 | Ağ | F23 | Oturumsuz HTTP 200; veri taşıyan istek yok |
 | JSON adı | F25 | Otomatik/elle; geçersiz ve yinelenen ad uyarısı |

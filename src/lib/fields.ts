@@ -80,6 +80,12 @@ export function duplicateForm(form: FormSchema, existingTitles: string[]): FormS
   return { ...form, id: newId(), title, fields: form.fields.map((f) => ({ ...f, id: newId(), rules: { ...f.rules }, options: [...f.options] })), createdAt: now, updatedAt: now }
 }
 
+/** The options a select field really offers: trimmed, without empty lines or duplicates (order kept).
+ *  Used for storage, preview, validation and export so they always agree. */
+export function cleanOptions(options: string[]): string[] {
+  return [...new Set(options.map((o) => o.trim()).filter(Boolean))]
+}
+
 export function moveItem<T>(list: T[], from: number, to: number): T[] {
   if (to < 0 || to >= list.length || from === to) return list
   const copy = [...list]

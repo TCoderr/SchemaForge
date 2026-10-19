@@ -1,6 +1,6 @@
 # SchemaForge — Gerçek Özellikler (ACTUAL_FEATURES)
 
-**Author / Maintainer:** Tugay Sinan Ergün · **GitHub:** TCoderr · **Tarih:** 19 Ekim 2026 · **Sürüm:** 1.0.0 · **Güncelleme:** 1.1 fonksiyonel denetim (19.10.2026)
+**Author / Maintainer:** Tugay Sinan Ergün · **GitHub:** TCoderr · **Tarih:** 19 Ekim 2026 · **Sürüm:** 1.0.0 · **Güncelleme:** 1.1 fonksiyonel denetim; 1.0.2 hata düzeltmeleri (19.10.2026)
 
 Bu belge SchemaForge'un **bugün gerçekten ne yaptığını** kaydeder. FormPilot AI kampanyasının (`D:\Project\FormPilot-AI\PRODUCT_ALIGNMENT_CHECKLIST.md`) vaatleri, sonradan bu belgeye göre kontrol edilebilir.
 
@@ -34,7 +34,7 @@ Test dosyaları:
 | F13 | Doğrulama kuralları: zorunlu, en az/en fazla karakter, e-posta biçimi, sayı aralığı, tarih aralığı, seçim listesi, zorunlu onay kutusu | Implemented and tested | lib.test validateValue (6 test); App.test `6.`; e2e |
 | F14 | Çelişkili kural uyarıları (ör. en az > en fazla, boş seçenek listesi) | Implemented and tested | lib.test "design problems" |
 | F15 | Canlı önizleme: tasarımdaki değişiklik aynı anda önizlemede görünür | Implemented and tested | App.test `4.`, `4b.`, `5.`; e2e |
-| F16 | Önizlemede gerçek alan türleri ve çalışan doğrulama (alandan çıkınca ve gönderince); hatalar `aria-invalid` ve `aria-describedby` ile bağlı | Implemented and tested | App.test `6.`; e2e full flow |
+| F16 | Önizlemede gerçek alan türleri ve çalışan doğrulama (alandan çıkınca ve gönderince); hatalar `aria-invalid` ve `aria-describedby` ile bağlı. **1.0.2:** ayrıştırılamayan sayı girdisi reddedilir; hata mesajları şema değişikliğini izler; "Temizle" reddedilen metni de siler | Implemented and tested | App.test `6.`; e2e full flow |
 | F17 | Önizleme gönderimi veriyi hiçbir yere göndermez; yalnızca doğrular | Implemented and tested | App.test `6.` (başarı mesajı); uygulamada ağ isteği yok |
 | F18 | LocalStorage kalıcılığı: sayfa yenilenince veriler korunur | Implemented and tested | App.test `9.`; e2e full flow (**gerçek yenileme**); lib.test storage |
 | F19 | Bozuk LocalStorage verisi: çökmez, uyarı gösterir, ham veriyi yedekler, "Temiz başlat" sunar | Implemented and tested | App.test `11a.`; lib.test corrupt/wrong shape; e2e corrupt |
@@ -50,10 +50,13 @@ Test dosyaları:
 | F29 | Kullanıcı metni HTML olarak işlenmez (`dangerouslySetInnerHTML` kullanılmaz) | Implemented and tested | App.test "security" |
 | F30 | Duyarlı (responsive) arayüz; mobilde yatay taşma yok | Implemented and tested | e2e mobile (390 px) |
 | F31 | Klavye ile kullanım ve görünür odak göstergesi | Implemented and tested | e2e keyboard |
-| F32 | Onay penceresinde odak yönetimi (Vazgeç'e odaklanır, Escape kapatır) | Implemented and tested | App.test `8.` (Escape) |
+| F32 | Onay ve dışa aktarma pencerelerinde odak yönetimi: Vazgeç'e/Kapat'a odaklanır, Escape kapatır, **Tab/Shift+Tab pencere içinde kalır (1.0.2)**, kapanınca odak tetikleyiciye (o silindiyse ana içeriğe) döner | Implemented and tested | App.test `8.`, BUG-009; functional F06, F15, F30 |
 | F33 | "İçeriğe atla" bağlantısı | Implemented and tested | functional F19, F20; App.test BUG-003 (1.1'de düzeltildi: düzenleyiciyi kapatıyordu) |
 | F34 | Verinin yalnızca bu tarayıcıda saklandığı açıklaması | Implemented and tested | Başlık ve alt bilgide sabit metin; ekran görüntüleri |
 | F35 | Hash tabanlı yönlendirme ve Netlify yönlendirme kuralı (`netlify.toml`, `public/_redirects`) | Implemented and tested | Canlı sitede (https://schemaforge-tcoderr.netlify.app) Playwright 4/4; `/forms/abc` → HTTP 200 |
+| F37 | Seçim kutusu seçenekleri tek biçimde: kırpılmış, boş ve yinelenen satırsız; kayıt, önizleme, doğrulama ve JSON aynı (1.0.2) | Implemented and tested | lib BUG-006; functional F27 |
+| F38 | JSON dosya adında Türkçe harfler doğru küçültülür (İ→i, I→ı) | Implemented and tested | lib BUG-008; functional F29 |
+| F39 | Başlıksız form ve etiketsiz alan için anlamlı düğme adları ("Adsız form", "(etiketsiz)") | Implemented and tested | App.test BUG-010; functional F31 |
 | F36 | Çoklu sekme: başka sekmede kaydedilen değişiklik bu sekmeye alınır, üzerine yazılmaz | Implemented and tested | functional F21 (iki gerçek sekme); App.test BUG-001 (1.1'de eklendi) |
 | P1 | JSON içe aktarma (şema doğrulamalı) | Planned | Kod yok |
 | P2 | Alanları sürükle-bırak ile sıralama | Planned | Şu an yukarı/aşağı butonları var |

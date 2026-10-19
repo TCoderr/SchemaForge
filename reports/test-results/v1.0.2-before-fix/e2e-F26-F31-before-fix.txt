@@ -1,0 +1,204 @@
+npm notice run schemaforge@1.0.0 npx
+npm notice run playwright test e2e/functional.spec.ts -g F2[6-9]|F3[01] --project=desktop
+[WebServer] npm notice run schemaforge@1.0.0 build
+[WebServer] npm notice run tsc -b && vite build
+[WebServer] npm notice run schemaforge@1.0.0 preview
+[WebServer] npm notice run vite preview --port 4173 --strictPort
+
+Running 6 tests using 1 worker
+
+  ✘  1 [desktop] › e2e\functional.spec.ts:516:3 › desktop › F26 BUG-005 regression: unparsable number input is rejected, optional or required; "Temizle" clears it (5.4s)
+  ✘  2 [desktop] › e2e\functional.spec.ts:538:3 › desktop › F27 BUG-006 regression: options are trimmed, de-duplicated and identical in storage, preview, validation and export (5.5s)
+  ✘  3 [desktop] › e2e\functional.spec.ts:553:3 › desktop › F28 BUG-007 regression: preview errors follow schema changes (required on/off) (5.5s)
+  ✘  4 [desktop] › e2e\functional.spec.ts:564:3 › desktop › F29 BUG-008 regression: export file names keep Turkish letters correctly (İ ı Ş ş Ğ ğ Ü ü Ö ö Ç ç) (5.4s)
+  ✘  5 [desktop] › e2e\functional.spec.ts:572:3 › desktop › F30 BUG-009 regression: Tab and Shift+Tab stay inside both modals; focus returns to a sensible trigger (453ms)
+  ✘  6 [desktop] › e2e\functional.spec.ts:592:3 › desktop › F31 BUG-010 regression: an empty title or label still gives every button a meaningful accessible name (5.4s)
+
+
+  1) [desktop] › e2e\functional.spec.ts:516:3 › desktop › F26 BUG-005 regression: unparsable number input is rejected, optional or required; "Temizle" clears it 
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator:  getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live="polite"]')
+    Expected: "1 alanda hata var. Lütfen işaretli alanları düzeltin."
+    Received: "Form geçerli. Bu bir önizlemedir; veriler hiçbir yere gönderilmedi."
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveText" getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live="polite"]') with timeout 5000ms
+      - waiting for getByRole('form', { name: 'Form önizlemesi' }).locator('[aria-live="polite"]')
+        14 × locator resolved to <div aria-live="polite">…</div>
+           - unexpected value "Form geçerli. Bu bir önizlemedir; veriler hiçbir yere gönderilmedi."
+
+
+      519 |     await age.pressSequentially('1-2')
+      520 |     await submit(page)
+    > 521 |     await expect(result(page)).toHaveText('1 alanda hata var. Lütfen işaretli alanları düzeltin.')
+          |                                ^
+      522 |     await expect(pv.getByText('Lütfen bir sayı girin.')).toBeVisible()
+      523 |     await page.getByLabel('Zorunlu alan').check() // required: still "not a number", not "required"
+      524 |     await expect(pv.getByText('Lütfen bir sayı girin.')).toBeVisible()
+        at D:\Project\SchemaForge\e2e\functional.spec.ts:521:32
+
+    Error Context: test-results\functional-desktop-F26-BUG-39ebf--required-Temizle-clears-it-desktop\error-context.md
+
+  2) [desktop] › e2e\functional.spec.ts:538:3 › desktop › F27 BUG-006 regression: options are trimmed, de-duplicated and identical in storage, preview, validation and export 
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator: getByRole('form', { name: 'Form önizlemesi' }).getByLabel(/Şehir/).locator('option')
+    Timeout: 5000ms
+    - Expected  - 1
+    + Received  + 2
+
+      Array [
+        "Seçiniz…",
+    -   "İstanbul",
+    +   "  İstanbul ",
+    +   "Ankara",
+        "Ankara",
+      ]
+
+    Call log:
+      - Expect "toHaveText" getByRole('form', { name: 'Form önizlemesi' }).getByLabel(/Şehir/).locator('option') with timeout 5000ms
+      - waiting for getByRole('form', { name: 'Form önizlemesi' }).getByLabel(/Şehir/).locator('option')
+        14 × locator resolved to 4 elements
+
+
+      541 |     await page.getByLabel('Zorunlu alan').check() // leaving the textarea normalises the stored list
+      542 |     const options = preview(page).getByLabel(/Şehir/).locator('option')
+    > 543 |     await expect(options).toHaveText(['Seçiniz…', 'İstanbul', 'Ankara'])
+          |                           ^
+      544 |     await expect(page.getByLabel('Seçenekler')).toHaveValue('İstanbul\nAnkara')
+      545 |     expect((await stored(page))[0].fields[0].options).toEqual(['İstanbul', 'Ankara'])
+      546 |     await preview(page).getByLabel(/Şehir/).selectOption('İstanbul')
+        at D:\Project\SchemaForge\e2e\functional.spec.ts:543:27
+
+    Error Context: test-results\functional-desktop-F27-BUG-5d325-eview-validation-and-export-desktop\error-context.md
+
+  3) [desktop] › e2e\functional.spec.ts:553:3 › desktop › F28 BUG-007 regression: preview errors follow schema changes (required on/off) 
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  getByRole('form', { name: 'Form önizlemesi' }).getByText('Bu alan zorunludur.')
+    Expected: 0
+    Received: 1
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" getByRole('form', { name: 'Form önizlemesi' }).getByText('Bu alan zorunludur.') with timeout 5000ms
+      - waiting for getByRole('form', { name: 'Form önizlemesi' }).getByText('Bu alan zorunludur.')
+        14 × locator resolved to 1 element
+           - unexpected value "1"
+
+
+      556 |     await expect(preview(page).getByText('Bu alan zorunludur.')).toBeVisible()
+      557 |     await page.getByLabel('Zorunlu alan').uncheck()
+    > 558 |     await expect(preview(page).getByText('Bu alan zorunludur.')).toHaveCount(0)
+          |                                                                  ^
+      559 |     await expect(result(page)).toHaveText('') // no stale "1 alanda hata var"
+      560 |     await page.getByLabel('Zorunlu alan').check()
+      561 |     await expect(preview(page).getByText('Bu alan zorunludur.')).toBeVisible() // and come back when the rule returns
+        at D:\Project\SchemaForge\e2e\functional.spec.ts:558:66
+
+    Error Context: test-results\functional-desktop-F28-BUG-c9535-ma-changes-required-on-off--desktop\error-context.md
+
+  4) [desktop] › e2e\functional.spec.ts:564:3 › desktop › F29 BUG-008 regression: export file names keep Turkish letters correctly (İ ı Ş ş Ğ ğ Ü ü Ö ö Ç ç) 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('dialog')
+    Timeout: 5000ms
+    - Expected substring  -  1
+    + Received string     + 10
+
+    - işğüöç-ışğüöç-ıi.schemaforge.json
+    + JSON dışa aktarmai-şğüöç-ışğüöç-ii.schemaforge.json · 0 alan · biçim schemaforge.form v1✕{
+    +   "format": "schemaforge.form",
+    +   "version": 1,
+    +   "exportedAt": "2026-10-19T15:20:36.777Z",
+    +   "form": {
+    +     "title": "İŞĞÜÖÇ ışğüöç Iİ",
+    +     "description": "",
+    +     "fields": []
+    +   }
+    + }Panoya kopyalaJSON indir
+
+    Call log:
+      - Expect "toContainText" getByRole('dialog') with timeout 5000ms
+      - waiting for getByRole('dialog')
+        14 × locator resolved to <div role="dialog" aria-modal="true" aria-labelledby="export-title" class="flex max-h-[90vh] w-full max-w-3xl flex-col rounded-2xl bg-white shadow-xl">…</div>
+           - unexpected value "JSON dışa aktarmai-şğüöç-ışğüöç-ii.schemaforge.json · 0 alan · biçim schemaforge.form v1✕{
+      "format": "schemaforge.form",
+      "version": 1,
+      "exportedAt": "2026-10-19T15:20:36.777Z",
+      "form": {
+        "title": "İŞĞÜÖÇ ışğüöç Iİ",
+        "description": "",
+        "fields": []
+      }
+    }Panoya kopyalaJSON indir"
+
+
+      565 |     await page.goto('/'); await newForm(page, 'İŞĞÜÖÇ ışğüöç Iİ')
+      566 |     await page.getByRole('button', { name: "JSON'u dışa aktar" }).click()
+    > 567 |     await expect(page.getByRole('dialog')).toContainText('işğüöç-ışğüöç-ıi.schemaforge.json')
+          |                                            ^
+      568 |     const [download] = await Promise.all([page.waitForEvent('download'), page.getByRole('button', { name: 'JSON indir' }).click()])
+      569 |     expect(download.suggestedFilename()).toBe('işğüöç-ışğüöç-ıi.schemaforge.json')
+      570 |   })
+        at D:\Project\SchemaForge\e2e\functional.spec.ts:567:44
+
+    Error Context: test-results\functional-desktop-F29-BUG-67c45-ly-İ-ı-Ş-ş-Ğ-ğ-Ü-ü-Ö-ö-Ç-ç--desktop\error-context.md
+
+  5) [desktop] › e2e\functional.spec.ts:572:3 › desktop › F30 BUG-009 regression: Tab and Shift+Tab stay inside both modals; focus returns to a sensible trigger 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      575 |     const open = page.getByRole('button', { name: "JSON'u dışa aktar" })
+      576 |     await open.click()
+    > 577 |     for (let i = 0; i < 8; i++) { await page.keyboard.press('Tab'); expect(await inside('dialog')).toBe(true) }
+          |                                                                                                    ^
+      578 |     await page.getByRole('dialog').getByRole('button', { name: 'Kapat' }).focus()
+      579 |     await page.keyboard.press('Shift+Tab') // from the first element to the last
+      580 |     await expect(page.getByRole('button', { name: 'JSON indir' })).toBeFocused()
+        at D:\Project\SchemaForge\e2e\functional.spec.ts:577:100
+
+    Error Context: test-results\functional-desktop-F30-BUG-94a6b-turns-to-a-sensible-trigger-desktop\error-context.md
+
+  6) [desktop] › e2e\functional.spec.ts:592:3 › desktop › F31 BUG-010 regression: an empty title or label still gives every button a meaningful accessible name 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('button', { name: '(etiketsiz) alanını sil' })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('button', { name: '(etiketsiz) alanını sil' }) with timeout 5000ms
+      - waiting for getByRole('button', { name: '(etiketsiz) alanını sil' })
+
+
+      593 |     await page.goto('/'); await newForm(page, '')
+      594 |     await add(page, 'Kısa metin'); await page.getByLabel('Etiket').fill('')
+    > 595 |     await expect(page.getByRole('button', { name: '(etiketsiz) alanını sil' })).toBeVisible()
+          |                                                                                 ^
+      596 |     await expect(page.getByRole('button', { name: '(etiketsiz) alanını yukarı taşı' })).toBeDisabled()
+      597 |     await toList(page)
+      598 |     for (const action of ['düzenle', 'kopyala', 'sil']) await expect(page.getByRole('button', { name: `Adsız form formunu ${action}` })).toBeVisible()
+        at D:\Project\SchemaForge\e2e\functional.spec.ts:595:81
+
+    Error Context: test-results\functional-desktop-F31-BUG-3b35c--meaningful-accessible-name-desktop\error-context.md
+
+  6 failed
+    [desktop] › e2e\functional.spec.ts:516:3 › desktop › F26 BUG-005 regression: unparsable number input is rejected, optional or required; "Temizle" clears it 
+    [desktop] › e2e\functional.spec.ts:538:3 › desktop › F27 BUG-006 regression: options are trimmed, de-duplicated and identical in storage, preview, validation and export 
+    [desktop] › e2e\functional.spec.ts:553:3 › desktop › F28 BUG-007 regression: preview errors follow schema changes (required on/off) 
+    [desktop] › e2e\functional.spec.ts:564:3 › desktop › F29 BUG-008 regression: export file names keep Turkish letters correctly (İ ı Ş ş Ğ ğ Ü ü Ö ö Ç ç) 
+    [desktop] › e2e\functional.spec.ts:572:3 › desktop › F30 BUG-009 regression: Tab and Shift+Tab stay inside both modals; focus returns to a sensible trigger 
+    [desktop] › e2e\functional.spec.ts:592:3 › desktop › F31 BUG-010 regression: an empty title or label still gives every button a meaningful accessible name 
+EXIT=1

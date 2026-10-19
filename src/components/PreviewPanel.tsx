@@ -1,27 +1,43 @@
 import { useState, type FormEvent } from 'react'
 import type { FormField, FormSchema, FormValues } from '../interfaces/form'
+import { cleanOptions } from '../lib/fields'
 import { validateForm, validateValue } from '../lib/validation'
 import { Button, inputClass, Panel } from './ui'
 
 /** Renders the schema as a real, working form. Values stay in memory only; nothing is sent anywhere. */
 export function PreviewPanel({ form }: { form: FormSchema }) {
   const [values, setValues] = useState<FormValues>({})
-  const [errors, setErrors] = useState<Record<string, string>>({})
+  /** Number inputs whose text the browser cannot parse (it reports "" for them), keyed by field id. */
+  const [badInput, setBadInput] = useState<Record<string, boolean>>({})
+  /** Fields whose error is on screen (flagged on blur or submit). The messages themselves are derived from the
+   *  current schema on every render, so they follow rule changes such as "required" being switched off. */
+  const [flagged, setFlagged] = useState<Record<string, boolean>>({})
   const [result, setResult] = useState<'ok' | 'error' | null>(null)
+  const [generation, setGeneration] = useState(0) // "Temizle" remounts the inputs so rejected text disappears too
+
+  const check = (f: FormField) => validateValue(f, values[f.id], badInput[f.id])
+  const errors: Record<string, string> = {}
+  for (const f of form.fields) {
+    const message = flagged[f.id] ? check(f) : null
+    if (message) errors[f.id] = message
+  }
+  const errorCount = Object.keys(errors).length
+  const valid = Object.keys(validateForm(form, values, badInput)).length === 0
 
   const setValue = (f: FormField, v: string | boolean) => {
     setValues((prev) => ({ ...prev, [f.id]: v }))
     setResult(null)
-    if (errors[f.id]) setErrors((prev) => withError(prev, f.id, validateValue(f, v)))
+    if (flagged[f.id] && !validateValue(f, v, badInput[f.id])) setFlagged((prev) => ({ ...prev, [f.id]: false }))
   }
-  const onBlur = (f: FormField) => setErrors((prev) => withError(prev, f.id, validateValue(f, values[f.id])))
+  const setBad = (f: FormField, bad: boolean) => setBadInput((prev) => (Boolean(prev[f.id]) === bad ? prev : { ...prev, [f.id]: bad }))
+  const onBlur = (f: FormField) => setFlagged((prev) => ({ ...prev, [f.id]: check(f) !== null }))
   const onSubmit = (e: FormEvent) => {
     e.preventDefault()
-    const errs = validateForm(form, values)
-    setErrors(errs)
+    const errs = validateForm(form, values, badInput)
+    setFlagged(Object.fromEntries(form.fields.map((f) => [f.id, f.id in errs])))
     setResult(Object.keys(errs).length ? 'error' : 'ok')
   }
-  const reset = () => { setValues({}); setErrors({}); setResult(null) }
+  const reset = () => { setValues({}); setBadInput({}); setFlagged({}); setResult(null); setGeneration((g) => g + 1) }
 
   return (
     <Panel title="Canlı önizleme" id="preview-panel-title">
@@ -32,9 +48,9 @@ export function PreviewPanel({ form }: { form: FormSchema }) {
       {form.fields.length === 0 ? (
         <p className="text-sm text-slate-500">Alan eklediğinizde form burada görünür.</p>
       ) : (
-        <form noValidate onSubmit={onSubmit} aria-label="Form önizlemesi" className="space-y-4">
+        <form key={generation} noValidate onSubmit={onSubmit} aria-label="Form önizlemesi" className="space-y-4">
           {form.fields.map((f) => <PreviewField key={f.id} field={f} value={values[f.id]} error={errors[f.id]}
-            onChange={(v) => setValue(f, v)} onBlur={() => onBlur(f)} />)}
+            onChange={(v) => setValue(f, v)} onBadInput={(bad) => setBad(f, bad)} onBlur={() => onBlur(f)} />)}
           {/* preventDefault on mousedown keeps focus in the field: otherwise its blur validation inserts an error message,
               the buttons shift down under the pointer and the click is lost. Keyboard and touch activation are unchanged. */}
           <div className="flex flex-wrap gap-2 pt-2">
@@ -42,8 +58,8 @@ export function PreviewPanel({ form }: { form: FormSchema }) {
             <Button onClick={reset} onMouseDown={(e) => e.preventDefault()}>Temizle</Button>
           </div>
           <div aria-live="polite">
-            {result === 'ok' && <p className="rounded-lg bg-emerald-50 p-3 text-sm text-emerald-800">Form geçerli. Bu bir önizlemedir; veriler hiçbir yere gönderilmedi.</p>}
-            {result === 'error' && <p className="rounded-lg bg-red-50 p-3 text-sm text-red-800">{Object.keys(errors).length} alanda hata var. Lütfen işaretli alanları düzeltin.</p>}
+            {result === 'ok' && valid && <p className="rounded-lg bg-emerald-50 p-3 text-sm text-emerald-800">Form geçerli. Bu bir önizlemedir; veriler hiçbir yere gönderilmedi.</p>}
+            {result === 'error' && errorCount > 0 && <p className="rounded-lg bg-red-50 p-3 text-sm text-red-800">{errorCount} alanda hata var. Lütfen işaretli alanları düzeltin.</p>}
           </div>
         </form>
       )}
@@ -51,14 +67,9 @@ export function PreviewPanel({ form }: { form: FormSchema }) {
   )
 }
 
-function withError(prev: Record<string, string>, id: string, msg: string | null) {
-  const next = { ...prev }
-  if (msg) next[id] = msg; else delete next[id]
-  return next
-}
-
-function PreviewField({ field: f, value, error, onChange, onBlur }: {
-  field: FormField; value: string | boolean | undefined; error?: string; onChange: (v: string | boolean) => void; onBlur: () => void
+function PreviewField({ field: f, value, error, onChange, onBadInput, onBlur }: {
+  field: FormField; value: string | boolean | undefined; error?: string; onChange: (v: string | boolean) => void
+  onBadInput: (bad: boolean) => void; onBlur: () => void
 }) {
   const id = `pv-${f.id}`
   const describedBy = [f.helpText ? `${id}-help` : '', error ? `${id}-err` : ''].filter(Boolean).join(' ') || undefined
@@ -81,7 +92,7 @@ function PreviewField({ field: f, value, error, onChange, onBlur }: {
       control = (
         <select {...common} className={cls} value={text} onChange={(e) => onChange(e.target.value)}>
           <option value="">Seçiniz…</option>
-          {f.options.filter((o) => o.trim()).map((o) => <option key={o} value={o}>{o}</option>)}
+          {cleanOptions(f.options).map((o) => <option key={o} value={o}>{o}</option>)}
         </select>
       )
       break
@@ -102,6 +113,8 @@ function PreviewField({ field: f, value, error, onChange, onBlur }: {
           min={f.type === 'number' ? f.rules.min : f.type === 'date' ? f.rules.minDate : undefined}
           max={f.type === 'number' ? f.rules.max : f.type === 'date' ? f.rules.maxDate : undefined}
           maxLength={f.type !== 'number' && f.type !== 'date' ? f.rules.maxLength : undefined}
+          // onInput fires on every keystroke; onChange does not when the parsed value stays "" (e.g. "-" -> "1-")
+          onInput={f.type === 'number' ? (e) => onBadInput(e.currentTarget.validity.badInput) : undefined}
           onChange={(e) => onChange(e.target.value)} />
       )
   }

@@ -1,6 +1,6 @@
 import { useId, type ReactNode } from 'react'
 import { FIELD_TYPES, FIELD_TYPE_LABELS, RULES_BY_TYPE, type FieldRules, type FieldType, type FormField } from '../interfaces/form'
-import { changeFieldType, toFieldName, uniqueName } from '../lib/fields'
+import { changeFieldType, cleanOptions, toFieldName, uniqueName } from '../lib/fields'
 import { nameProblem, ruleProblems } from '../lib/validation'
 import { inputClass, Panel } from './ui'
 
@@ -76,8 +76,11 @@ export function PropertiesPanel({ field, fields, onChange }: { field: FormField 
 
         {field.type === 'select' && (
           <Row label="Seçenekler" htmlFor={id('opts')} hint="Her satıra bir seçenek yazın.">
+            {/* Raw lines while typing (trimming here would eat the space between words); the stored list is
+                normalised when the textarea is left. Preview, validation and export always use cleanOptions(). */}
             <textarea id={id('opts')} rows={4} className={inputClass} value={field.options.join('\n')}
-              onChange={(e) => set({ options: e.target.value.split('\n') })} />
+              onChange={(e) => set({ options: e.target.value.split('\n') })}
+              onBlur={() => { const clean = cleanOptions(field.options); if (clean.join('\n') !== field.options.join('\n')) set({ options: clean }) }} />
           </Row>
         )}
 
